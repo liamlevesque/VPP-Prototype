@@ -1,0 +1,468 @@
+
+
+/*******************
+	RESETS
+*******************/
+
+body{
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+	color: $brand-color;
+}
+
+h1{
+	font-size: 1.9rem;
+	margin-bottom: $default-margin;
+}
+
+h3{
+	margin-bottom: $default-margin;
+}
+
+p{
+	font-size: 0.9em;
+	line-height: 1.4rem;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+/**********************
+	TEXT FORMATTING
+**********************/
+@mixin smalltext{
+	font-size: 0.7rem;
+	font-weight: 700;
+	line-height: 0.8rem;
+}
+
+label{
+	@include smalltext;
+	text-transform: uppercase;
+	
+	display: inline-block;
+
+	color: $low-contrast; 
+}
+
+.grey-link{
+	color: $low-contrast;
+	font-size: 0.8rem;
+}
+
+/**********************
+	BUTTONS
+**********************/
+button{
+	background-color: $brand-color;
+	padding: 10px $default-margin;
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 700;
+	border-radius: 10px;
+	border: 0; 
+	outline: none;
+	cursor: pointer;
+
+	&:hover{
+		background-color: darken($brand-color,10%);
+	}
+
+	&.icon{
+		background-color: transparent;
+		padding: 0 5px;
+		vertical-align: middle;
+
+		img{
+			width: 15px;
+		}
+	}
+}
+
+/**********************
+	CONTAINERS
+**********************/
+	.box-bordered{
+		border: 1px solid $low-contrast;
+		padding: $default-margin;
+		position: relative;
+	}
+
+	.box--footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: darken($vlow-contrast,10%);
+		border-top: 1px solid $low-contrast;
+		vertical-align: bottom;
+	}
+
+	[class*="box-money"]{
+		text-align: right;
+		padding: $default-margin; 
+	}
+
+	.box-money{
+		color: $money-color;
+
+		&_finance{
+			background-color: $finance-tint;
+			color: $finance-color;
+			transition: $transition;
+			
+			&.s-finance-inactive{
+				background-color: $finance-dabled;
+				color: $low-contrast;
+				text-decoration: line-through;		
+			}
+		}
+
+		&_finance-total{
+			background-color: $finance-tint;
+			color: $finance-color;
+			position: relative;
+		}
+	}
+
+/*******************
+	HELPER CLASSES
+********************/
+	.h-overflow{
+		overflow: hidden;
+	}
+
+	.h-ta-center{
+		text-align: center;
+	}
+
+	.h-mb-100{
+		margin-bottom: $default-margin;
+	}
+
+	.h-f-right{
+		position: absolute;
+		top: $default-margin;
+		right: $default-margin;
+		text-align: right;
+	}
+
+/*******************
+	GENERAL LAYOUT
+*******************/
+
+	header{
+		padding: $default-margin;
+		oveflow: hidden;
+		position: relative;
+
+		.home-link{
+			font-size: 0.8rem;
+			
+			img{
+				height: 8px;
+			}
+		}
+	}
+
+	.top-section{
+		background-color: $vlow-contrast;
+	}
+
+	.pinned-section{
+		background-color: $vlow-contrast;
+		border-bottom: 1px solid $low-contrast;
+		z-index: 1000;
+
+		&.stuck{
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	.content--center{
+		width: 1000px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	[class^="col"]{
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		height: 100%;
+	}
+
+	.col{
+		&-0{
+			width: 10%;
+		}
+		&-1{
+			width: 5%;
+		}
+		&-2{
+			width: 53%;
+		}
+		&-3{
+			width: 15%;
+		}
+		&-4{
+			width: 15%;
+		}
+	}
+
+/**********************
+	METADATA
+**********************/
+
+	.details-table{
+		label{
+			display: inline-block;
+			height: $input-height;
+			width: 40%;
+			text-align: right;
+			padding-right: 10px;
+		}
+
+		.calculation{
+			position: relative;
+		}
+	}
+
+	.action{
+		vertical-align: bottom;
+		text-align: center;
+		padding: $default-margin;
+		@extend .g-third;
+
+		.action-icon{
+			display: inline-block;
+			margin-bottom: 5px;
+			width: 15px;  
+		}
+
+		.action-label{
+			display: block;
+			@include smalltext;
+			text-transform: uppercase;
+		}
+	}
+
+
+
+
+/**********************
+	FINANCING
+**********************/
+.financing{
+	margin-top: 10px;
+
+	background-color: white;
+	border: 1px solid $finance-color;
+	overflow: hidden;
+
+	.g-third{
+		padding: $default-margin;
+	}
+}
+
+
+/**********************
+	PURCHASES
+**********************/
+
+.table--header{
+	padding: $default-margin 0 10px;
+	text-align: center;
+}
+
+.purchase{
+	padding: 10px 0;
+	display: table-row;
+
+	[class^="col"]{
+		display: table-cell;
+		padding: $default-margin 0;
+		vertical-align: top;
+		border-bottom: 1px solid $vlow-contrast;
+
+		&[class*="box-money"]{
+			padding: $default-margin;
+			font-size: 1.2rem;
+		}
+	}
+
+	.col-1, .col-3, .col-4{
+		vertical-align: middle;
+	}
+
+	.col-3, .col-4{
+		padding-right: 30px;
+	}
+
+	.col-1{
+		color: $brand-color;
+		text-align: center;
+	}
+
+	.col-2{
+		position: relative;
+	}
+
+}
+	.description{
+		font-size: 1.1em;
+	}
+
+	.description-footer{
+		position: absolute;
+		bottom: 0;
+		margin-bottom: $default-margin;
+	}
+
+	.unit-pill{
+		background-color: $vlow-contrast;
+		border-radius: 10px;
+		color: $dark-contrast;
+		display: inline-block;
+		@include smalltext;
+		margin-right: 20px;
+		font-size: 0.75rem;
+		
+		div{
+			display: inline-block;
+		}
+
+		.unit--quantity{
+			border-radius: 10px 0 0 10px;
+			background-color: $money-color;
+			color: white;
+			padding: 5px 10px;
+
+			&:after{
+				content: "x";
+			}
+		}
+
+		.unit--price{
+			padding: 5px 15px 5px 5px;
+			color: $money-color;
+
+			&:before{
+				content: "$";
+			}
+			&:after{
+				content: " ea";
+			}
+		}
+	}
+
+	.purchase-meta{
+		display: inline-block;
+	}
+
+
+/**********************
+	FOOTER AREA
+**********************/
+
+.purchases--totals{
+	position: relative;
+	margin-bottom: $default-margin;
+
+	[class^='col']{
+		padding: $default-margin;
+	}
+}
+
+$or-circle-size: 30px;
+
+.totals--or{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: $dark-contrast;
+	border-radius: $or-circle-size;
+	line-height: $or-circle-size;
+	width: $or-circle-size;
+	height: $or-circle-size;
+	text-align: center; 
+	display: inline-block;
+	color: white;
+}
+
+.finance-confirmation{
+	border: 1px solid $finance-color;
+	padding: $default-margin;
+	text-align: center;
+}
+
+/**********************
+	CURRENCY FORMATTING
+**********************/
+
+[class^="dollars"]:before{
+	content: '$';
+}
+
+.dollars{	
+	&_200{
+		font-size: 1.1rem;
+	}
+
+	&_400{
+		font-size: 1.4rem;
+	}
+
+	&_700{
+		font-size: 1.8rem;
+	}
+}
+
+[class^="cents"]{
+	vertical-align: top;
+	display: inline-block;
+	margin-left: -5px;
+	margin-top: 2px;
+
+	&:before{
+		content: '.';
+	}
+	&:empty{
+		display: none;
+	}
+}
+
+.cents{
+	&_200{
+		font-size: 0.7rem;
+	}
+
+	&_400{
+		font-size: 0.8rem;
+	}
+
+	&_700{
+		font-size: 0.9rem;
+	}
+}

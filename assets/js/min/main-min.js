@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){console.log("hat"),$.each(".js--price",function(){console.log($(this).data("price"));var c=$(this).data("price");$(this).children(".js--price_dollars").html(c)})});

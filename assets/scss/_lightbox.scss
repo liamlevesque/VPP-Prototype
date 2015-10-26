@@ -1,0 +1,72 @@
+.lb-background{
+	background-color: rgba(black,0.6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 9000;
+	overflow-y: auto;
+
+	&.s-open{
+		display: block;
+	}
+}
+
+.lb-window{
+	position: relative;
+	width: 600px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 50px 0;
+
+	background-color: white;
+	
+	.lb-window-close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: transparent;
+		padding: $default-margin;
+
+		img{
+			width: 15px;
+		}
+	}
+
+	.lb-content{
+		padding: 2 * $default-margin;
+		text-align: center;
+
+		img{
+			margin-bottom: $default-margin;
+		}
+	}
+
+	.lb-action-area{
+		padding: $default-margin;
+		background-color: $vlow-contrast;
+		text-align: right;
+	}
+
+}
+
+
+
+.collapsible{
+
+	.default-hidden{
+		display: none;
+	}
+
+	&.s-expanded{
+		.default-shown{
+			display: none;
+		}
+		.default-hidden{
+			display: block;
+		}
+	}
+}

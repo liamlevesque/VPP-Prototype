@@ -1,0 +1,64 @@
+//COLOURS
+
+$brand-color: #E87722;
+$finance-color: #24532B;
+$finance-tint: #D3E8CB;
+$finance-dabled: #F3FFF8;
+$money-color: #20579E;
+
+$error-colour: #c4483a;
+$active-colour: #20579E;
+$link-colour: #4A90E2;
+
+$vlow-contrast: #E9E9E9;
+$low-contrast: #959595;
+$dark-contrast: #585858;
+
+.c-price{color: $money-color;}
+.c-finance{color: $finance-color;}
+.c-brand{color: $brand-color;}
+
+.c-link{color: $link-colour;}
+
+.bg-finance{background-color: $finance-tint;}
+
+
+//MEASUREMENTS
+
+$default-margin: 15px;
+$input-height: 30px;
+
+//TRANSITIONS
+$transition: .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 80em) { @content; }
+  }
+  @if $point == largemax {
+    @media (max-width: 80em) { @content; }
+  }
+  @if $point == med-large {
+    @media (min-width: 80em) { @content; }
+  }
+  @if $point == med-med-large {
+    @media (min-width: 64em) { @content; }
+  }
+  @else if $point == med-to-medlarge {
+    @media (min-width: 48em) and (max-width: 64em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 48em) { @content; }
+  }
+  @else if $point == medmax {
+    @media (max-width: 48em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 30.0625em)  { @content; }
+  }
+  @else if $point == smallmax {
+    @media (max-width: 30.0625em)  { @content; }
+  }
+}
+
