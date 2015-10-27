@@ -3,76 +3,77 @@ $(function(){
 	/*********************************
 		INITIALIZE EVERYTHING
 	*********************************/
-	updatePrices();
-	updateTotals();
+		updatePrices();
+		updateTotals();
 
 	
 	/*********************************
 		FINANCE CALCULATOR CONTROLS
 	*********************************/
-	$('.js--finance-interest').on('input', function(){
-		if($(this).val().length == 0) return; //don't recalculate if this is empty
-		updateInterest(parseFloat($(this).val()).round(2));
-	});
+		$('.js--finance-interest').on('input', function(){
+			if($(this).val().length == 0) return; //don't recalculate if this is empty
+			updateInterest(parseFloat($(this).val()).round(2));
+		});
 
-	$('.js--interest-plus, .js--interest-minus').click(function(){
-		
-		var tempValue = parseFloat($('.js--finance-interest').val()).round(2), 
-			increment = parseFloat($(this).data('increment')).round(2);
+		$('.js--interest-plus, .js--interest-minus').click(function(){
 			
-		updateInterest(tempValue + increment);
-		
-		$('.js--finance-interest').val(interest);
-	});
+			var tempValue = parseFloat($('.js--finance-interest').val()).round(2), 
+				increment = parseFloat($(this).data('increment')).round(2);
+			
+			if(tempValue + increment <= 0) updateInterest(0);
+			else updateInterest(tempValue + increment);
+			
+			$('.js--finance-interest').val(interest.toFixed(2));
+		});
 
-	$('.js--finance-period').change(function(){
-		period = parseInt($(this).val());
-		
-		updatePrices();
-		updateTotals();
-	});
+		$('.js--finance-period').change(function(){
+			period = parseInt($(this).val());
+			
+			updatePrices();
+			updateTotals();
+		});
 
 	/*********************************
 		PURCHASE ROWS 
 	*********************************/
-	$('.js--purchase .js--monthly').click(function(e){
-		//$(this).find('.js--monthly-toggle')[0].click();
+		$('.js--purchase .js--monthly').click(function(e){
+			//$(this).find('.js--monthly-toggle')[0].click();
 
-		//var target = $(this).find('.js--monthly-toggle');
-		//$(this).find('.js--monthly-toggle').hide();
-		//target.prop('checked',!target.prop('checked'));
-		//$(this).toggleClass('s-finance-inactive');
-		//updateTotals();
-	});
+			//var target = $(this).find('.js--monthly-toggle');
+			//$(this).find('.js--monthly-toggle').hide();
+			//target.prop('checked',!target.prop('checked'));
+			//$(this).toggleClass('s-finance-inactive');
+			//updateTotals();
+		});
 
-	$('.js--monthly-toggle').on('change',function(){
-		$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
-		updateTotals();
-	});
+		$('.js--monthly-toggle').on('change',function(){
+			$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
+			updateTotals();
+		});
 
 
 	/*********************************
 		WAYPOINTS
 	*********************************/
-	var waypoints = new Waypoint.Sticky({
-		element: $('.js--pin-section')
-	});
+		var waypoints = new Waypoint.Sticky({
+			element: $('.js--pin-section')
+		});
 
 
 	/*********************************
 		LIGHTBOX
 	*********************************/
-	$('.js--lb-show').click(function(){
-		$('.js--lightbox').addClass('s-open');
-	});
+		$('.js--lb-show').click(function(){
+			$('.js--lightbox').addClass('s-open');
+		});
 
-	$('.js--lb-close').click(function(){
-		$('.js--lightbox').removeClass('s-open');
-	});
+		$('.js--lb-close').click(function(){
+			$('.js--lightbox').removeClass('s-open');
+		});
 
-	$('.js--collapsible-toggle').click(function(){
-		$(this).parents('.js--collapsible').toggleClass('s-expanded');
-	});
+		$('.js--collapsible-toggle').click(function(){
+			$(this).parents('.js--collapsible').toggleClass('s-expanded');
+		});
 
 }); 
 
@@ -80,6 +81,10 @@ Number.prototype.round = function(p) {
   p = p || 10;
   return parseFloat( this.toFixed(p) );
 };
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 var interest = 3.95,
 	period = 48;
@@ -99,7 +104,7 @@ function moneyUpdate(target, val){
 
 	if(valString[1] && valString[1].length < 2) valString[1] += "0";
 	
-	target.find('.js--dollars').html(valString[0]);
+	target.find('.js--dollars').html(numberWithCommas(valString[0]));
 	if(valString[1])target.find('.js--cents').html(valString[1].substring(0,2));
 }
 
@@ -110,11 +115,12 @@ function updatePrices(){
 			adjustedInterest = (interest/100)/12,
 			monthly = amt * ((adjustedInterest * Math.pow((1 + adjustedInterest),period)) / (Math.pow((1 + adjustedInterest),period) - 1));
 
+		if(adjustedInterest === 0) monthly = amt/period; //IF 0% FINANCING, JUST DIVIDE PRICE BY TOTAL PERIOD
+
 		moneyUpdate(thisPrice,amt);
 		moneyUpdate(thisPrice.next('.js--monthly'),monthly);
 	}); 
 }
-
 
 function updateTotals(){
  	var totalPrice = 0,
@@ -140,3 +146,8 @@ function updateTotals(){
 	moneyUpdate($('.js--monthly-total'),totalFinance);//FINANCE MONTHLY PAYMENT TOTAL
 
 }
+
+
+
+
+

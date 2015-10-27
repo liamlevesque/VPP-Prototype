@@ -8,7 +8,7 @@
   color: #E87722; }
 
 .c-link {
-  color: #4A90E2; }
+  color: #20579e; }
 
 .bg-finance {
   background-color: #D3E8CB; }
@@ -62,7 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; }
 
 .field--select {
-  background: url("select-arrow.png") no-repeat right 12px;
+  background: url("../img/select-arrow.png") no-repeat right 0;
   cursor: pointer; }
   .invalid.field--select {
     border-color: #c4483a; }
@@ -74,48 +74,96 @@ input[type=number]::-webkit-outer-spin-button {
   .field--toggle .toggle-control {
     -webkit-transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
             transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    width: 27px;
-    height: 18px;
+    width: 21px;
+    height: 14px;
     display: block;
     border: 2px solid #24532B;
-    border-radius: 18px;
+    border-radius: 14px;
     background-color: #24532B;
     position: relative; }
     .field--toggle .toggle-control:after {
       -webkit-transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
               transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
       content: "";
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       display: block;
       background-color: #fff;
       border-radius: 50%;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 7px; }
   .field--toggle input {
     display: none; }
     .field--toggle input:checked + .toggle-control {
       border-color: #585858;
       background-color: rgba(0, 0, 0, 0.3); }
       .field--toggle input:checked + .toggle-control:after {
-        left: 9px; }
+        left: 0; }
+
+.field--toggle_vertical {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  .field--toggle_vertical .toggle-control {
+    -webkit-transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+            transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    width: 14px;
+    height: 28px;
+    display: block;
+    border: 2px solid #24532B;
+    border-radius: 14px;
+    background-color: #24532B;
+    position: relative; }
+    .field--toggle_vertical .toggle-control:before {
+      font-size: 0.4rem;
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      bottom: 1px;
+      left: 1px; }
+    .field--toggle_vertical .toggle-control:after {
+      -webkit-transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+              transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      content: "";
+      width: 14px;
+      height: 14px;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .field--toggle_vertical input {
+    display: none; }
+    .field--toggle_vertical input:checked + .toggle-control {
+      border-color: #c4483a;
+      background-color: #c4483a; }
+      .field--toggle_vertical input:checked + .toggle-control:after {
+        top: 14px; }
+      .field--toggle_vertical input:checked + .toggle-control:before {
+        bottom: auto;
+        top: 1px;
+        left: 0; }
 
 /*****************
 GRID
 ******************/
-.g-quarter, .g-third, .action, .g-two-thirds, .g-half {
+.g-quarter, .g-third, .g-two-thirds, .g-half {
   box-sizing: border-box;
   position: relative;
   vertical-align: top; }
   @media (min-width: 48em) {
-    .g-quarter, .g-third, .action, .g-two-thirds, .g-half {
+    .g-quarter, .g-third, .g-two-thirds, .g-half {
       display: inline-block;
       vertical-align: top; }
-      .g-quarter:last-of-type, .g-third:last-of-type, .action:last-of-type, .g-two-thirds:last-of-type, .g-half:last-of-type {
+      .g-quarter:last-of-type, .g-third:last-of-type, .g-two-thirds:last-of-type, .g-half:last-of-type {
         float: right;
         margin-right: 0; } }
-  .g-no-space.g-quarter, .g-no-space.g-third, .g-no-space.action, .g-no-space.g-two-thirds, .g-no-space.g-half {
+  .g-no-space.g-quarter, .g-no-space.g-third, .g-no-space.g-two-thirds, .g-no-space.g-half {
     margin: 0; }
 
 .g-display-table {
@@ -147,12 +195,12 @@ GRID
     margin-right: 1%; } }
 
 @media (min-width: 48em) {
-  .g-third, .action {
+  .g-third {
     width: 32%;
     margin-right: 1.7%; }
-    .g-third.g-no-space, .g-no-space.action {
+    .g-third.g-no-space {
       width: 34%; }
-    .g-third:nth-of-type(3n+3), .action:nth-of-type(3n+3), .g-third.last, .last.action {
+    .g-third:nth-of-type(3n+3), .g-third.last {
       float: right;
       margin-right: 0; } }
 
@@ -192,14 +240,18 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 1.9rem;
+  margin-bottom: 3px; }
+
+h2 {
   margin-bottom: 15px; }
 
 h3 {
-  margin-bottom: 15px; }
+  margin-bottom: 7.5px; }
 
 p {
   font-size: 0.9em;
-  line-height: 1.4rem; }
+  line-height: 1.4rem;
+  margin-top: 0; }
 
 a {
   color: inherit;
@@ -210,6 +262,12 @@ a {
 /**********************
 	TEXT FORMATTING
 **********************/
+.smalltext {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 0.8rem;
+  text-transform: uppercase; }
+
 label {
   font-size: 0.7rem;
   font-weight: 700;
@@ -221,6 +279,11 @@ label {
 .grey-link {
   color: #959595;
   font-size: 0.8rem; }
+
+.phone-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px; }
 
 /**********************
 	BUTTONS
@@ -243,6 +306,8 @@ button {
     vertical-align: middle; }
     button.icon img {
       width: 15px; }
+  button.icon_100 img {
+    width: 10px; }
 
 /**********************
 	CONTAINERS
@@ -250,7 +315,13 @@ button {
 .box-bordered {
   border: 1px solid #959595;
   padding: 15px;
-  position: relative; }
+  position: relative;
+  margin-right: 15px; }
+  .box-bordered_greybg {
+    background-color: gainsboro;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right: 15px; }
 
 .box--footer {
   position: absolute;
@@ -271,7 +342,8 @@ button {
     background-color: #D3E8CB;
     color: #24532B;
     -webkit-transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-            transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035); }
+            transition: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    position: relative; }
     .box-money_finance.s-finance-inactive {
       background-color: #F3FFF8;
       color: #959595;
@@ -293,11 +365,23 @@ button {
 .h-mb-100 {
   margin-bottom: 15px; }
 
+.h-p-center {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center; }
+
 .h-f-right {
   position: absolute;
   top: 15px;
   right: 15px;
   text-align: right; }
+
+.h-va-super {
+  vertical-align: super; }
 
 /*******************
 	GENERAL LAYOUT
@@ -323,8 +407,8 @@ header {
     top: 0;
     width: 100%; }
 
-.content--center {
-  width: 1000px;
+.content--center, footer {
+  max-width: 1000px;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -340,11 +424,11 @@ header {
 .col-1 {
   width: 5%; }
 .col-2 {
-  width: 53%; }
+  width: 48%; }
 .col-3 {
-  width: 15%; }
+  width: 19%; }
 .col-4 {
-  width: 15%; }
+  width: 16%; }
 
 /**********************
 	METADATA
@@ -361,11 +445,12 @@ header {
 .action {
   vertical-align: bottom;
   text-align: center;
-  padding: 15px; }
+  padding: 15px;
+  display: inline-block; }
   .action .action-icon {
     display: inline-block;
     margin-bottom: 5px;
-    width: 15px; }
+    width: 24px; }
   .action .action-label {
     display: block;
     font-size: 0.7rem;
@@ -377,11 +462,11 @@ header {
 	FINANCING
 **********************/
 .financing {
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: white;
   border: 1px solid #24532B;
   overflow: hidden; }
-  .financing .g-third, .financing .action {
+  .financing .g-third {
     padding: 15px; }
 
 /**********************
@@ -398,10 +483,12 @@ header {
     display: table-cell;
     padding: 15px 0;
     vertical-align: top;
-    border-bottom: 1px solid #E9E9E9; }
+    border-bottom: 1px dotted #bdbdbd; }
     .purchase [class^="col"][class*="box-money"] {
       padding: 15px;
       font-size: 1.2rem; }
+    .purchase [class^="col"].box-money_finance {
+      padding-right: 40px; }
   .purchase .col-1, .purchase .col-3, .purchase .col-4 {
     vertical-align: middle; }
   .purchase .col-3, .purchase .col-4 {
@@ -413,12 +500,12 @@ header {
     position: relative; }
 
 .description {
-  font-size: 1.1em; }
+  display: block;
+  font-size: 1.1rem;
+  min-height: 2em; }
 
 .description-footer {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 15px; }
+  margin-top: 15px; }
 
 .unit-pill {
   background-color: #E9E9E9;
@@ -450,14 +537,18 @@ header {
 .purchase-meta {
   display: inline-block; }
 
-/**********************
-	FOOTER AREA
-**********************/
+/********************************
+	TOTALS AND FINANCING FOOTER
+********************************/
 .purchases--totals {
   position: relative;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  display: table-row; }
   .purchases--totals [class^='col'] {
+    display: table-cell;
     padding: 15px; }
+  .purchases--totals .col-3 {
+    padding-right: 30px; }
 
 .totals--or {
   position: absolute;
@@ -467,24 +558,43 @@ header {
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-color: #585858;
-  border-radius: 30px;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
+  border-radius: 24px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
   text-align: center;
   display: inline-block;
-  color: white; }
+  color: white;
+  font-size: 0.9rem; }
 
 .finance-confirmation {
   border: 1px solid #24532B;
   padding: 15px;
   text-align: center; }
 
+/***********************
+	FOOTER
+************************/
+footer {
+  padding-bottom: 50px; }
+
+.disclaimers {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 0.8rem;
+  color: #959595; }
+
 /**********************
 	CURRENCY FORMATTING
 **********************/
-[class^="dollars"]:before {
+.dollar [class^="dollars"]:before {
   content: '$'; }
+.pound [class^="dollars"]:before {
+  content: '\00A3'; }
+.yen [class^="dollars"]:before {
+  content: '\00A5'; }
+.euro [class^="dollars"]:before {
+  content: '\20AC'; }
 
 .dollars_200 {
   font-size: 1.1rem; }
@@ -501,10 +611,13 @@ header {
   [class^="cents"]:before {
     content: '.'; }
   [class^="cents"]:empty {
-    display: none; }
+    visibility: hidden; }
+    [class^="cents"]:empty:after {
+      content: '.00'; }
 
 .cents_200 {
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  margin-top: 6px; }
 .cents_400 {
   font-size: 0.8rem; }
 .cents_700 {

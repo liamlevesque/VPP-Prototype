@@ -8,11 +8,13 @@ $money-color: #20579E;
 
 $error-colour: #c4483a;
 $active-colour: #20579E;
-$link-colour: #4A90E2;
+$link-colour: #20579e;
 
 $vlow-contrast: #E9E9E9;
 $low-contrast: #959595;
 $dark-contrast: #585858;
+
+$border-color: #bdbdbd;
 
 .c-price{color: $money-color;}
 .c-finance{color: $finance-color;}
@@ -27,6 +29,8 @@ $dark-contrast: #585858;
 
 $default-margin: 15px;
 $input-height: 30px;
+$toggle-height: 14px;
+$toggle-padding: 40px; //THIS IS HOW MUCH THE MONEY
 
 //TRANSITIONS
 $transition: .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
