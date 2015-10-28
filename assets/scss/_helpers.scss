@@ -13,6 +13,18 @@
 		margin-bottom: $default-margin;
 	}
 
+	.h-mb-50{
+		margin-bottom: $default-margin/2;	
+	}
+
+	.h-mb-0{
+		margin-bottom: 0;
+	}
+
+	.h-mr-100{
+		margin-right: $default-margin;
+	}
+
 	.h-pt-100{
 		padding-top: $default-margin;
 	}
@@ -47,7 +59,8 @@
 
 .c-link{color: $link-colour;}
 
-.c-white{color: white}
+.c-white{color: white;}
+.c-black{color: black;}
 
 .bg-finance{background-color: $finance-tint;}
 .bg-brand{background-color: $brand-color;} 

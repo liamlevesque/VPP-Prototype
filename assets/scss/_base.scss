@@ -141,7 +141,6 @@ button{
 		border: 1px solid $low-contrast;
 		padding: $default-margin;
 		position: relative;
-		margin-right: $default-margin;
 
 		&_greybg{
 			background-color: darken($vlow-contrast, 5%);
@@ -251,7 +250,6 @@ button{
 	.details-table{
 		label{
 			display: inline-block;
-			height: $input-height;
 			width: 40%;
 			text-align: right;
 			padding-right: 10px;
@@ -261,6 +259,16 @@ button{
 			position: relative;
 		}
 	}
+		.details--entry{
+			display: block;
+	    	text-align: left;
+	    	padding: 10px 0;
+	    	border-bottom: 1px dotted $low-contrast;
+
+	    	&:last-of-type{
+	    		border-bottom-width: 0;
+	    	}
+	    }
 
 	.action{
 		vertical-align: bottom;
