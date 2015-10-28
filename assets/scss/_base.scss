@@ -8,6 +8,10 @@ body{
 	font-family: 'Trebuchet MS', Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
+
+	&.s-no-scroll{
+		overflow-y: hidden;
+	}
 }
 
 ul{
@@ -80,6 +84,11 @@ label{
 .grey-link{
 	color: $low-contrast;
 	font-size: 0.8rem;
+	cursor: pointer;
+
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 .phone-link{
@@ -107,11 +116,14 @@ button{
 
 	&.icon{
 		background-color: transparent;
-		padding: 0 5px;
-		vertical-align: middle;
 
 		img{
 			width: 15px;
+		}
+		
+		&.icon_plain{
+			padding: 0 5px;
+			vertical-align: middle;
 		}
 	}
 
@@ -178,41 +190,6 @@ button{
 	}
 
 /*******************
-	HELPER CLASSES
-********************/
-	.h-overflow{
-		overflow: hidden;
-	}
-
-	.h-ta-center{
-		text-align: center;
-	}
-
-	.h-mb-100{
-		margin-bottom: $default-margin;
-	}
-
-	.h-p-center{
-		position: absolute;
-		top: $default-margin;
-		left: 50%;
-		transform: translateX(-50%);
-
-		text-align: center;
-	}
-
-	.h-f-right{
-		position: absolute;
-		top: $default-margin;
-		right: $default-margin;
-		text-align: right;
-	}
-
-	.h-va-super{
-		vertical-align: super;
-	}
-
-/*******************
 	GENERAL LAYOUT
 *******************/
 
@@ -234,22 +211,11 @@ button{
 		background-color: $vlow-contrast;
 	}
 
-	.pinned-section{
-		background-color: $vlow-contrast;
-		border-bottom: 1px solid $low-contrast;
-		z-index: 1000;
-
-		&.stuck{
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-	}
-
 	.content--center{
 		max-width: 1000px;
 		margin: 0 auto;
-		overflow: hidden;
+		//overflow: hidden;
+		position: relative;
 	}
 
 	[class^="col"]{
@@ -322,17 +288,77 @@ button{
 /**********************
 	FINANCING
 **********************/
-.financing{
-	margin-top: $default-margin;
 
-	background-color: white;
-	border: 1px solid $finance-color;
-	overflow: hidden;
+	$shadow-height: 10px;
 
-	.g-third{
-		padding: $default-margin;
+	.pinned-section{
+		background-color: $vlow-contrast;
+		border-bottom: 1px solid $low-contrast;
+		z-index: 1000;
+		position: relative;
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -$shadow-height;
+			height: $shadow-height - 1;
+			
+			background-image: radial-gradient(ellipse farthest-side at center top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+			opacity: 0;
+			transition: opacity 0.5s linear; 
+		}
+
+		&.s-stuck{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			
+			&:after{
+				
+				opacity: 1;
+
+			}
+
+			.financing.s-hidden{
+				display: none;
+			}
+
+			.finance--collapse{
+				right: -25px;
+			}
+		}
 	}
-}
+
+	.js--sticky-wrapper{
+		transition: height $transition-time_1 $transition-function;
+	}
+
+	.financing{
+		background-color: white;
+		border: 1px solid $finance-color;
+		overflow: hidden;
+
+		z-index: 2;
+		position: relative;
+
+		.g-third{
+			padding: $default-margin;
+		}
+
+		p{
+			margin-bottom: 0;
+		}
+	}
+
+	.finance--collapse{
+		position: absolute;
+		top: $default-margin;
+		right: 0;
+		transition: right $transition-time_1 $transition-function;
+		z-index: 1;
+	}
 
 
 /**********************
@@ -401,7 +427,7 @@ button{
 		color: $dark-contrast;
 		display: inline-block;
 		@include smalltext;
-		margin-right: 20px;
+		margin-right: $default-margin;
 		font-size: 0.75rem;
 		
 		div{
@@ -422,12 +448,12 @@ button{
 		.unit--price{
 			padding: 5px 15px 5px 5px;
 			color: $money-color;
-
+			
 			&:before{
-				content: "$";
+				//content: "$"; //THIS WILL BE HANDLED BY THE UNIVERSAL MONEY SYMBOL CLASS
 			}
 			&:after{
-				content: " ea";
+				//content: " ea";
 			}
 		}
 	}
@@ -471,7 +497,7 @@ $or-circle-size: 24px;
 	text-align: center; 
 	display: inline-block;
 	color: white;
-	font-size: 0.9rem;
+	font-size: 0.6rem;
 }
 
 .finance-confirmation{
@@ -503,7 +529,7 @@ $or-circle-size: 24px;
 **********************/
 
 
-[class^="dollars"]:before{
+[class^="dollars"]:before, .currency-symbol:before{
 	
 	.dollar &{ 
 		content: '$';	
@@ -566,5 +592,26 @@ $or-circle-size: 24px;
 
 	&_700{
 		font-size: 0.9rem;
+	}
+}
+
+
+/*************************
+	COLLAPSIBLE ELEMENTS
+*************************/
+
+.collapsible{
+
+	.default-hidden{
+		display: none;
+	}
+
+	&.s-expanded{
+		.default-shown{
+			display: none;
+		}
+		.default-hidden{
+			display: block;
+		}
 	}
 }

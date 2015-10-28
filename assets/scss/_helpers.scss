@@ -1,0 +1,52 @@
+/*******************
+	HELPER CLASSES
+********************/
+	.h-overflow{
+		overflow: hidden;
+	}
+
+	.h-ta-center{
+		text-align: center;
+	}
+
+	.h-mb-100{
+		margin-bottom: $default-margin;
+	}
+
+	.h-pt-100{
+		padding-top: $default-margin;
+	}
+
+	.h-p-center{
+		position: absolute;
+		top: $default-margin;
+		left: 50%;
+		transform: translateX(-50%);
+
+		text-align: center;
+	}
+
+	.h-f-right{
+		position: absolute;
+		top: $default-margin;
+		right: $default-margin;
+		text-align: right;
+	}
+
+	.h-va-super{
+		vertical-align: super;
+	}
+
+/*******************
+	COLOUR OVERRIDES
+********************/
+
+.c-price{color: $money-color;}
+.c-finance{color: $finance-color;}
+.c-brand{color: $brand-color;}
+
+.c-link{color: $link-colour;}
+
+.bg-finance{background-color: $finance-tint;}
+.bg-brand{background-color: $brand-color;} 
+.bg-grey{background-color: $vlow-contrast;}

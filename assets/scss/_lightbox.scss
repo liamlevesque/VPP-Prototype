@@ -1,17 +1,43 @@
-.lb-background{
-	background-color: rgba(black,0.6);
+.lb{
 	position: fixed;
+	top: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9000;
+	overflow-y: hidden;
+	transition: top $transition-time_2 $transition-function $transition-time_1;
+
+	&.s-open{
+		top: 0;
+		//overflow-y: auto;
+		transition: top $transition-time_2 $transition-function;
+
+		.lb-window{
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+			transition: opacity $transition-time_2 $transition-function $transition-time_1, transform $transition-time_2 $transition-function $transition-time_1;
+		}
+	}
+}
+
+.lb-background{
+	cursor: pointer;
+	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	display: none;
-	z-index: 9000;
-	overflow-y: auto;
+	background-color: rgba(black,0.6);
+}
 
-	&.s-open{
-		display: block;
-	}
+.lb-window-scroll{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: auto;
 }
 
 .lb-window{
@@ -19,10 +45,13 @@
 	width: 600px;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%) translateY(50%);
+	opacity: 0;
+	transition: opacity $transition-time_2 $transition-function, transform $transition-time_2 $transition-function;
 	margin: 50px 0;
 
 	background-color: white;
+}
 	
 	.lb-window-close{
 		position: absolute;
@@ -31,9 +60,7 @@
 		background-color: transparent;
 		padding: $default-margin;
 
-		img{
-			width: 15px;
-		}
+		z-index: 500;
 	}
 
 	.lb-content{
@@ -48,25 +75,160 @@
 	.lb-action-area{
 		padding: $default-margin;
 		background-color: $vlow-contrast;
-		text-align: right;
-	}
+		position: relative;
+		overflow: hidden;
+		text-align: center;
 
-}
-
-
-
-.collapsible{
-
-	.default-hidden{
-		display: none;
-	}
-
-	&.s-expanded{
-		.default-shown{
-			display: none;
+		button{
+			display: inline-block;
 		}
-		.default-hidden{
-			display: block;
+
+		&--secondary{
+			@extend .grey-link;
+			display: inline-block;
 		}
 	}
-}
+
+	.lb-wizard{
+		overflow-y: hidden;
+		position: relative;
+
+		&.s-step-1{
+			.step-1{
+				max-height: 400px;
+
+				.step-content{
+					transform: translateY(0);
+					opacity: 1;
+					transition: opacity $transition-time_2 $transition-function, transform $transition-time_2 $transition-function;
+				}
+			}
+
+			.step-2{
+				background-color: $vlow-contrast;
+			}
+
+			.step-2a{
+				max-height: 50px;
+			}
+
+			.step-2b{
+				max-height: 0;
+
+				.step-content{
+					transform: translateY(50%);
+					opacity: 0;
+				}
+			}
+
+			.step-3{
+				max-height: 0;
+
+				.step-content{
+					transform: translateY(50%);
+					opacity: 0;
+				}
+			}
+		}
+
+		&.s-step-2{
+			.step-1{
+				max-height: 0;
+
+				.step-content{
+					transform: translateY(-50%);
+					opacity: 0;
+					transition: opacity $transition-time_2 $transition-function, transform $transition-time_2 $transition-function;
+				}
+			}
+
+			.step-2{
+				background-color: $vlow-contrast;
+			}
+
+			.step-2a{
+				max-height: 0;
+			}
+			.step-2b{
+				max-height: 300px;
+				transition: max-height $transition-time_2 $transition-function;
+
+				.step-content{
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.step-3{
+				max-height: 0;
+
+				.step-content{
+					transform: translateY(50%);
+					opacity: 0;
+				}
+			}
+		}
+
+		&.s-step-3{
+			.step-1{
+				max-height: 0;
+			}
+
+			.step-2{
+				background-color: $brand-color;
+			}
+
+			.step-2a{
+				max-height: 0;
+			}
+			.step-2b{
+				max-height: 300px;
+				
+				.lb-airplane--hiding-message{
+					max-height: 0;
+				}
+
+				.step-content{
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.step-3{
+				max-height: 1000px;
+
+				.step-content{
+					transform: translateY(0);
+					opacity: 1;
+				} 
+			}
+		}
+	}
+
+	.lb-wizard--step{
+		overflow-y: hidden;
+		transition: max-height $transition-time_2 $transition-function;
+	}
+
+	.lb-airplane--hiding-message{
+		max-height: 50px;
+		transition: max-height $transition-time_2 $transition-function;
+		overflow-y: hidden;
+	}
+
+	.step-2{
+		transition: background-color $transition-time_2 $transition-function;
+	}
+
+	.step-content{
+		transition: opacity $transition-time_2 $transition-function $transition-time_1, transform $transition-time_2 $transition-function $transition-time_1;
+	}
+
+	
+
+
+
+
+
+
+

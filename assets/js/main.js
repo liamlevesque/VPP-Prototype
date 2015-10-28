@@ -5,7 +5,7 @@ $(function(){
 	*********************************/
 		updatePrices();
 		updateTotals();
-
+		updateTotalItems();
 	
 	/*********************************
 		FINANCE CALCULATOR CONTROLS
@@ -33,30 +33,52 @@ $(function(){
 			updateTotals();
 		});
 
-	/*********************************
+		// $('.js--toggle-finance').click(function(){
+		// 	if(isFinancingHidden) return;
+		// 	isFinancingHidden = true;
+				
+		// 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
+		// 		financeHeight = parseInt($('.js--finance-container').css('height'));
+
+		// 	$('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
+
+		// 	$('.js--finance-container').addClass('s-hidden');
+		// });
+
+	/********************************* 
 		PURCHASE ROWS 
 	*********************************/
-		$('.js--purchase .js--monthly').click(function(e){
-			//$(this).find('.js--monthly-toggle')[0].click();
-
-			//var target = $(this).find('.js--monthly-toggle');
-			//$(this).find('.js--monthly-toggle').hide();
-			//target.prop('checked',!target.prop('checked'));
-			//$(this).toggleClass('s-finance-inactive');
-			//updateTotals();
-		});
-
 		$('.js--monthly-toggle').on('change',function(){
 			$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
 			updateTotals();
+		});
+
+		//ANY NUMBER THAT WE WANT TO ADD COMMAS TO GETS PROCESSED HERE - USED FOR UNIT PRICING ATM
+		$('.js--insert-commas').each(function(){
+			$(this).html(numberWithCommas($(this).html()));
 		});
 
 
 	/*********************************
 		WAYPOINTS
 	*********************************/
-		var waypoints = new Waypoint.Sticky({
-			element: $('.js--pin-section')
+		var waypoints = new Waypoint({
+			element: $('.js--sticky-wrapper'),
+			handler: function(direction) {
+				$('.js--sticky-wrapper').css('height',$('.js--sticky-wrapper').css('height'));
+				// var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
+				// 	financeHeight = parseInt($('.js--finance-container').css('height'));
+				
+				if(direction === 'down'){
+					$('.js--pin-section').addClass('s-stuck');
+					// if(isFinancingHidden) $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
+					// else $('.js--sticky-wrapper').css('height',currentHeight + 'px');
+				}
+				else{
+					$('.js--pin-section').removeClass('s-stuck');
+					//if(isFinancingHidden) $('.js--sticky-wrapper').css('height',currentHeight + financeHeight + 'px');
+				}
+			}
 		});
 
 
@@ -65,14 +87,36 @@ $(function(){
 	*********************************/
 		$('.js--lb-show').click(function(){
 			$('.js--lightbox').addClass('s-open');
+			$('.js--body').addClass('s-no-scroll');
 		});
 
 		$('.js--lb-close').click(function(){
 			$('.js--lightbox').removeClass('s-open');
+			$('.js--body').removeClass('s-no-scroll');
 		});
 
 		$('.js--collapsible-toggle').click(function(){
 			$(this).parents('.js--collapsible').toggleClass('s-expanded');
+		});
+
+		$('.js--lb-window').click(function(e){
+			e.stopPropagation(); //PREVENT ACTIONS IN THE MODAL FROM TRIGGERING THE CLOSE BEHAVIOUR
+		});
+
+		/////// WIZARD ////////
+
+		$('.js--s1-continue').click(function(){
+			$('.js--wizard').removeClass('s-step-1').addClass('s-step-2');
+			
+			setTimeout(function(){
+				$('.js--wizard').removeClass('s-step-2').addClass('s-step-3');	
+			},3000);
+			
+			// var currentStep = $('.js--wizard-step.s-active').data('step'),
+			// 	nextStep = currentStep + 1;
+			
+			// $('.js--wizard-step.s-active').addClass('s-complete').removeClass('s-active');
+			// $('.js--wizard-step[data-step="' + nextStep + '"]').addClass('s-active');
 		});
 
 }); 
@@ -87,7 +131,16 @@ function numberWithCommas(x) {
 }
 
 var interest = 3.95,
-	period = 48;
+	period = 48,
+	isFinancingHidden = false;
+
+// function resizeStickySection(hideOrNot){
+// 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
+// 		financeHeight = parseInt($('.js--finance-container').css('height'));
+
+// 	//if(hideOrNot) $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
+// 	 $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
+// }
 
 function updateInterest(val){
 	if(val < 0) interest = 0;
@@ -122,6 +175,25 @@ function updatePrices(){
 	}); 
 }
 
+function pluralize(word, qty){
+	if(qty > 1) return word + 's';
+	else return word;
+}
+
+function updateTotalItems(){
+	var totalItemsFinance = 0,
+		totalItems = 0;
+
+	$('.js--purchase').each(function(){ //COUNT HOW MANY ITEMS ON PAGE AND UPDATE PLACES SHOWING COUNT
+		totalItems += 1;
+		if(!$(this).hasClass('s-finance-inactive')) totalItemsFinance += 1;
+	});
+	
+	$('.js--total-items').html(totalItems + " " + pluralize('item',totalItems));
+	$('.js--total-items_finance').html(totalItemsFinance + " " + pluralize('item',totalItemsFinance));
+	
+}
+
 function updateTotals(){
  	var totalPrice = 0,
  		totalFinance = 0,
@@ -131,9 +203,11 @@ function updateTotals(){
 		totalPrice += $(this).data('price');
 
 		//IF THIS ROW IS OFF FOR FINANCING, DON'T ADD TO TOTAL FOR FINANCING
-		if(!$(this).next('.js--monthly').hasClass('s-finance-inactive')) totalForFinance += $(this).data('price');
-	});
+		if(!$(this).next('.js--monthly').hasClass('s-finance-inactive')){
+			totalForFinance += $(this).data('price');
+		} 
 
+	});
 
 	$('.js--monthly:not(.s-finance-inactive)').each(function(){
 		totalFinance += $(this).data('price');

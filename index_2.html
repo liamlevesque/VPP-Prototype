@@ -18,7 +18,7 @@
 
 				<div class="h-p-center">
 					<h1>Purchase Summary</h1>
-					<p><label>Last Updated:</label><span class="smalltext">&nbsp;3 minutes ago</span><button class="icon icon_plain"><img src="assets/img/refresh.png"/></button></p>
+					<p><label>Last Updated:</label><span class="smalltext">&nbsp;3 minutes ago</span><button class="icon"><img src="assets/img/refresh.png"/></button></p>
 				</div>
 
 				<div class="h-f-right">
@@ -297,58 +297,44 @@
 			<div class="lb-window js--lb-window">
 				<button class="icon lb-window-close js--lb-close"><img src="assets/img/close.png"/></button>
 				
-				<div class="lb-wizard js--wizard s-step-1">
+				<div class="lb-wizard">
 				
-					<div class="lb-wizard--step step-1">
-						<div class="step-content">
-							<div class="lb-content">
-								<h2>So you want to apply for financing, huh?</h2>
-								<p>You have asked for financing on <span class="js--total-items_finance"></span> totalling to <span class="js--finance-total"><span class="dollars_200 js--dollars"></span><span class="cents_200 h-va-super js--cents"></span></span>.</p>
-								<p>If that looks right, click "apply now" to confirm and we will submit your request using the contact information provided with your bidding account.</p>
-							</div>
+					<div class="lb-wizard-step js--wizard-step s-active" data-step="1">
+						<div class="lb-content">
+							<h2>So you want to apply for financing, huh?</h2>
+							<p>You have asked for financing on <span class="js--total-items_finance"></span> totalling to <span class="js--finance-total"><span class="dollars_200 js--dollars"></span><span class="cents_200 h-va-super js--cents"></span></span>.</p>
+							<p>If that looks right, click "apply now" to confirm and we will submit your request.</p>
+						</div>
+						<div class="lb-action-area">
+							<!-- <div class="lb-action-area--secondary js--lb-close">cancel</div> -->
+							<button class="lb-action-area--primary js--lb-continue">Apply Now!</button>
 						</div>
 					</div>
 
-					<div class="step-2">
+					<div class="lb-wizard-step js--wizard-step" data-step="2">
 						<div class="lb-content">
-							<div class="lb-wizard--step step-2a">
-								<button class="js--s1-continue">Apply Now!</button>
-							</div>
-
-							<div class="lb-wizard--step step-2b">
-								<div class="step-content">
-									<div class="lb-airplane--hiding-message">Sending Application</div>
-									<img src="assets/img/airplane.png"/>
+							<img src="assets/img/airplane.png"/>
+							<h2>Your finance application has been sent.<br/>High Five!</h2>
+							<p> One of our finance representatives will contact you within 48 hours. We've also sent you confirmation of your application via e-mail.</p>
+							<p>If you have any questions in the meantime, please contact Ritchie Bros. Financial Services at:</p>
+							<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
+							<div class="collapsible js--collapsible">
+								<div class="default-shown js--default-shown">
+									<div class="grey-link js--collapsible-toggle">show contact information for the rest of the world</div>
+								</div>
+								<div class="default-hidden js--default-hidden">
+									<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
+									<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
+									<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
+									<div class="grey-link js--collapsible-toggle">hide contact information for the rest of the world</div>
 								</div>
 							</div>
+							<br/>
+							<br/>
+							<p class="c-brand">Please reference your bidder number: 123456</p>
 						</div>
-
-						<div class="lb-wizard--step step-3">
-							<div class="step-content">
-								<div class="lb-content">
-									<h2>Your finance application has been sent.<br/>High Five!</h2>
-									<p> One of our finance representatives will contact you within 48 hours. We've also sent you confirmation of your application via e-mail.</p>
-									<p>If you have any questions in the meantime, please contact Ritchie Bros. Financial Services at:</p>
-									<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
-									<div class="collapsible js--collapsible">
-										<div class="default-shown js--default-shown">
-											<div class="grey-link js--collapsible-toggle">show contact information for the rest of the world</div>
-										</div>
-										<div class="default-hidden js--default-hidden">
-											<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
-											<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
-											<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
-											<div class="grey-link js--collapsible-toggle">hide contact information for the rest of the world</div>
-										</div>
-									</div>
-									<br/>
-									<br/>
-									<p class="c-brand">Please reference your bidder number: 123456</p>
-								</div>
-								<div class="lb-action-area bg">
-									<button class="js--lb-close">OK, Got it!</button>
-								</div>
-							</div>
+						<div class="lb-action-area">
+							<button class="js--lb-close">OK, Got it!</button>
 						</div>
 					</div>
 

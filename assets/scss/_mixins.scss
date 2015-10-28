@@ -16,15 +16,6 @@ $dark-contrast: #585858;
 
 $border-color: #bdbdbd;
 
-.c-price{color: $money-color;}
-.c-finance{color: $finance-color;}
-.c-brand{color: $brand-color;}
-
-.c-link{color: $link-colour;}
-
-.bg-finance{background-color: $finance-tint;}
-
-
 //MEASUREMENTS
 
 $default-margin: 15px;
@@ -33,7 +24,11 @@ $toggle-height: 14px;
 $toggle-padding: 40px; //THIS IS HOW MUCH THE MONEY
 
 //TRANSITIONS
-$transition: .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$transition-time_1: .2s;
+$transition-time_2: .35s;
+$transition-function: cubic-bezier(0.630, 0.005, 0.365, 1.000);//cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+$transition: $transition-time_1 $transition-function;
 
 
 @mixin breakpoint($point) {
