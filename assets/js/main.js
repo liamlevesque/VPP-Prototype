@@ -15,6 +15,10 @@ $(function(){
 			updateInterest(parseFloat($(this).val()).round(2));
 		});
 
+		$('.js--finance-interest')[0].addEventListener('mousewheel', function(e){
+			if(parseFloat($(this).val()) < 0) $(this).val(0.00);
+		});
+
 		$('.js--interest-plus, .js--interest-minus').click(function(){
 			
 			var tempValue = parseFloat($('.js--finance-interest').val()).round(2), 
