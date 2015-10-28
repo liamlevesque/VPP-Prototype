@@ -55,7 +55,13 @@ input[type=number]::-webkit-outer-spin-button {
     background-position: right -33px; }
 
 .field--toggle {
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
   .field--toggle .toggle-control {
     -webkit-transition: 0.2s cubic-bezier(0.63, 0.005, 0.365, 1);
             transition: 0.2s cubic-bezier(0.63, 0.005, 0.365, 1);
