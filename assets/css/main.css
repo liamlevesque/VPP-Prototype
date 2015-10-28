@@ -390,7 +390,8 @@ header {
   text-align: right;
   padding-right: 10px; }
 .details-table .calculation {
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
 
 .details--entry {
   display: block;
@@ -694,8 +695,6 @@ footer {
 .lb-content {
   padding: 30px;
   text-align: center; }
-  .lb-content img {
-    margin-bottom: 15px; }
 
 .lb-action-area {
   padding: 15px;
@@ -770,7 +769,9 @@ footer {
   .lb-wizard.s-step-3 .step-1 {
     max-height: 0; }
   .lb-wizard.s-step-3 .step-2 {
-    background-color: #E87722; }
+    background-color: white; }
+    .lb-wizard.s-step-3 .step-2 .lb-content {
+      padding-bottom: 0; }
   .lb-wizard.s-step-3 .step-2a {
     max-height: 0; }
   .lb-wizard.s-step-3 .step-2b {
@@ -796,7 +797,7 @@ footer {
           transition: max-height 0.35s cubic-bezier(0.63, 0.005, 0.365, 1); }
 
 .lb-airplane--hiding-message {
-  max-height: 50px;
+  max-height: 100px;
   -webkit-transition: max-height 0.35s cubic-bezier(0.63, 0.005, 0.365, 1);
           transition: max-height 0.35s cubic-bezier(0.63, 0.005, 0.365, 1);
   overflow-y: hidden; }
@@ -804,6 +805,8 @@ footer {
 .step-2 {
   -webkit-transition: background-color 0.35s cubic-bezier(0.63, 0.005, 0.365, 1);
           transition: background-color 0.35s cubic-bezier(0.63, 0.005, 0.365, 1); }
+  .step-2 .lb-content {
+    padding: 15px 30px; }
 
 .step-content {
   -webkit-transition: opacity 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s, -webkit-transform 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s;
@@ -833,7 +836,10 @@ footer {
 .h-pt-100 {
   padding-top: 15px; }
 
-.h-p-center {
+.h-p-0 {
+  padding: 0; }
+
+.h-pos-center {
   position: absolute;
   top: 15px;
   left: 50%;
@@ -841,6 +847,10 @@ footer {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: center; }
+
+.h-mw-400 {
+  max-width: 400px;
+  margin: 0 auto; }
 
 .h-f-right {
   position: absolute;
@@ -865,6 +875,9 @@ footer {
 
 .c-link {
   color: #1478BC; }
+
+.c-grey {
+  color: #959595; }
 
 .c-white {
   color: white; }

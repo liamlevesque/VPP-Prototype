@@ -68,7 +68,7 @@
 		text-align: center;
 
 		img{
-			margin-bottom: $default-margin;
+			//margin-bottom: $default-margin;
 		}
 	}
 
@@ -175,7 +175,11 @@
 			}
 
 			.step-2{
-				background-color: $brand-color;
+				background-color: white;
+
+				.lb-content{
+					padding-bottom: 0;
+				}
 			}
 
 			.step-2a{
@@ -211,13 +215,17 @@
 	}
 
 	.lb-airplane--hiding-message{
-		max-height: 50px;
+		max-height: 100px;
 		transition: max-height $transition-time_2 $transition-function;
 		overflow-y: hidden;
 	}
 
 	.step-2{
 		transition: background-color $transition-time_2 $transition-function;
+
+		.lb-content{
+			padding: $default-margin $default-margin * 2;
+		}
 	}
 
 	.step-content{
