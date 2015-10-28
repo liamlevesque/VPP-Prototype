@@ -17,11 +17,11 @@
   }
 
   &:hover{
-    border: 1px solid $active-colour;
+    border: 1px solid $border-active;
   }
 
   &:focus{
-    border: 1px solid $active-colour;
+    border: 1px solid $border-active;
   }
 }
 
