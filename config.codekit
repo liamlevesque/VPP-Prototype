@@ -99,6 +99,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/qmark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 700,
+		"inputAbbreviatedPath": "\/assets\/img\/qmark.png",
+		"outputAbbreviatedPath": "\/assets\/img\/qmark.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/refresh.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -265,6 +276,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/scss\/_mixins.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_mixins.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/scss\/_tooltip.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/scss\/_tooltip.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_tooltip.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1234,6 +1261,344 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/tooltipster-master\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-noir.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-noir.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-punk.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-punk.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-shadow.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/css\/themes\/tooltipster-shadow.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/css\/tooltipster.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/css\/tooltipster.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/demo\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/demo\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/demo\/map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6353,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/demo\/map.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/demo\/map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/demo\/reset.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/demo\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/demo\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/demo\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/css\/prettify.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/css\/prettify.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/css\/reset.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/css\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/browser-chrome.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8439,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-chrome.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-chrome.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/browser-firefox.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9351,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-firefox.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-firefox.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/browser-ie.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5305,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-ie.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-ie.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/browser-opera.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4585,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-opera.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-opera.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/browser-safari.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12435,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-safari.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/browser-safari.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/favicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 378,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/favicon.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/favicon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/large-background.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 159444,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/large-background.jpg",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/large-background.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/pattern-navy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 119069,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/pattern-navy.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/pattern-navy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/social.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14777,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/social.jpg",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/social.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/images\/spiderman.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24528,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/spiderman.png",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/images\/spiderman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/tooltipster-master\/doc\/js\/jquery.jgfeed.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/jquery.jgfeed.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/min\/jquery.jgfeed-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/doc\/js\/lang-css.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/lang-css.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/min\/lang-css-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/doc\/js\/prettify.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/prettify.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/min\/prettify-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/doc\/js\/scripts.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/scripts.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/doc\/js\/min\/scripts-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/tooltipster-master\/js\/jquery.tooltipster.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/js\/jquery.tooltipster.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/js\/min\/jquery.tooltipster-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/js\/jquery.tooltipster.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/js\/jquery.tooltipster.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/js\/min\/jquery.tooltipster.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/tooltipster-master\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/bower_components\/tooltipster-master\/tooltipster.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/tooltipster-master\/tooltipster.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/tooltipster-master\/tooltipster.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/bower_components\/waypoints\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -1503,6 +1868,12 @@
 			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/bower_components\/waypoints\/lib\/jquery.waypoints.min.js",
 			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 0,
+			"linkedFileAbbreviatedPath": "\/bower_components\/tooltipster-master\/js\/jquery.tooltipster.min.js",
+			"position": 2,
 			"type": 0
 			}
 		]

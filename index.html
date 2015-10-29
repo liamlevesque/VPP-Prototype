@@ -127,7 +127,10 @@
 					<div class="col-1"><label>Lot #</label></div>
 					<div class="col-2"><label>Description</label></div>
 					<div class="col-3"><label>Price</label></div>
-					<div class="col-4"><label>Financing<br/>Est. Monthly Payment</label></div>
+					<div class="col-4 h-pos-relative">
+						<label>Financing<br/>Est. Monthly Payment</label>
+						<div class="js--tooltip_finance-disclaimer tooltip_ne"><img src="assets/img/qmark.png"/></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -151,7 +154,7 @@
 				<div class="col-4 js--monthly box-money_finance" data-price="0">
 					<span class="dollars_400 js--dollars"></span>
 					<span class="cents_400 js--cents"></span>
-					<label class="field--toggle">
+					<label class="field--toggle js--tooltip-monthly-toggle">
 						<input type="checkbox" class="toggle_input js--monthly-toggle" />
 						<div class="toggle-control"></div>
 					</label>
@@ -180,7 +183,7 @@
 				<div class="col-4 js--monthly box-money_finance" data-price="0">
 					<span class="dollars_400 js--dollars"></span>
 					<span class="cents_400 js--cents"></span>
-					<label class="field--toggle">
+					<label class="field--toggle js--tooltip-monthly-toggle">
 						<input type="checkbox" class="toggle_input js--monthly-toggle" />
 						<div class="toggle-control"></div>
 					</label>
@@ -202,7 +205,7 @@
 				<div class="col-4 js--monthly box-money_finance" data-price="0">
 					<span class="dollars_400 js--dollars"></span>
 					<span class="cents_400 js--cents"></span>
-					<label class="field--toggle">
+					<label class="field--toggle js--tooltip-monthly-toggle js--tooltip-monthly-toggle">
 						<input type="checkbox" class="toggle_input js--monthly-toggle" />
 						<div class="toggle-control"></div>
 					</label>
@@ -224,7 +227,7 @@
 				<div class="col-4 js--monthly box-money_finance" data-price="0">
 					<span class="dollars_400 js--dollars"></span>
 					<span class="cents_400 js--cents"></span>
-					<label class="field--toggle">
+					<label class="field--toggle js--tooltip-monthly-toggle">
 						<input type="checkbox" class="toggle_input js--monthly-toggle" />
 						<div class="toggle-control"></div>
 					</label>
@@ -246,7 +249,7 @@
 				<div class="col-4 js--monthly box-money_finance" data-price="0">
 					<span class="dollars_400 js--dollars"></span>
 					<span class="cents_400 js--cents"></span>
-					<label class="field--toggle">
+					<label class="field--toggle js--tooltip-monthly-toggle">
 						<input type="checkbox" class="toggle_input js--monthly-toggle" />
 						<div class="toggle-control"></div>
 					</label>
@@ -371,6 +374,16 @@
 
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="tooltips--content-placeholder">
+		<div class="js--tooltip_finance-disclaimer--content">
+			<p>Financing is available in select countries on approved credit. Estimated monthly payment is based on a typical term and interest rate. Actual payments may vary.</p>
+		</div>
+
+		<div class="js--tooltip-monthly-toggle--content">
+			<p>Click to turn financing on/off for this item</p>
 		</div>
 	</div>
 

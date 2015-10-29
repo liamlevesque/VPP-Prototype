@@ -1,3 +1,4 @@
+@import url(../../bower_components/tooltipster-master/css/tooltipster.css);
 .field--text, .field--select {
   width: 100%;
   height: 30px;
@@ -29,17 +30,17 @@
   position: relative;
   display: inline-block; }
   .field--w-modifier button {
-    width: 30px;
+    width: 28px;
     padding: 0;
     position: absolute;
     border-radius: 0;
     display: block;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
     line-height: 1; }
     .field--w-modifier button:last-child {
-      right: 32px; }
+      right: 31px; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -286,18 +287,25 @@ label {
 **********************/
 button {
   background-color: #E87722;
-  padding: 10px 15px;
-  color: white;
-  font-size: 1.1rem;
+  background-image: -webkit-linear-gradient(#FAB558, #F69731);
+  background-image: linear-gradient(#FAB558, #F69731);
+  border: 1px solid #E87722;
+  border-radius: 5px;
+  color: black;
+  padding: 8px 15px;
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 10px;
-  border: 0;
   outline: none;
   cursor: pointer; }
   button:hover {
-    background-color: #c35f14; }
+    background-color: #c35f14;
+    background-image: -webkit-linear-gradient(#F58D31, #EB6D30);
+    background-image: linear-gradient(#F58D31, #EB6D30);
+    color: white; }
   button.icon {
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    border: 0; }
     button.icon img {
       width: 15px; }
     button.icon.icon_plain {
@@ -826,6 +834,34 @@ footer {
   -webkit-transition: opacity 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s, -webkit-transform 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s;
           transition: opacity 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s, transform 0.35s cubic-bezier(0.63, 0.005, 0.365, 1) 0.2s; }
 
+.tooltips--content-placeholder {
+  display: none; }
+
+.tooltip_ne {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px; }
+  .tooltip_ne img {
+    width: 100%;
+    max-width: 100%; }
+
+.ritchie-tooltips {
+  border-radius: 5px;
+  border: none;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  max-width: 300px; }
+
+/* Use this next selector to style things like font-size and line-height: */
+.ritchie-tooltips .tooltipster-content {
+  font-size: 1rem;
+  padding: 15px;
+  overflow: visible; }
+  .ritchie-tooltips .tooltipster-content p {
+    margin: 0; }
+
 /*******************
 	HELPER CLASSES
 ********************/
@@ -852,6 +888,9 @@ footer {
 
 .h-p-0 {
   padding: 0; }
+
+.h-pos-relative {
+  position: relative; }
 
 .h-pos-center {
   position: absolute;

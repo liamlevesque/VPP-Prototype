@@ -33,7 +33,7 @@
     text-decoration: underline;
     cursor: pointer;
   }
-  
+
 }
 
 .field--text{
@@ -45,18 +45,18 @@
   display: inline-block;
   
   button{
-    width: $input-height;
+    width: $input-height - 2;
     padding: 0; 
     position: absolute;
     border-radius: 0;
     display: block;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
     line-height: 1;
 
     &:last-child{
-      right: $input-height + 2;
+      right: $input-height + 1;
     }
   }
 }

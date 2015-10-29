@@ -100,22 +100,30 @@ label{
 	BUTTONS
 **********************/
 button{
+	
 	background-color: $brand-color;
-	padding: 10px $default-margin;
-	color: white;
-	font-size: 1.1rem;
+	background-image: $button-gradient;
+	border: 1px solid $brand-color;
+	border-radius: $default-border-radius;
+	color: black;
+	
+	padding: 8px $default-margin;
+	
+	font-size: 1rem;
 	font-weight: 700;
-	border-radius: 10px;
-	border: 0; 
 	outline: none;
 	cursor: pointer;
 
 	&:hover{
 		background-color: darken($brand-color,10%);
+		background-image: $button-gradient_hover;
+		color: white;
 	}
 
 	&.icon{
 		background-color: transparent;
+		background-image: none;
+		border: 0;
 
 		img{
 			width: 15px;

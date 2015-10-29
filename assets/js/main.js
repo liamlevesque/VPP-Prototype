@@ -28,7 +28,7 @@ $(function(){
 		$('.js--finance-interest').on('input', function(){
 			if($(this).val().length == 0) return; //don't recalculate if this is empty
 			updateInterest(parseFloat($(this).val()).round(2));
-		});
+		}); 
 
 		$('.js--finance-interest').on('keypress', function(e){
 			if (e.keyCode != 46 && e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57))
@@ -63,17 +63,14 @@ $(function(){
 			updateTotals();
 		});
 
-		// $('.js--toggle-finance').click(function(){
-		// 	if(isFinancingHidden) return;
-		// 	isFinancingHidden = true;
-				
-		// 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
-		// 		financeHeight = parseInt($('.js--finance-container').css('height'));
-
-		// 	$('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
-
-		// 	$('.js--finance-container').addClass('s-hidden');
-		// });
+		//TOOLTIP FOR THE FINANCING DISCLAIMER
+		$('.js--tooltip_finance-disclaimer').tooltipster({
+			content: $($('.js--tooltip_finance-disclaimer--content').html()),
+			theme: 'ritchie-tooltips',
+			timer: 10000,
+			hideOnClick: true,
+			position: 'bottom-right'
+		});
 
 	/********************************* 
 		PURCHASE ROWS 
@@ -81,6 +78,16 @@ $(function(){
 		$('.js--monthly-toggle').on('change',function(){
 			$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
 			updateTotals();
+		});
+
+		//TOOLTIPS ON THE MONTHLY FINANCING TOGGLE
+		$('.js--tooltip-monthly-toggle').tooltipster({
+			content: $($('.js--tooltip-monthly-toggle--content').html()),
+			theme: 'ritchie-tooltips',
+			delay: 1000,
+			timer: 2000,
+			hideOnClick: true,
+			position: 'bottom-right'
 		});
 
 		//ANY NUMBER THAT WE WANT TO ADD COMMAS TO GETS PROCESSED HERE - USED FOR UNIT PRICING ATM

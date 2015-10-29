@@ -6,6 +6,9 @@ $finance-tint: #D3E8CB;
 $finance-dabled: #F3FFF8;
 $money-color: #20579E;
 
+$button-gradient: linear-gradient(#FAB558, #F69731);
+$button-gradient_hover: linear-gradient(#F58D31, #EB6D30);
+
 $error-colour: #c4483a;
 $error-colour-light: #F3BFBF;
 $active-colour: #20579E;
@@ -21,10 +24,12 @@ $border-active: #E35530;
 
 //MEASUREMENTS
 
+$default-border-radius: 5px;
 $default-margin: 15px;
 $input-height: 30px;
 $toggle-height: 14px;
 $toggle-padding: 40px; //THIS IS HOW MUCH THE MONEY
+$tooltip-icon-size: 24px;
 
 //TRANSITIONS
 $transition-time_1: .2s;
