@@ -6,6 +6,7 @@
 
 body{
 	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	font-size: 95%;
 	margin: 0;
 	padding: 0;
 
@@ -156,6 +157,26 @@ button{
 			margin-top: $default-margin;
 			margin-right: $default-margin;
 		}
+
+		&_black{
+			border: 1px solid black;
+			padding: $default-margin;
+			position: relative;
+		}
+	}
+
+	.box--header, .box--divider{
+		padding: $default-margin/2 $default-margin;
+		margin: (-$default-margin) (-$default-margin) $default-margin;
+		background-color: black;
+
+		h3{
+			margin: 0;
+		}
+	}
+
+	.box--divider{
+		margin: 0 (-$default-margin) $default-margin;
 	}
 
 	.box--footer{
@@ -219,11 +240,11 @@ button{
 	}
 
 	.top-section{
-		background-color: $grey-100;
+		background-color: $grey-50;
 	}
 
 	.content--center{
-		max-width: 1000px;
+		max-width: 990px;
 		margin: 0 auto;
 		//overflow: hidden;
 		position: relative;

@@ -218,6 +218,7 @@ GRID
 *******************/
 body {
   font-family: 'Trebuchet MS', Verdana, sans-serif;
+  font-size: 95%;
   margin: 0;
   padding: 0; }
   body.s-no-scroll {
@@ -326,6 +327,20 @@ button {
     padding: 15px;
     margin-top: 15px;
     margin-right: 15px; }
+  .box-bordered_black {
+    border: 1px solid black;
+    padding: 15px;
+    position: relative; }
+
+.box--header, .box--divider {
+  padding: 7.5px 15px;
+  margin: -15px -15px 15px;
+  background-color: black; }
+  .box--header h3, .box--divider h3 {
+    margin: 0; }
+
+.box--divider {
+  margin: 0 -15px 15px; }
 
 .box--footer {
   position: absolute;
@@ -372,10 +387,10 @@ header {
       height: 8px; }
 
 .top-section {
-  background-color: #E9E9E9; }
+  background-color: #e8e6e2; }
 
 .content--center, footer {
-  max-width: 1000px;
+  max-width: 990px;
   margin: 0 auto;
   position: relative; }
 
@@ -848,16 +863,17 @@ footer {
     max-width: 100%; }
 
 .ritchie-tooltips {
-  border-radius: 5px;
-  border: none;
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
+  border-radius: 0;
+  border: 1px solid black;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  background: white;
+  color: black;
   max-width: 300px; }
 
 /* Use this next selector to style things like font-size and line-height: */
 .ritchie-tooltips .tooltipster-content {
   font-size: 1rem;
-  padding: 15px;
+  padding: 7.5px 15px;
   overflow: visible; }
   .ritchie-tooltips .tooltipster-content p {
     margin: 0; }

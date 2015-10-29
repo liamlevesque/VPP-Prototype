@@ -6,14 +6,12 @@ $finance-tint: #D3E8CB;
 $finance-dabled: #F3FFF8;
 $money-color: #20579E;
 
-$button-gradient: linear-gradient(#FAB558, #F69731);
-$button-gradient_hover: linear-gradient(#F58D31, #EB6D30);
-
 $error-colour: #c4483a;
 $error-colour-light: #F3BFBF;
 $active-colour: #20579E;
 $link-colour: #1478BC;
 
+$grey-50: #e8e6e2;
 $grey-100: #E9E9E9;
 $grey-300: #bfc0be;
 $grey-500: #959595;
@@ -21,6 +19,13 @@ $grey-700: #585858;
 
 $border-color: #bdbdbd;
 $border-active: #E35530;
+
+//GRADIENTS
+$button-gradient: linear-gradient(#FAB558, #F69731);
+$button-gradient_hover: linear-gradient(#F58D31, #EB6D30);
+
+//BOX SHADOW
+$ritchie-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 
 //MEASUREMENTS
 
