@@ -40,7 +40,7 @@
 								<li class="details--entry"><label>Bidder No:</label><span>123456</span></li>
 								<li class="details--entry"><label>Bidding Limit:</label><span>$146,700</span></li>
 								<li class="details--entry"><label>Auction:</label><span><a href="#" class="c-link">Chilliwack</a></span></li>
-								<li class="details--entry"><label>Bidder No:</label><span>123456</span></li>
+								<li class="details--entry"><label>Values shown in:</label><span class="dollars--currency js--toggle-currency">CAD</span></li>
 							</ul>
 						</div>
 
@@ -78,26 +78,30 @@
 							<ul class="details-table">
 								<li class="calculation js--finance-total">
 									<label>Total Selected for Financing</label>
-									<span class="dollars_200 js--dollars c-finance"></span>
-									<span class="cents_200 js--cents c-finance"></span>
+									<div>
+										<span class="dollars_200 js--dollars c-price"></span>
+										<span class="cents_200 js--cents c-price"></span>
+									</div>
 								</li>
 								<li class="calculation">
 									<label>Interest Rate</label>
 									<div class="field--w-modifier">
-										<input type="number" class="js--finance-interest field--text" value="3.95">
+										<input type="text" class="js--finance-interest field--text" value="3.95%">
 										<button class="js--interest-minus" data-increment="-0.5">-</button>
 										<button class="js--interest-plus" data-increment="0.5">+</button>
 									</div>
 								</li>
 								<li class="calculation">
 									<label>Payment Period</label>
-									<select name="select" class="js--finance-period field--select">
-									  <option value="3">3 Months</option> 
-									  <option value="6">6 Months</option> 
-									  <option value="12">12 Months</option> 
-									  <option value="24">24 Months</option> 
-									  <option value="48" selected>48 Months</option>
-									</select>
+									<div>
+										<select name="select" class="js--finance-period field--select">
+										  <option value="3">3 Months</option> 
+										  <option value="6">6 Months</option> 
+										  <option value="12">12 Months</option> 
+										  <option value="24">24 Months</option> 
+										  <option value="48" selected>48 Months</option>
+										</select>
+									</div>
 								</li>
 							</ul>
 						</div>
@@ -306,47 +310,18 @@
 								<p>Before you do, please ensure that these details are correct:</p>
 								
 								<div class="h-mw-400">
-									<div class="box-money_finance h-ta-center h-mb-50">
+									<div class="box-money_total h-ta-center h-mb-0">
 										<label class="h-mb-100">TOTAL FINANCE VALUE</label>
 										<p class="js--finance-total h-mb-50">
-											<span class="dollars_700 js--dollars"></span><span class="cents_700 h-va-super js--cents"></span></span>
+											<span class="dollars_700 js--dollars c-price"></span><span class="cents_700 c-price h-va-super js--cents"></span></span>
 										</p>
 										<p class="h-mb-0">
 											(<span class="js--total-items_finance c-black"></span>)
 										</p>
 									</div>
-
-									<div class="box-bordered h-p-0">
-										<ul class="details-table">
-											<li class="details--entry">
-												<label>Your Name</label><span>Joe Bidder</span>
-											</li>
-											<li class="details--entry">
-												<label>Telephone</label><span>604-789-9001</span>
-											</li>
-											<li class="details--entry">
-												<label>Email</label><span>joe@bidder.ca</span>
-											</li>
-										</ul>
-									</div>
 								</div>
 								<br/>
-								<p>If that all looks right, let&#39;s get going!</p>
-								<div class="collapsible js--collapsible">
-									<div class="default-shown js--default-shown">
-										<div class="grey-link js--collapsible-toggle">Problems with the information above? We can help with that!</div>
-									</div>
-									<div class="default-hidden js--default-hidden">
-										<div class="">
-											<p>If this information is incorrect, please call support at:</p>
-											<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
-											<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
-											<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
-											<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
-											<div class="grey-link js--collapsible-toggle">Got it! Hide This</div>
-										</div>
-									</div>
-								</div>
+								<p>If that looks right, let&#39;s get going!</p>
 							</div>
 						</div>
 					</div>

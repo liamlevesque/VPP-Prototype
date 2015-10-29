@@ -1,7 +1,7 @@
 .field--text, .field--select {
-  width: 150px;
+  width: 100%;
   height: 30px;
-  border: 1px solid #585858;
+  border: 1px solid #bfc0be;
   background-color: white;
   border-radius: 0;
   -webkit-appearance: none;
@@ -14,7 +14,7 @@
   font-family: 'Trebuchet MS', Verdana, sans-serif;
   font-size: 1rem; }
   .invalid.field--text, .invalid.field--select {
-    border-color: #c4483a; }
+    background-color: #F3BFBF; }
   .field--text:hover, .field--select:hover {
     border: 1px solid #E35530; }
   .field--text:focus, .field--select:focus {
@@ -51,7 +51,7 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer; }
   .invalid.field--select {
     border-color: #c4483a; }
-  .field--select:hover, .field--select:focus {
+  .field--select:hover {
     background-position: right -33px; }
 
 .field--toggle {
@@ -344,6 +344,8 @@ button {
       background-color: #F3FFF8;
       color: #959595;
       text-decoration: line-through; }
+  .box-money_total {
+    border: 1px solid #24532B; }
   .box-money_finance-total {
     background-color: #D3E8CB;
     color: #24532B;
@@ -394,10 +396,16 @@ header {
   display: inline-block;
   width: 40%;
   text-align: right;
-  padding-right: 10px; }
+  margin-right: 2%; }
 .details-table .calculation {
+  display: block;
   position: relative;
   margin-bottom: 10px; }
+  .details-table .calculation > div {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 55%; }
 
 .details--entry {
   display: block;
@@ -621,7 +629,7 @@ footer {
 
 .cents_200 {
   font-size: 0.7rem;
-  margin-top: 6px; }
+  margin-top: 0px; }
 .cents_400 {
   font-size: 0.8rem; }
 .cents_700 {

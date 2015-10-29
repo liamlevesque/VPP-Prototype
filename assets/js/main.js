@@ -1,6 +1,21 @@
 $(function(){
 
 	/*********************************
+		CODE FOR DEMO PURPOSE ONLY
+	**********************************/
+
+		var currencies = ['dollar','yen','pound','euro'],
+			currency = 0;
+
+		$('.js--toggle-currency').click(function(){
+			$('body').removeClass(currencies[currency]);
+			
+			currency = (currency++ >= currencies.length - 1 )? 0 : currency;
+			
+			$('body').addClass(currencies[currency]);
+		}); 
+
+	/*********************************
 		INITIALIZE EVERYTHING
 	*********************************/
 		updatePrices();
@@ -15,19 +30,30 @@ $(function(){
 			updateInterest(parseFloat($(this).val()).round(2));
 		});
 
+		$('.js--finance-interest').on('keypress', function(e){
+			if (e.keyCode != 46 && e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57))
+	            return false;
+	         return true;
+		});
+
+		$('.js--finance-interest').on('blur', function(e){
+			$('.js--finance-interest').val(interest.toFixed(2) + "%");
+		});
+
 		$('.js--finance-interest')[0].addEventListener('mousewheel', function(e){
 			if(parseFloat($(this).val()) < 0) $(this).val(0.00);
 		});
 
 		$('.js--interest-plus, .js--interest-minus').click(function(){
 			
-			var tempValue = parseFloat($('.js--finance-interest').val()).round(2), 
+			var tempValue = interest,
 				increment = parseFloat($(this).data('increment')).round(2);
 			
 			if(tempValue + increment <= 0) updateInterest(0);
 			else updateInterest(tempValue + increment);
 			
-			$('.js--finance-interest').val(interest.toFixed(2));
+			$('.js--finance-interest').val(interest.toFixed(2) + "%");
+			
 		});
 
 		$('.js--finance-period').change(function(){

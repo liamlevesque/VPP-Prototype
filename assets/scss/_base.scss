@@ -78,11 +78,11 @@ label{
 	
 	display: inline-block;
 
-	color: $low-contrast; 
+	color: $grey-500; 
 }
 
 .grey-link{
-	color: $low-contrast;
+	color: $grey-500;
 	font-size: 0.8rem;
 	cursor: pointer;
 
@@ -138,12 +138,12 @@ button{
 	CONTAINERS
 **********************/
 	.box-bordered{
-		border: 1px solid $low-contrast;
+		border: 1px solid $grey-500;
 		padding: $default-margin;
 		position: relative;
 
 		&_greybg{
-			background-color: darken($vlow-contrast, 5%);
+			background-color: darken($grey-100, 5%);
 			padding: $default-margin;
 			margin-top: $default-margin;
 			margin-right: $default-margin;
@@ -155,8 +155,8 @@ button{
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: darken($vlow-contrast,10%);
-		border-top: 1px solid $low-contrast;
+		background-color: darken($grey-100,10%);
+		border-top: 1px solid $grey-500;
 		vertical-align: bottom;
 	}
 
@@ -176,9 +176,13 @@ button{
 			
 			&.s-finance-inactive{
 				background-color: $finance-dabled;
-				color: $low-contrast;
+				color: $grey-500;
 				text-decoration: line-through;		
 			}
+		}
+
+		&_total{
+			border: 1px solid $finance-color;
 		}
 
 		&_finance-total{
@@ -207,7 +211,7 @@ button{
 	}
 
 	.top-section{
-		background-color: $vlow-contrast;
+		background-color: $grey-100;
 	}
 
 	.content--center{
@@ -252,19 +256,27 @@ button{
 			display: inline-block;
 			width: 40%;
 			text-align: right;
-			padding-right: 10px;
+			margin-right: 2%;
 		}
 
 		.calculation{
+			display: block;
 			position: relative;
 			margin-bottom: 10px;
+
+			&>div{
+				display: inline-block;
+				vertical-align: top;
+				box-sizing: border-box;
+				width: 55%;
+			}
 		}
 	}
 		.details--entry{
 			display: block;
 	    	text-align: left;
 	    	padding: 10px 0;
-	    	border-bottom: 1px dotted $low-contrast;
+	    	border-bottom: 1px dotted $grey-500;
 
 	    	&:last-of-type{
 	    		border-bottom-width: 0;
@@ -301,8 +313,8 @@ button{
 	$shadow-height: 10px;
 
 	.pinned-section{
-		background-color: $vlow-contrast;
-		border-bottom: 1px solid $low-contrast;
+		background-color: $grey-100;
+		border-bottom: 1px solid $grey-500;
 		z-index: 1000;
 		position: relative;
 
@@ -431,9 +443,9 @@ button{
 	}
 
 	.unit-pill{
-		background-color: $vlow-contrast;
+		background-color: $grey-100;
 		border-radius: 10px;
-		color: $dark-contrast;
+		color: $grey-700;
 		display: inline-block;
 		@include smalltext;
 		margin-right: $default-margin;
@@ -498,7 +510,7 @@ $or-circle-size: 24px;
 	top: 50%;
 	left: 0;
 	transform: translateX(-50%) translateY(-50%);
-	background-color: $dark-contrast;
+	background-color: $grey-700;
 	border-radius: $or-circle-size;
 	line-height: $or-circle-size;
 	width: $or-circle-size;
@@ -528,7 +540,7 @@ $or-circle-size: 24px;
 
 		.disclaimers{
 			@include smalltext;
-			color: $low-contrast;
+			color: $grey-500;
 		}
 
 
@@ -592,7 +604,7 @@ $or-circle-size: 24px;
 .cents{
 	&_200{
 		font-size: 0.7rem;
-		margin-top: 6px;
+		margin-top: 0px;
 	}
 
 	&_400{
