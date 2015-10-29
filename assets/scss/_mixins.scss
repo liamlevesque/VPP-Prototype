@@ -43,6 +43,21 @@ $transition-function: cubic-bezier(0.630, 0.005, 0.365, 1.000);//cubic-bezier(0.
 
 $transition: $transition-time_1 $transition-function;
 
+@mixin transition($properties...){
+  transition-property: $properties;
+  transition-duration: $transition-time_2;
+  transition-timing-function: $transition-function;
+}
+
+@mixin transition-delayed($delay, $properties...){
+  transition-property: $properties;
+  transition-duration: $transition-time_2;
+  transition-timing-function: $transition-function;
+  transition-delay: $delay;
+}
+
+
+//BREAKPOINTS
 
 @mixin breakpoint($point) {
   @if $point == large {
