@@ -78,6 +78,7 @@ $(function(){
 		$('.js--monthly-toggle').on('change',function(){
 			$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
 			updateTotals();
+			updateTotalItems();
 		});
 
 		//TOOLTIPS ON THE MONTHLY FINANCING TOGGLE
@@ -213,8 +214,8 @@ function updatePrices(){
 }
 
 function pluralize(word, qty){
-	if(qty > 1) return word + 's';
-	else return word;
+	if(qty === 1) return word;
+	else return word + 's';
 }
 
 function updateTotalItems(){
@@ -223,7 +224,7 @@ function updateTotalItems(){
 
 	$('.js--purchase').each(function(){ //COUNT HOW MANY ITEMS ON PAGE AND UPDATE PLACES SHOWING COUNT
 		totalItems += 1;
-		if(!$(this).hasClass('s-finance-inactive')) totalItemsFinance += 1;
+		if($(this).find('.s-finance-inactive').length === 0) totalItemsFinance += 1;
 	});
 	
 	$('.js--total-items').html(totalItems + " " + pluralize('item',totalItems));
