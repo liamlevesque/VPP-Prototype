@@ -67,7 +67,8 @@ $(function(){
 		$('.js--tooltip_finance-disclaimer').tooltipster({
 			content: $($('.js--tooltip_finance-disclaimer--content').html()),
 			theme: 'ritchie-tooltips',
-			timer: 10000,
+			//timer: 10000,
+			interactive: true,
 			hideOnClick: true,
 			position: 'bottom-right'
 		});
@@ -168,8 +169,8 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-var interest = 3.95,
-	period = 48,
+var interest = 6.00,
+	period = 24,
 	isFinancingHidden = false;
 
 // function resizeStickySection(hideOrNot){

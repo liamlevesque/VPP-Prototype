@@ -8,6 +8,7 @@ $money-color: #20579E;
 
 $error-colour: #c4483a;
 $error-colour-light: #F3BFBF;
+$warning-colour: #FCD748;
 $active-colour: #20579E;
 $link-colour: #1478BC;
 
@@ -25,7 +26,11 @@ $button-gradient: linear-gradient(#FAB558, #F69731);
 $button-gradient_hover: linear-gradient(#F58D31, #EB6D30);
 
 //BOX SHADOW
-$ritchie-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+$ritchie-shadow: 0 1px 5px 0 rgba(0,0,0,0.5);
+$ritchie-shadow_inner: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
+
+//TEXT SIZES
+$default-text-size: 0.85rem;
 
 //MEASUREMENTS
 

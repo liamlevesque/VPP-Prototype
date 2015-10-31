@@ -55,6 +55,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/attention.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 778,
+		"inputAbbreviatedPath": "\/assets\/img\/attention.png",
+		"outputAbbreviatedPath": "\/assets\/img\/attention.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/close.png": {
 		"fileType": 32768,
 		"ignore": 0,

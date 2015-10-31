@@ -44,10 +44,10 @@
 							</ul>
 						</div>
 
-						<div class="box-bordered_greybg">
+						<div class="box-bordered_greybg h-mr-100">
 							<h3>Need Shipping?</h3>
 							<p>Get free, competitive, no obligation quotes for shipping these items. One request, multiple quotes. It's that easy</p>
-							<button>Get a Free Quote</button>
+							<a href="http://uship.com" class="c-link">Get a Free Shipping Quote</a>
 						</div>
 					</div>
 
@@ -86,7 +86,7 @@
 								<li class="calculation">
 									<label>Interest Rate</label>
 									<div class="field--w-modifier">
-										<input type="text" class="js--finance-interest field--text" value="3.95%">
+										<input type="text" class="js--finance-interest field--text" value="6.00%">
 										<button class="js--interest-minus" data-increment="-0.5">-</button>
 										<button class="js--interest-plus" data-increment="0.5">+</button>
 									</div>
@@ -98,8 +98,8 @@
 										  <option value="3">3 Months</option> 
 										  <option value="6">6 Months</option> 
 										  <option value="12">12 Months</option> 
-										  <option value="24">24 Months</option> 
-										  <option value="48" selected>48 Months</option>
+										  <option value="24" selected>24 Months</option> 
+										  <option value="48">48 Months</option>
 										</select>
 									</div>
 								</li>
@@ -112,7 +112,14 @@
 								<span class="">PER MONTH</span>
 							</div>
 							<label>Financing Total Estimated Payment</label>
-							<br/><br/><button class="js--lb-show">Apply for Financing</button>
+							<br/><br/>
+							
+							<div class="h-pos-relative h-d-inline-block">
+								<button class="js--lb-show">Apply for financing</button>
+								<div class="js--tooltip_finance-disclaimer tooltip_e"><img src="assets/img/qmark.png"/></div>
+							</div>
+
+							<label>IT'S FAST, EASY & NO OBLIGATION</label>
 						</div>
 					</div>
 
@@ -129,7 +136,6 @@
 					<div class="col-3"><label>Price</label></div>
 					<div class="col-4 h-pos-relative">
 						<label>Financing<br/>Est. Monthly Payment</label>
-						<div class="js--tooltip_finance-disclaimer tooltip_ne"><img src="assets/img/qmark.png"/></div>
 					</div>
 				</div>
 			</div>
@@ -285,7 +291,11 @@
 				</div>
 				<div class="g-third finance-confirmation">
 					<p><strong> Does that sound a little bit easier to swallow? <br/> Apply for financing today! </strong></p>
-					<button class="js--lb-show">Apply for financing</button>
+					<div class="h-pos-relative h-d-inline-block">
+						<button class="js--lb-show">Apply for financing</button>
+						<div class="js--tooltip_finance-disclaimer tooltip_e"><img src="assets/img/qmark.png"/></div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -310,11 +320,12 @@
 						<div class="step-content">
 							<div class="lb-content">
 								<h2>So you want to apply for financing, huh?</h2>
-								<p>Before you do, please ensure that these details are correct:</p>
+								<br/>
+								<p class="p-100">Before you do, please ensure that these details are correct:</p>
 								
 								<div class="h-mw-400">
-									<div class="box-money_total h-ta-center h-mb-0">
-										<label class="h-mb-100">TOTAL FINANCE VALUE</label>
+									<div class="box--money-summary">
+										<label class="h-mb-100">TOTAL REQUESTED FINANCING</label>
 										<p class="js--finance-total h-mb-50">
 											<span class="dollars_700 js--dollars c-price"></span><span class="cents_700 c-price h-va-super js--cents"></span></span>
 										</p>
@@ -322,9 +333,12 @@
 											(<span class="js--total-items_finance c-black"></span>)
 										</p>
 									</div>
+									<div class="box--warning">
+										Please note that financing is only available in Canada, USA, Australia and Europe.
+									</div>
 								</div>
 								<br/>
-								<p>If that looks right, let&#39;s get going!</p>
+								<p class="p-100">If that looks right, let&#39;s get going!</p>
 							</div>
 						</div>
 					</div>
@@ -332,13 +346,13 @@
 					<div class="step-2">
 						<div class="lb-content">
 							<div class="lb-wizard--step step-2a">
-								<button class="js--s1-continue">Apply Now!</button>
+								<button class="js--s1-continue">Send Financing Application!</button>
 							</div>
 
 							<div class="lb-wizard--step step-2b">
 								<div class="step-content">
 									<div class="lb-wizard--top-img">
-										<img class="img-1" src="assets/img/airplane.png"/>
+										<img class="img-1" src="assets/img/airplane_gif.gif"/>
 										<img class="img-2" src="assets/img/check.gif"/>
 									</div>
 									<div class="lb-airplane--hiding-message"><h1 class="c-grey">Sending Application</h1><br/><br/></div>
@@ -350,23 +364,28 @@
 							<div class="step-content">
 								<div class="lb-content">
 									<h2 class="">Your finance application has been sent.<br/>High Five!</h2>
-									<p> One of our finance representatives will contact you within 48 hours. We've also sent you confirmation of your application via e-mail.</p>
-									<p>If you have any questions in the meantime, please contact Ritchie Bros. Financial Services at:</p>
-									<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
-									<div class="collapsible js--collapsible">
-										<div class="default-shown js--default-shown">
-											<div class="grey-link js--collapsible-toggle">show contact information for the rest of the world</div>
+									<div class="h-mw-400">
+										<p class="p-100"> One of our finance representatives will contact you within 48 hours. We've also sent you confirmation of your application via e-mail.</p>
+										<div class="box-bordered">
+											<p class="p-100">If you have any questions in the meantime, please contact Ritchie Bros. Financial Services at:</p>
+											<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
+											<div class="collapsible js--collapsible">
+												<div class="default-shown js--default-shown">
+													<div class="grey-link js--collapsible-toggle">show contact information for the rest of the world</div>
+												</div>
+												<div class="default-hidden js--default-hidden">
+													<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
+													<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
+													<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
+													<div class="grey-link js--collapsible-toggle">hide contact information for the rest of the world</div>
+												</div>
+											</div>
+											<br/>
+											<br/>
+											<p class="c-brand">Please reference your bidder number: 123456</p>
 										</div>
-										<div class="default-hidden js--default-hidden">
-											<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
-											<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
-											<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
-											<div class="grey-link js--collapsible-toggle">hide contact information for the rest of the world</div>
-										</div>
+										<br/><br/>
 									</div>
-									<br/>
-									<br/>
-									<p class="c-brand">Please reference your bidder number: 123456</p><br/><br/>
 								</div>
 								<div class="lb-action-area">
 									<button class="js--lb-close">OK, Got it!</button>
@@ -383,6 +402,13 @@
 	<div class="tooltips--content-placeholder">
 		<div class="js--tooltip_finance-disclaimer--content">
 			<p>Financing is available in select countries on approved credit. Estimated monthly payment is based on a typical term and interest rate. Actual payments may vary.</p>
+			<p>Would you rather talk to us about this? Call us:</p>
+			<ul>
+				<li>USA/Canada - <a href="tel:18553315750">1 855 331 5750</a></li> 
+				<li>Europe - <a href="tel:18553315750">+31.765.242.602</a></li> 
+				<li>Mexico - <a href="tel:18553315750">+52.427.266.0909</a></li> 
+				<li>Australia - <a href="tel:18553315750">+61(0)73382.4491</a></li> 
+			</ul>
 		</div>
 
 		<div class="js--tooltip-monthly-toggle--content">

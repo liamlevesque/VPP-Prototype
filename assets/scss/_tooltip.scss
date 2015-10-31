@@ -4,10 +4,8 @@
 	display: none;
 }
 
-.tooltip_ne{
+[class*='tooltip_']{
 	position: absolute;
-	top: -$tooltip-icon-size/2;
-	right: -$tooltip-icon-size/2;
 	width: $tooltip-icon-size;
 	height: $tooltip-icon-size;
 
@@ -15,7 +13,24 @@
 		width: 100%;
 		max-width: 100%;
 	}
+}
 
+.tooltip{
+	&_ne{
+		top: -$tooltip-icon-size/2;
+		right: -$tooltip-icon-size/2;
+	}
+
+	&_se{
+		bottom: 15px;
+		right: 5px;
+	}
+
+	&_e{
+		right: -$tooltip-icon-size - 3;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
 }
 
 .ritchie-tooltips {
@@ -35,5 +50,25 @@
 
 	p{
 		margin: 0;
+	}
+
+	p + p{
+		margin-top: $default-margin;
+	}
+
+	ul{
+		padding-left: $default-margin;
+		padding-top: $default-margin;
+	}
+
+	li{
+		line-height: 1;
+		font-size: $default-text-size;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	a{
+		color: $link-colour;
 	}
 }

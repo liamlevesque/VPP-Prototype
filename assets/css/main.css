@@ -218,7 +218,7 @@ GRID
 *******************/
 body {
   font-family: 'Trebuchet MS', Verdana, sans-serif;
-  font-size: 95%;
+  font-size: 100%;
   margin: 0;
   padding: 0; }
   body.s-no-scroll {
@@ -244,9 +244,13 @@ h3 {
   margin-bottom: 7.5px; }
 
 p {
-  font-size: 0.9em;
+  font-size: 0.85rem;
   line-height: 1.4rem;
   margin-top: 0; }
+
+.p-100 {
+  font-size: 1rem;
+  line-height: 1.6rem; }
 
 a {
   color: inherit;
@@ -293,6 +297,7 @@ button {
   border: 1px solid #E87722;
   border-radius: 5px;
   color: black;
+  position: relative;
   padding: 8px 15px;
   font-size: 1rem;
   font-weight: 700;
@@ -315,9 +320,35 @@ button {
   button.icon_100 img {
     width: 10px; }
 
+.button_secondary {
+  box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #E9E9E9;
+  background-image: none;
+  border: 0;
+  color: #E87722; }
+
 /**********************
 	CONTAINERS
 **********************/
+.box--warning {
+  border: 1px solid #bfc0be;
+  padding: 15px;
+  padding-left: 77px;
+  margin-top: 15px;
+  position: relative;
+  text-align: left;
+  font-size: 0.8rem; }
+  .box--warning:before {
+    content: " ";
+    display: inline-block;
+    background: url("../img/attention.png") no-repeat 0 center;
+    border-right: 1px solid #bfc0be;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    bottom: 15px;
+    width: 47px; }
+
 .box-bordered {
   border: 1px solid #959595;
   padding: 15px;
@@ -325,8 +356,7 @@ button {
   .box-bordered_greybg {
     background-color: gainsboro;
     padding: 15px;
-    margin-top: 15px;
-    margin-right: 15px; }
+    margin-top: 15px; }
   .box-bordered_black {
     border: 1px solid black;
     padding: 15px;
@@ -350,6 +380,12 @@ button {
   background-color: #d0d0d0;
   border-top: 1px solid #959595;
   vertical-align: bottom; }
+
+.box--money-summary {
+  background-color: rgba(32, 87, 158, 0.15);
+  text-align: center;
+  margin-bottom: 0;
+  padding: 15px; }
 
 [class*="box-money"] {
   text-align: right;
@@ -789,7 +825,7 @@ footer {
   position: relative;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5); }
   .lb-wizard.s-step-1 .step-1 {
     max-height: 1000px; }
     .lb-wizard.s-step-1 .step-1 .step-content {
@@ -926,20 +962,31 @@ footer {
 .tooltips--content-placeholder {
   display: none; }
 
-.tooltip_ne {
+[class*='tooltip_'] {
   position: absolute;
-  top: -12px;
-  right: -12px;
   width: 24px;
   height: 24px; }
-  .tooltip_ne img {
+  [class*='tooltip_'] img {
     width: 100%;
     max-width: 100%; }
+
+.tooltip_ne {
+  top: -12px;
+  right: -12px; }
+.tooltip_se {
+  bottom: 15px;
+  right: 5px; }
+.tooltip_e {
+  right: -27px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .ritchie-tooltips {
   border-radius: 0;
   border: 1px solid black;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
   background: white;
   color: black;
   max-width: 300px; }
@@ -951,6 +998,18 @@ footer {
   overflow: visible; }
   .ritchie-tooltips .tooltipster-content p {
     margin: 0; }
+  .ritchie-tooltips .tooltipster-content p + p {
+    margin-top: 15px; }
+  .ritchie-tooltips .tooltipster-content ul {
+    padding-left: 15px;
+    padding-top: 15px; }
+  .ritchie-tooltips .tooltipster-content li {
+    line-height: 1;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    display: block; }
+  .ritchie-tooltips .tooltipster-content a {
+    color: #1478BC; }
 
 /*******************
 	HELPER CLASSES
@@ -978,6 +1037,9 @@ footer {
 
 .h-p-0 {
   padding: 0; }
+
+.h-d-inline-block {
+  display: inline-block; }
 
 .h-pos-relative {
   position: relative; }
