@@ -230,6 +230,12 @@ body {
   body.s-no-financing .col-4 {
     width: 0 !important;
     display: none; }
+  body.s-no-purchases .no-purchases--hide {
+    display: none; }
+  body.s-no-purchases .purchases {
+    display: none; }
+  body.s-no-purchases .purchases_empty {
+    display: block; }
 
 ul {
   list-style-type: none;
@@ -306,7 +312,15 @@ button, .button, .button_secondary {
   font-size: 1rem;
   font-weight: 700;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  button:disabled, .button:disabled, .button_secondary:disabled {
+    opacity: 0.4;
+    cursor: normal;
+    pointer-events: none; }
 
 button, .button {
   background-color: #E87722;
@@ -575,9 +589,8 @@ header {
   display: none; }
 .purchases_empty {
   padding: 130px 15px;
-  text-align: center; }
-  .purchases_empty.s-hidden {
-    display: none; }
+  text-align: center;
+  display: none; }
 
 .purchase {
   padding: 10px 0;

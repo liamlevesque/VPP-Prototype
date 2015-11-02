@@ -22,20 +22,10 @@ $(function(){
 		});
 
 		$('.js--toggle-purchases').click(function(){
-			if(noItems){
-				$('.js--lb-show').prop('disabled',true);
-				noItems = false;
-				updateTotals();
-			}
-			else{
-				$('.js--lb-show').prop('disabled',false);
-				noItems = true;
-				updateTotals();
-			}
-
-			$('.js--all-purchases').toggleClass('s-hidden');
-			$('.js--no-purchases').toggleClass('s-hidden');
-
+			noItems = !noItems;
+			$('.js--lb-show').prop('disabled',noItems);
+			updateTotals();
+			$('body').toggleClass('s-no-purchases');
 		});
 
 	/*********************************

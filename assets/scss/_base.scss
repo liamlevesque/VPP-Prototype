@@ -28,6 +28,21 @@ body{
 			display: none;
 		}
 	}
+
+	&.s-no-purchases{
+
+		.no-purchases--hide{
+			display: none;
+		}
+
+		.purchases{
+			display: none;
+		}
+
+		.purchases_empty{
+			display: block;
+		}
+	}
 }
 
 ul{
@@ -131,7 +146,14 @@ label{
 	font-weight: 700;
 	outline: none;
 	cursor: pointer;
+	user-select: none;
 
+
+	&:disabled{
+		opacity: 0.4;
+		cursor: normal;
+		pointer-events: none;
+	}
 }
 
 	button, .button{
@@ -508,10 +530,7 @@ label{
 	&_empty{
 		padding: 130px $default-margin;
 		text-align: center;
-
-		&.s-hidden{
-			display: none;
-		}
+		display: none;
 	}
 }
 
