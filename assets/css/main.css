@@ -438,7 +438,9 @@ header {
       height: 8px; }
 
 .logo {
-  display: inline-block; }
+  display: inline-block;
+  width: 200px;
+  height: 46px; }
 
 .top-section {
   background-color: #e8e6e2; }
