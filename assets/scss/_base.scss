@@ -105,56 +105,70 @@ label{
 /**********************
 	BUTTONS
 **********************/
-button{
-	
-	background-color: $brand-color;
-	background-image: $button-gradient;
-	border: 1px solid $brand-color;
-	border-radius: $default-border-radius;
-	color: black;
+%button{
 	position: relative;
+	display: inline-block;
 	
 	padding: 8px $default-margin;
-	
+	color: black;
+	border-radius: $default-border-radius;
 	font-size: 1rem;
 	font-weight: 700;
 	outline: none;
 	cursor: pointer;
 
-	&:hover{
-		background-color: darken($brand-color,10%);
-		background-image: $button-gradient_hover;
-		color: white;
-	}
-
-	&.icon{
-		background-color: transparent;
-		background-image: none;
-		border: 0;
-
-		img{
-			width: 15px;
-		}
-		
-		&.icon_plain{
-			padding: 0 5px;
-			vertical-align: middle;
-		}
-	}
-
-	&.icon_100{
-		img{
-			width: 10px;
-		}
-	}
 }
 
+	button{
+		@extend %button;
+
+		background-color: $brand-color;
+		background-image: $button-gradient;
+		border: 1px solid $brand-color;
+
+		&:hover{
+			background-color: darken($brand-color,10%);
+			background-image: $button-gradient_hover;
+			color: white;
+		}
+
+		&.icon{
+			background-color: transparent;
+			background-image: none;
+			border: 0;
+
+			img{
+				width: 15px;
+			}
+			
+			&.icon_plain{
+				padding: 0 5px;
+				vertical-align: middle;
+			}
+		}
+
+		&.icon_100{
+			img{
+				width: 10px;
+			}
+		}
+	}
+
 	.button_secondary{
+		@extend %button;
+
 		box-shadow: $ritchie-shadow_inner;
-		background-color: $grey-100;
+		background-color: $grey-300;
 		background-image: none;
 		border: 0;
-		color: $brand-color;
+		color: black;
+
+		&:hover{
+			background-color: darken($grey-300,30%);
+			box-shadow: none;
+			color: white;
+			text-decoration: none;
+		}
 	}
 
 /**********************

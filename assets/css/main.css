@@ -290,19 +290,22 @@ label {
 /**********************
 	BUTTONS
 **********************/
-button {
-  background-color: #E87722;
-  background-image: -webkit-linear-gradient(#FAB558, #F69731);
-  background-image: linear-gradient(#FAB558, #F69731);
-  border: 1px solid #E87722;
-  border-radius: 5px;
-  color: black;
+button, .button_secondary {
   position: relative;
+  display: inline-block;
   padding: 8px 15px;
+  color: black;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: 700;
   outline: none;
   cursor: pointer; }
+
+button {
+  background-color: #E87722;
+  background-image: -webkit-linear-gradient(#FAB558, #F69731);
+  background-image: linear-gradient(#FAB558, #F69731);
+  border: 1px solid #E87722; }
   button:hover {
     background-color: #c35f14;
     background-image: -webkit-linear-gradient(#F58D31, #EB6D30);
@@ -322,10 +325,15 @@ button {
 
 .button_secondary {
   box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
-  background-color: #E9E9E9;
+  background-color: #bfc0be;
   background-image: none;
   border: 0;
-  color: #E87722; }
+  color: black; }
+  .button_secondary:hover {
+    background-color: #737471;
+    box-shadow: none;
+    color: white;
+    text-decoration: none; }
 
 /**********************
 	CONTAINERS
