@@ -302,7 +302,7 @@ label{
 
 	header{
 		padding: $default-margin;
-		oveflow: hidden;
+		overflow: hidden;
 		position: relative;
 
 		.home-link{
@@ -312,6 +312,10 @@ label{
 				height: 8px;
 			}
 		}
+	}
+
+	.logo{
+		display: inline-block;
 	}
 
 	.top-section{

@@ -430,12 +430,15 @@ button {
 *******************/
 header {
   padding: 15px;
-  oveflow: hidden;
+  overflow: hidden;
   position: relative; }
   header .home-link {
     font-size: 0.8rem; }
     header .home-link img {
       height: 8px; }
+
+.logo {
+  display: inline-block; }
 
 .top-section {
   background-color: #e8e6e2; }
