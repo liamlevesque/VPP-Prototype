@@ -15,6 +15,29 @@ $(function(){
 			$('body').addClass(currencies[currency]);
 		}); 
 
+		$('.js--financing-toggle').click(function(){
+			$('body').toggleClass('s-no-financing');
+			$('.js--shipping-button').toggleClass('button').toggleClass('button_secondary');
+			setTimeout(function(){$('.js--sticky-wrapper').css('height',$('.js--pin-section').css('height'))},100);
+		});
+
+		$('.js--toggle-purchases').click(function(){
+			if(noItems){
+				$('.js--lb-show').prop('disabled',true);
+				noItems = false;
+				updateTotals();
+			}
+			else{
+				$('.js--lb-show').prop('disabled',false);
+				noItems = true;
+				updateTotals();
+			}
+
+			$('.js--all-purchases').toggleClass('s-hidden');
+			$('.js--no-purchases').toggleClass('s-hidden');
+
+		});
+
 	/*********************************
 		INITIALIZE EVERYTHING
 	*********************************/
@@ -121,18 +144,9 @@ $(function(){
 			element: $('.js--sticky-wrapper'),
 			handler: function(direction) {
 				$('.js--sticky-wrapper').css('height',$('.js--sticky-wrapper').css('height'));
-				// var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
-				// 	financeHeight = parseInt($('.js--finance-container').css('height'));
 				
-				if(direction === 'down'){
-					$('.js--pin-section').addClass('s-stuck');
-					// if(isFinancingHidden) $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
-					// else $('.js--sticky-wrapper').css('height',currentHeight + 'px');
-				}
-				else{
-					$('.js--pin-section').removeClass('s-stuck');
-					//if(isFinancingHidden) $('.js--sticky-wrapper').css('height',currentHeight + financeHeight + 'px');
-				}
+				if(direction === 'down') $('.js--pin-section').addClass('s-stuck');
+				else $('.js--pin-section').removeClass('s-stuck');
 			}
 		});
 
@@ -187,8 +201,9 @@ function numberWithCommas(x) {
 
 var interest = 6.00,
 	period = 24,
-	isFinancingHidden = false;
-	startTimeStamp = new Date();
+	isFinancingHidden = false,
+	startTimeStamp = new Date(),
+	noItems = false;
 
 // function resizeStickySection(hideOrNot){
 // 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
@@ -208,13 +223,13 @@ function updateInterest(val){
 
 function moneyUpdate(target, val){
 	target.data('price', val);
-
 	var valString = val.toString().split('.');
 
 	if(valString[1] && valString[1].length < 2) valString[1] += "0";
-	
 	target.find('.js--dollars').html(numberWithCommas(valString[0]));
-	if(valString[1])target.find('.js--cents').html(valString[1].substring(0,2));
+	
+	if(valString[1]) target.find('.js--cents').html(valString[1].substring(0,2));
+	else target.find('.js--cents').html('00');
 }
 
 function updatePrices(){
@@ -268,6 +283,11 @@ function updateTotals(){
 	$('.js--monthly:not(.s-finance-inactive)').each(function(){
 		totalFinance += $(this).data('price');
 	});
+
+	if(noItems){
+		totalForFinance = 0;
+		totalFinance = 0;
+	}
 
 	moneyUpdate($('.js--auction-total'),totalPrice);//UPDATE AUCTION TOTAL
 

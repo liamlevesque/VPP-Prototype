@@ -134,7 +134,7 @@ label{
 
 }
 
-	button{
+	button, .button{
 		@extend %button;
 
 		background-color: $brand-color;
@@ -414,8 +414,6 @@ label{
 	}
 
 
-
-
 /**********************
 	FINANCING
 **********************/
@@ -423,7 +421,7 @@ label{
 	$shadow-height: 10px;
 
 	.pinned-section{
-		background-color: $grey-100;
+		background-color: $grey-50;
 		border-bottom: 1px solid $grey-500;
 		z-index: 1000;
 		position: relative;
@@ -499,6 +497,22 @@ label{
 .table--header{
 	padding: $default-margin 0 10px;
 	text-align: center;
+}
+
+.purchases{
+	
+	&.s-hidden{
+		display: none;
+	}
+
+	&_empty{
+		padding: 130px $default-margin;
+		text-align: center;
+
+		&.s-hidden{
+			display: none;
+		}
+	}
 }
 
 .purchase{
@@ -744,5 +758,30 @@ $or-circle-size: 24px;
 		.default-hidden{
 			display: block;
 		}
+	}
+}
+
+
+
+
+
+.demo-controls{
+	background-color: $grey-300;
+	padding: 30px;
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	color: black;
+
+	li{
+		position: relative;
+	    width: 200px;
+	    margin-bottom: 10px;
+	}
+
+	.toggle-currency{
+		cursor: pointer;
+		user-select: none;
 	}
 }

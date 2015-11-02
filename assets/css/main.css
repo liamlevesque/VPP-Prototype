@@ -297,7 +297,7 @@ label {
 /**********************
 	BUTTONS
 **********************/
-button, .button_secondary {
+button, .button, .button_secondary {
   position: relative;
   display: inline-block;
   padding: 8px 15px;
@@ -308,26 +308,26 @@ button, .button_secondary {
   outline: none;
   cursor: pointer; }
 
-button {
+button, .button {
   background-color: #E87722;
   background-image: -webkit-linear-gradient(#FAB558, #F69731);
   background-image: linear-gradient(#FAB558, #F69731);
   border: 1px solid #E87722; }
-  button:hover {
+  button:hover, .button:hover {
     background-color: #c35f14;
     background-image: -webkit-linear-gradient(#F58D31, #EB6D30);
     background-image: linear-gradient(#F58D31, #EB6D30);
     color: white; }
-  button.icon {
+  button.icon, .button.icon {
     background-color: transparent;
     background-image: none;
     border: 0; }
-    button.icon img {
+    button.icon img, .button.icon img {
       width: 15px; }
-    button.icon.icon_plain {
+    button.icon.icon_plain, .button.icon.icon_plain {
       padding: 0 5px;
       vertical-align: middle; }
-  button.icon_100 img {
+  button.icon_100 img, .button.icon_100 img {
     width: 10px; }
 
 .button_secondary {
@@ -514,7 +514,7 @@ header {
 	FINANCING
 **********************/
 .pinned-section {
-  background-color: #E9E9E9;
+  background-color: #e8e6e2;
   border-bottom: 1px solid #959595;
   z-index: 1000;
   position: relative; }
@@ -570,6 +570,14 @@ header {
 .table--header {
   padding: 15px 0 10px;
   text-align: center; }
+
+.purchases.s-hidden {
+  display: none; }
+.purchases_empty {
+  padding: 130px 15px;
+  text-align: center; }
+  .purchases_empty.s-hidden {
+    display: none; }
 
 .purchase {
   padding: 10px 0;
@@ -723,6 +731,27 @@ footer {
   display: none; }
 .collapsible.s-expanded .default-hidden {
   display: block; }
+
+.demo-controls {
+  background-color: #bfc0be;
+  padding: 30px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: black; }
+  .demo-controls li {
+    position: relative;
+    width: 200px;
+    margin-bottom: 10px; }
+  .demo-controls .toggle-currency {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
 
 .lb {
   position: fixed;
