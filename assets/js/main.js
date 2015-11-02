@@ -28,7 +28,7 @@ $(function(){
 		TIMESTAMP
 	*********************************/
 		$('.js--tooltip--timestamp').tooltipster({
-			content: $('<p>'+ getFormattedDate(fakeTimeStamp) +'</p>'),
+			content: $('<p>'+ getFormattedDate(startTimeStamp) +'</p>'),
 			theme: 'ritchie-tooltips',
 			hideOnClick: true,
 			position: 'bottom'
@@ -187,8 +187,8 @@ function numberWithCommas(x) {
 
 var interest = 6.00,
 	period = 24,
-	isFinancingHidden = false,
-	fakeTimeStamp = new Date(2015, 9, 2, 10, 41, 00, 00);
+	isFinancingHidden = false;
+	startTimeStamp = new Date();
 
 // function resizeStickySection(hideOrNot){
 // 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
@@ -282,7 +282,7 @@ function updateTotals(){
 //DATE FUNCTIONS
 
 function updateTimeStamp(){
-	$('.js--update-time').html(timeDifference(fakeTimeStamp,Date.now()));
+	$('.js--update-time').html(timeDifference(startTimeStamp,Date.now()));
 }
 
 
@@ -297,7 +297,11 @@ function timeDifference(current, previous) {
 
     var elapsed = Math.abs(current - previous);
 
-    if (elapsed < msPerHour) {
+    if (elapsed < msPerMinute) {
+		return 'right now';
+    }
+
+    else if (elapsed < msPerHour) {
          time = Math.round(elapsed/msPerMinute);
          return  time + ' minute'+ (time === 1 ? "" : "s") +' ago';
     }
