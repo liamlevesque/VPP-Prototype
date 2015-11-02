@@ -21,6 +21,22 @@ $(function(){
 		updatePrices();
 		updateTotals();
 		updateTotalItems();
+		updateTimeStamp();
+
+
+	/*********************************
+		TIMESTAMP
+	*********************************/
+		$('.js--tooltip--timestamp').tooltipster({
+			content: $('<p>'+ getFormattedDate(fakeTimeStamp) +'</p>'),
+			theme: 'ritchie-tooltips',
+			hideOnClick: true,
+			position: 'bottom'
+		});
+
+		//UPDATE RELATIVE TIME
+		var timestampTimer = setInterval(updateTimeStamp, 60000);
+
 	
 	/*********************************
 		FINANCE CALCULATOR CONTROLS
@@ -171,7 +187,8 @@ function numberWithCommas(x) {
 
 var interest = 6.00,
 	period = 24,
-	isFinancingHidden = false;
+	isFinancingHidden = false,
+	fakeTimeStamp = new Date(2015, 9, 2, 10, 41, 00, 00);
 
 // function resizeStickySection(hideOrNot){
 // 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
@@ -260,6 +277,72 @@ function updateTotals(){
 
 }
 
+
+
+//DATE FUNCTIONS
+
+function updateTimeStamp(){
+	$('.js--update-time').html(timeDifference(fakeTimeStamp,Date.now()));
+}
+
+
+function timeDifference(current, previous) {
+
+    var msPerMinute = 60000,
+    	msPerHour = msPerMinute * 60,
+    	msPerDay = msPerHour * 24,
+    	msPerMonth = msPerDay * 30,
+    	msPerYear = msPerDay * 365,
+    	time;
+
+    var elapsed = Math.abs(current - previous);
+
+    if (elapsed < msPerHour) {
+         time = Math.round(elapsed/msPerMinute);
+         return  time + ' minute'+ (time === 1 ? "" : "s") +' ago';
+    }
+
+    else if (elapsed < msPerDay ) {
+         time = Math.round(elapsed/msPerHour);
+         return  time + ' hour'+ (time === 1 ? "" : "s") +' ago';
+    }
+
+    else if (elapsed < msPerMonth) {
+        time = Math.round(elapsed/msPerDay);
+        return  time + ' day'+ (time === 1 ? "" : "s") +' ago';
+    }
+
+    else if (elapsed < msPerYear) {
+        time = Math.round(elapsed/msPerMonth);
+        return  time + ' month'+ (time === 1 ? "" : "s") +' ago';
+    }
+
+    else {
+    	time = Math.round(elapsed/msPerYear);
+        return 'approximately ' + time + ' year' + (time === 1 ? "" : "s") + ' ago';   
+    }
+}
+
+
+function getFormattedDate(date) {
+    date = typeof date !== 'undefined' ?  date : new Date();
+
+    var month = date.getMonth() + 1,
+    	day = date.getDate(),
+    	hour = date.getHours(),
+    	min = date.getMinutes(),
+    	sec = date.getSeconds();
+
+    month = (month < 10 ? "0" : "") + month;
+    day = (day < 10 ? "0" : "") + day;
+    hour = (hour < 10 ? "0" : "") + hour;
+    min = (min < 10 ? "0" : "") + min;
+    sec = (sec < 10 ? "0" : "") + sec;
+
+    var str = date.getFullYear() + "/" + month + "/" + day + " @ " +  hour + ":" + min + ":" + sec;
+
+    return str;
+}
 
 
 
