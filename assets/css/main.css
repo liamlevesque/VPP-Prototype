@@ -583,7 +583,8 @@ header {
 **********************/
 .table--header {
   padding: 15px 0 10px;
-  text-align: center; }
+  text-align: center;
+  font-size: 0.9rem; }
 
 .purchases.s-hidden {
   display: none; }
