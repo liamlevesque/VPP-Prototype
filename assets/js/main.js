@@ -143,7 +143,7 @@ $(function(){
 
 
 	/*********************************
-		LIGHTBOX
+		LIGHTBOX INTERACTIONS (APPLICATION PROCESS)
 	*********************************/
 		$('.js--lb-show').click(function(){
 			$('.js--lightbox').addClass('s-open');
@@ -163,23 +163,32 @@ $(function(){
 			e.stopPropagation(); //PREVENT ACTIONS IN THE MODAL FROM TRIGGERING THE CLOSE BEHAVIOUR
 		});
 
-		/////// WIZARD ////////
+		/////// APPLICATION WIZARD ////////
 
 		$('.js--s1-continue').click(function(){
 			$('.js--wizard').removeClass('s-step-1').addClass('s-step-2');
 			
 			setTimeout(function(){
-				$('.js--wizard').removeClass('s-step-2').addClass('s-step-3');	
+				$('.js--wizard').removeClass('s-step-2').addClass('s-step-3');
+				$('.js--lb-show').html('Application Sent!').addClass('s-success');
 			},3000);
-			
-			// var currentStep = $('.js--wizard-step.s-active').data('step'),
-			// 	nextStep = currentStep + 1;
-			
-			// $('.js--wizard-step.s-active').addClass('s-complete').removeClass('s-active');
-			// $('.js--wizard-step[data-step="' + nextStep + '"]').addClass('s-active');
 		});
 
 }); 
+
+/*********************************
+	GLOBAL VARIABLES
+*********************************/
+
+var interest = 6.00,
+	period = 24,
+	isFinancingHidden = false,
+	startTimeStamp = new Date(),
+	noItems = false;
+
+/*********************************
+	GENERIC FUNCTIONS
+*********************************/
 
 Number.prototype.round = function(p) {
   p = p || 10;
@@ -190,19 +199,14 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-var interest = 6.00,
-	period = 24,
-	isFinancingHidden = false,
-	startTimeStamp = new Date(),
-	noItems = false;
+function pluralize(word, qty){
+	return (qty === 1 ? word : word + 's');
+}
 
-// function resizeStickySection(hideOrNot){
-// 	var currentHeight = parseInt($('.js--sticky-wrapper').css('height')),
-// 		financeHeight = parseInt($('.js--finance-container').css('height'));
 
-// 	//if(hideOrNot) $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
-// 	 $('.js--sticky-wrapper').css('height',currentHeight - financeHeight + 'px');
-// }
+/*********************************
+	UPDATING VALUES FFROM CALCULATIONS
+*********************************/
 
 function updateInterest(val){
 	if(val < 0) interest = 0;
@@ -235,11 +239,6 @@ function updatePrices(){
 		moneyUpdate(thisPrice,amt);
 		moneyUpdate(thisPrice.next('.js--monthly'),monthly);
 	}); 
-}
-
-function pluralize(word, qty){
-	if(qty === 1) return word;
-	else return word + 's';
 }
 
 function updateTotalItems(){
@@ -289,8 +288,9 @@ function updateTotals(){
 }
 
 
-
-//DATE FUNCTIONS
+/*********************************
+	TIMESTAMP FUNCTIONS
+*********************************/
 
 function updateTimeStamp(){
 	$('.js--update-time').html(timeDifference(startTimeStamp,Date.now()));
@@ -314,27 +314,27 @@ function timeDifference(current, previous) {
 
     else if (elapsed < msPerHour) {
          time = Math.round(elapsed/msPerMinute);
-         return  time + ' minute'+ (time === 1 ? "" : "s") +' ago';
+         return  time + ' ' + pluralize('minute', time) +' ago';
     }
 
     else if (elapsed < msPerDay ) {
          time = Math.round(elapsed/msPerHour);
-         return  time + ' hour'+ (time === 1 ? "" : "s") +' ago';
+         return  time + ' ' + pluralize('hour', time) +' ago';
     }
 
     else if (elapsed < msPerMonth) {
         time = Math.round(elapsed/msPerDay);
-        return  time + ' day'+ (time === 1 ? "" : "s") +' ago';
+        return  time + ' ' + pluralize('day', time) +' ago';
     }
 
     else if (elapsed < msPerYear) {
         time = Math.round(elapsed/msPerMonth);
-        return  time + ' month'+ (time === 1 ? "" : "s") +' ago';
+        return  time + ' ' + pluralize('month', time) +' ago';
     }
 
     else {
     	time = Math.round(elapsed/msPerYear);
-        return 'approximately ' + time + ' year' + (time === 1 ? "" : "s") + ' ago';   
+        return 'approximately ' + time + ' ' + pluralize('year', time) + ' ago';   
     }
 }
 

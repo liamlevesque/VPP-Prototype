@@ -344,6 +344,12 @@ button, .button, .button_secondary {
     pointer-events: none; }
 
 button, .button {
+  -webkit-transition-property: padding-left;
+          transition-property: padding-left;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+  -webkit-transition-timing-function: cubic-bezier(0.63, 0.005, 0.365, 1);
+          transition-timing-function: cubic-bezier(0.63, 0.005, 0.365, 1);
   background-color: #E87722;
   background-image: -webkit-linear-gradient(#FAB558, #F69731);
   background-image: linear-gradient(#FAB558, #F69731);
@@ -364,6 +370,19 @@ button, .button {
       vertical-align: middle; }
   button.icon_100 img, .button.icon_100 img {
     width: 10px; }
+  button.s-success, .button.s-success {
+    padding-left: 36px; }
+    button.s-success:before, .button.s-success:before {
+      content: " ";
+      background: url("../img/check_small.png") no-repeat 0 0;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 8px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
 
 .button_secondary {
   box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.15);

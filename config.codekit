@@ -66,6 +66,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/check_small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 883,
+		"inputAbbreviatedPath": "\/assets\/img\/check_small.png",
+		"outputAbbreviatedPath": "\/assets\/img\/check_small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/close.png": {
 		"fileType": 32768,
 		"ignore": 0,

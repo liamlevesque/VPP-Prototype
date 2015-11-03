@@ -179,6 +179,7 @@ label{
 
 	button, .button{
 		@extend %button;
+		@include transition(padding-left);
 
 		background-color: $brand-color;
 		background-image: $button-gradient;
@@ -208,6 +209,21 @@ label{
 		&.icon_100{
 			img{
 				width: 10px;
+			}
+		}
+
+		&.s-success{
+			padding-left: 36px;
+
+			&:before{
+				content: " ";
+				background: url('../img/check_small.png') no-repeat 0 0;
+				position: absolute;
+				width:20px;
+				height:20px;
+				left: 8px;
+				top: 50%;
+				transform: translateY(-50%);
 			}
 		}
 	}
