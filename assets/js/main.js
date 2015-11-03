@@ -11,7 +11,7 @@ $(function(){
 			$('body').removeClass(currencies[currency]);
 			
 			currency = (currency++ >= currencies.length - 1 )? 0 : currency;
-			$('.js--currency').html(currencies[currency]);
+			$('.js--currency').html(" " + currencies[currency]);
 			
 			$('body').addClass(currencies[currency]);
 		}); 
@@ -41,6 +41,7 @@ $(function(){
 	/*********************************
 		TIMESTAMP
 	*********************************/
+		//TOOLTIP FOR TIMESTAMP WITH TIME THIS PAGE WAS LAST REFRESHED
 		$('.js--tooltip--timestamp').tooltipster({
 			content: $('<p>'+ getFormattedDate(startTimeStamp) +'</p>'),
 			theme: 'ritchie-tooltips',
@@ -55,25 +56,30 @@ $(function(){
 	/*********************************
 		FINANCE CALCULATOR CONTROLS
 	*********************************/
+		//HANDLE WHEN THE INTEREST RATE CHANGES
 		$('.js--finance-interest').on('input', function(){
 			if($(this).val().length == 0) return; //don't recalculate if this is empty
 			updateInterest(parseFloat($(this).val()).round(2));
 		}); 
 
+		//HANDLE TEXT INPUT ON THE INTEREST RATE - ONLY ALLOW NUMBERS AND PERIODS
 		$('.js--finance-interest').on('keypress', function(e){
 			if (e.keyCode != 46 && e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57))
 	            return false;
 	         return true;
 		});
 
+		//HANDLE SCROLLING ON THE INTEREST RATE INPUT
 		$('.js--finance-interest').on('blur', function(e){
 			$('.js--finance-interest').val(interest.toFixed(2) + "%");
 		});
 
+		//HANDLE SCROLLING ON THE INTEREST RATE INPUT
 		$('.js--finance-interest')[0].addEventListener('mousewheel', function(e){
 			if(parseFloat($(this).val()) < 0) $(this).val(0.00);
 		});
 
+		//EVENTS FOR CLICKING +/- ON THE INTEREST RATE INPUT
 		$('.js--interest-plus, .js--interest-minus').click(function(){
 			
 			var tempValue = interest,
@@ -86,9 +92,9 @@ $(function(){
 			
 		});
 
+		//HANDLE CHANGING THE FINANCE PERIOD SELECTOR
 		$('.js--finance-period').change(function(){
 			period = parseInt($(this).val());
-			
 			updatePrices();
 			updateTotals();
 		});
@@ -106,27 +112,27 @@ $(function(){
 	/********************************* 
 		TOGGLES FOR FINANCING IN EACH ROW
 	*********************************/
-		//THESE THREE ACTIONS ARE FOR HANDLING MOUSE DOWN BEHAVIOR
-		$('.js--tooltip-monthly-toggle').on('mousedown',function(e){
-			var target = $(this).parents('.js--monthly');
-			target.toggleClass('s-finance-inactive');
-			$(this).find('.js--monthly-toggle').trigger('classChange'); 
-			updateTotals();
-			updateTotalItems();
-		});
+		//THESE THREE ACTIONS ARE FOR HANDLING MOUSE DOWN ACTIVATION OF TOGGLE
+			$('.js--tooltip-monthly-toggle').on('mousedown',function(e){
+				var target = $(this).parents('.js--monthly');
+				target.toggleClass('s-finance-inactive');
+				$(this).find('.js--monthly-toggle').trigger('classChange'); 
+				updateTotals();
+				updateTotalItems();
+			});
 
-		$('.js--monthly-toggle').on('click',function(e){
-			e.preventDefault();
-			e.stopPropagation();
-		});
+			$('.js--monthly-toggle').on('click',function(e){
+				e.preventDefault();
+				e.stopPropagation();
+			});
 
-		$('.js--monthly-toggle').on('classChange',function(){
-			
-			var target = $(this).parents('.js--monthly');
-			$(this).prop('checked',target.hasClass('s-finance-inactive'));
-			updateTotals();
-			updateTotalItems();
-		});
+			$('.js--monthly-toggle').on('classChange',function(){
+				
+				var target = $(this).parents('.js--monthly');
+				$(this).prop('checked',target.hasClass('s-finance-inactive'));
+				updateTotals();
+				updateTotalItems();
+			});
 
 		//TOOLTIPS ON THE MONTHLY FINANCING TOGGLE
 		$('.js--tooltip-monthly-toggle').tooltipster({
@@ -145,7 +151,7 @@ $(function(){
 
 
 	/*********************************
-		WAYPOINTS
+		WAYPOINTS - STICKY HEADER
 	*********************************/
 		var waypoints = new Waypoint({
 			element: $('.js--sticky-wrapper'),
@@ -179,13 +185,14 @@ $(function(){
 			e.stopPropagation(); //PREVENT ACTIONS IN THE MODAL FROM TRIGGERING THE CLOSE BEHAVIOUR
 		});
 
-		/////// APPLICATION WIZARD ////////
+		/////// LIGHTBOX ANIMATION STEPS ////////
 
 		$('.js--s1-continue').click(function(){
 			$('.js--wizard').removeClass('s-step-1').addClass('s-step-2');
 			
 			setTimeout(function(){
 				$('.js--wizard').removeClass('s-step-2').addClass('s-step-3');
+				//CHANGE THE TEXT IN THE "APPLY FOR FINANCING BUTTONS"
 				$('.js--lb-show').html('Application Sent!').addClass('s-success');
 			},3000);
 		});
