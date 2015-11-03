@@ -104,10 +104,26 @@ $(function(){
 		});
 
 	/********************************* 
-		PURCHASE ROWS 
+		TOGGLES FOR FINANCING IN EACH ROW
 	*********************************/
-		$('.js--monthly-toggle').on('change',function(){
-			$(this).parents('.js--monthly').toggleClass('s-finance-inactive');
+		//THESE THREE ACTIONS ARE FOR HANDLING MOUSE DOWN BEHAVIOR
+		$('.js--tooltip-monthly-toggle').on('mousedown',function(e){
+			var target = $(this).parents('.js--monthly');
+			target.toggleClass('s-finance-inactive');
+			$(this).find('.js--monthly-toggle').trigger('classChange'); 
+			updateTotals();
+			updateTotalItems();
+		});
+
+		$('.js--monthly-toggle').on('click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		});
+
+		$('.js--monthly-toggle').on('classChange',function(){
+			
+			var target = $(this).parents('.js--monthly');
+			$(this).prop('checked',target.hasClass('s-finance-inactive'));
 			updateTotals();
 			updateTotalItems();
 		});
