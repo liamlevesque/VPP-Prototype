@@ -164,6 +164,14 @@ GRID
     display: table-cell; }
     .g-display-table > [class^="g-"]:last-of-type {
       float: none; }
+  .g-display-table .g-quarter {
+    width: 25%; }
+  .g-display-table .g-third {
+    width: 33%; }
+  .g-display-table .g-half {
+    width: 50%; }
+  .g-display-table .g-two-thirds {
+    width: 66%; }
 
 @media (min-width: 48em) {
   .g-half-to-third {
@@ -225,6 +233,9 @@ body {
     overflow-y: hidden; }
   body.s-no-financing .no-finance--hide {
     display: none; }
+  body.s-no-financing .no-finance--full {
+    width: 100%;
+    text-align: center; }
   body.s-no-financing .col-2 {
     width: 64%; }
   body.s-no-financing .col-4 {
@@ -232,6 +243,9 @@ body {
     display: none; }
   body.s-no-purchases .no-purchases--hide {
     display: none; }
+  body.s-no-purchases .no-purcahses--full {
+    width: 100%;
+    text-align: center; }
   body.s-no-purchases .purchases {
     display: none; }
   body.s-no-purchases .purchases_empty {
@@ -267,9 +281,16 @@ p {
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    outline: none; }
+  a:active, a:focus {
+    outline: none; }
+  a.a--img {
+    line-height: 0;
+    display: inline-block; }
 
 /**********************
 	TEXT FORMATTING
@@ -366,7 +387,8 @@ button, .button {
   margin-top: 15px;
   position: relative;
   text-align: left;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  line-height: 1.2rem; }
   .box--warning:before {
     content: " ";
     display: inline-block;
@@ -482,6 +504,16 @@ header {
 .col-4 {
   width: 16%; }
 
+.g-custom-35 {
+  display: table-cell;
+  vertical-align: top;
+  width: 35%; }
+
+.g-custom-65 {
+  display: table-cell;
+  vertical-align: top;
+  width: 65%; }
+
 /**********************
 	METADATA
 **********************/
@@ -490,6 +522,11 @@ header {
   width: 40%;
   text-align: right;
   margin-right: 2%; }
+  @media (max-width: 48em) {
+    .details-table label {
+      display: block;
+      width: 100%;
+      text-align: left; } }
 .details-table .calculation {
   display: block;
   position: relative;
@@ -499,6 +536,10 @@ header {
     vertical-align: top;
     box-sizing: border-box;
     width: 55%; }
+    @media (max-width: 48em) {
+      .details-table .calculation > div {
+        display: block;
+        width: 100%; } }
 
 .details--entry {
   display: block;
@@ -584,8 +625,12 @@ header {
 .table--header {
   padding: 15px 0 10px;
   text-align: center;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  display: table;
+  width: 100%; }
 
+.purchases ul {
+  display: table; }
 .purchases.s-hidden {
   display: none; }
 .purchases_empty {
@@ -700,13 +745,13 @@ footer {
 /**********************
 	CURRENCY FORMATTING
 **********************/
-.dollar [class^="dollars"]:before, .dollar .currency-symbol:before {
+.CAD [class^="dollars"]:before, .CAD .currency-symbol:before {
   content: '$'; }
-.pound [class^="dollars"]:before, .pound .currency-symbol:before {
+.GBP [class^="dollars"]:before, .GBP .currency-symbol:before {
   content: '\00A3'; }
-.yen [class^="dollars"]:before, .yen .currency-symbol:before {
+.CNY [class^="dollars"]:before, .CNY .currency-symbol:before {
   content: '\00A5'; }
-.euro [class^="dollars"]:before, .euro .currency-symbol:before {
+.EUR [class^="dollars"]:before, .EUR .currency-symbol:before {
   content: '\20AC'; }
 
 .dollars_200 {
@@ -1103,6 +1148,10 @@ footer {
 
 .h-p-0 {
   padding: 0; }
+
+.h-d-table {
+  display: table;
+  width: 100%; }
 
 .h-d-inline-block {
   display: inline-block; }

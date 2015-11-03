@@ -4,13 +4,14 @@ $(function(){
 		CODE FOR DEMO PURPOSE ONLY
 	**********************************/
 
-		var currencies = ['dollar','yen','pound','euro'],
+		var currencies = ['CAD','CNY','GBP','EUR'],
 			currency = 0;
 
 		$('.js--toggle-currency').click(function(){
 			$('body').removeClass(currencies[currency]);
 			
 			currency = (currency++ >= currencies.length - 1 )? 0 : currency;
+			$('.js--currency').html(currencies[currency]);
 			
 			$('body').addClass(currencies[currency]);
 		}); 

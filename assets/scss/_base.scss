@@ -19,6 +19,11 @@ body{
 			display: none;
 		}
 
+		.no-finance--full{
+			width: 100%;
+			text-align: center;
+		}
+
 		.col-2{
 			width: 64%;
 		}
@@ -33,6 +38,11 @@ body{
 
 		.no-purchases--hide{
 			display: none;
+		}
+
+		.no-purcahses--full{
+			width: 100%;
+			text-align: center;
 		}
 
 		.purchases{
@@ -83,9 +93,20 @@ p{
 a{
 	color: inherit;
 	text-decoration: none;
+	outline: none;
 
 	&:hover{
 		text-decoration: underline;
+		outline: none;
+	}
+
+	&:active, &:focus{
+		outline: none;
+	}
+
+	&.a--img{
+		line-height: 0;
+		display: inline-block;
 	}
 }
 
@@ -221,6 +242,7 @@ label{
 		position: relative;
 		text-align: left;
 		font-size: 0.8rem;
+		line-height: 1.2rem;
 
 		&:before{
 			content: " ";
@@ -379,6 +401,18 @@ label{
 		}
 	}
 
+	//BOTTOM APPLY FOR FINANCING SECTION - MATCH WIDTH OF LAST TWO COLUMNS IN THE TABLE ABOVE
+	.g-custom-35{
+		display: table-cell;
+		vertical-align: top;
+		width: 35%;
+	}
+	.g-custom-65{
+		display: table-cell;
+		vertical-align: top;
+		width: 65%;	
+	}
+
 /**********************
 	METADATA
 **********************/
@@ -389,6 +423,12 @@ label{
 			width: 40%;
 			text-align: right;
 			margin-right: 2%;
+
+			@include breakpoint(medmax){
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
 		}
 
 		.calculation{
@@ -401,6 +441,11 @@ label{
 				vertical-align: top;
 				box-sizing: border-box;
 				width: 55%;
+
+				@include breakpoint(medmax){
+					display: block;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -520,9 +565,14 @@ label{
 	padding: $default-margin 0 10px;
 	text-align: center;
 	font-size: 0.9rem;
+	display: table;
+	width: 100%;
 }
 
 .purchases{
+	ul{
+		display: table;
+	}
 	
 	&.s-hidden{
 		display: none;
@@ -696,19 +746,19 @@ $or-circle-size: 24px;
 
 [class^="dollars"]:before, .currency-symbol:before{
 	
-	.dollar &{ 
+	.CAD &{ 
 		content: '$';	
 	}
 
-	.pound &{
+	.GBP &{
 		content: '\00A3';
 	}
 
-	.yen &{
+	.CNY &{
 		content: '\00A5';
 	}
 
-	.euro &{
+	.EUR &{
 		content: '\20AC';
 	}
 	
