@@ -460,7 +460,7 @@ button, .button {
     position: relative; }
 
 /*******************
-	GENERAL LAYOUT
+	HEADER
 *******************/
 header {
   padding: 15px 0;
@@ -475,7 +475,7 @@ header {
   display: inline-block;
   width: 200px;
   height: 46px;
-  margin-bottom: 20px; }
+  margin: 10px 0 20px; }
 
 .top-section {
   background-color: #e8e6e2; }
@@ -490,15 +490,34 @@ header {
 
 .actions {
   position: absolute;
-  bottom: 0;
+  top: 15px;
   right: -15px;
   text-align: right; }
+
+.action {
+  vertical-align: bottom;
+  text-align: center;
+  padding: 15px;
+  display: inline-block; }
+  .action .action-icon {
+    display: inline-block;
+    margin-bottom: 9px;
+    width: 24px; }
+  .action .action-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 0.8rem;
+    text-transform: uppercase; }
 
 .content--center, footer {
   max-width: 990px;
   margin: 0 auto;
   position: relative; }
 
+/*******************
+	GENERAL LAYOUT
+*******************/
 [class^="col"] {
   display: inline-block;
   margin: 0;
@@ -561,22 +580,6 @@ header {
   border-bottom: 1px dotted #959595; }
   .details--entry:last-of-type {
     border-bottom-width: 0; }
-
-.action {
-  vertical-align: bottom;
-  text-align: center;
-  padding: 15px;
-  display: inline-block; }
-  .action .action-icon {
-    display: inline-block;
-    margin-bottom: 15px;
-    width: 24px; }
-  .action .action-label {
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    line-height: 0.8rem;
-    text-transform: uppercase; }
 
 /**********************
 	FINANCING
@@ -1172,6 +1175,9 @@ body.s-no-purchases .purchases_empty {
 
 .h-ta-center {
   text-align: center; }
+
+.h-mt-80 {
+  margin-top: 10px; }
 
 .h-mt-100 {
   margin-top: 15px; }

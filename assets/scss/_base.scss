@@ -314,7 +314,7 @@ label{
 	}
 
 /*******************
-	GENERAL LAYOUT
+	HEADER
 *******************/
 
 	header{
@@ -335,7 +335,7 @@ label{
 		display: inline-block;
 		width: 200px;
     	height: 46px;
-    	margin-bottom: 20px;
+    	margin: 10px 0 20px;
 	}
 
 	.top-section{
@@ -351,9 +351,29 @@ label{
 
 	.actions{
 		position: absolute;
-		bottom: 0;
+		top: $default-margin;
 		right: -$default-margin;
 		text-align: right;
+	}
+
+	.action{
+		vertical-align: bottom;
+		text-align: center;
+		padding: $default-margin;
+		//@extend .g-third;
+		display: inline-block;
+
+		.action-icon{
+			display: inline-block;
+			margin-bottom: 9px;
+			width: 24px;  
+		}
+
+		.action-label{
+			display: block;
+			@include smalltext;
+			text-transform: uppercase;
+		}
 	}
 
 	.content--center{
@@ -362,6 +382,11 @@ label{
 		//overflow: hidden;
 		position: relative;
 	}
+
+
+/*******************
+	GENERAL LAYOUT
+*******************/
 
 	[class^="col"]{
 		display: inline-block;
@@ -448,25 +473,6 @@ label{
 	    	}
 	    }
 
-	.action{
-		vertical-align: bottom;
-		text-align: center;
-		padding: $default-margin;
-		//@extend .g-third;
-		display: inline-block;
-
-		.action-icon{
-			display: inline-block;
-			margin-bottom: $default-margin;
-			width: 24px;  
-		}
-
-		.action-label{
-			display: block;
-			@include smalltext;
-			text-transform: uppercase;
-		}
-	}
 
 
 /**********************

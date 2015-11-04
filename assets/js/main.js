@@ -41,6 +41,18 @@ $(function(){
 
 
 	/*********************************
+		LOGO
+	*********************************/
+
+		$('.js--tooltip-logo').tooltipster({
+			content: $('<p>Back to rbauction.com</p>'),
+			theme: 'ritchie-tooltips',
+			delay: 1000,
+			hideOnClick: true,
+			position: 'bottom'
+		});
+
+	/*********************************
 		TIMESTAMP
 	*********************************/
 		//TOOLTIP FOR TIMESTAMP WITH TIME THIS PAGE WAS LAST REFRESHED
