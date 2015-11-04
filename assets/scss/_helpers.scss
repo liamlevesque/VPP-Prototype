@@ -60,7 +60,7 @@
 
 	.h-pos-center{
 		position: absolute;
-		top: $default-margin;
+		top: 20px;
 		left: 50%;
 		transform: translateX(-50%);
 
@@ -94,6 +94,7 @@
 .c-link{color: $link-colour;}
 
 .c-grey{color: $grey-500;}
+.c-grey-700{color: $grey-700};
 .c-white{color: white;}
 .c-black{color: black;}
 

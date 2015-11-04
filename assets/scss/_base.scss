@@ -318,7 +318,7 @@ label{
 *******************/
 
 	header{
-		padding: $default-margin;
+		padding: $default-margin 0;
 		overflow: hidden;
 		position: relative;
 
@@ -335,10 +335,25 @@ label{
 		display: inline-block;
 		width: 200px;
     	height: 46px;
+    	margin-bottom: 20px;
 	}
 
 	.top-section{
 		background-color: $grey-50;
+	}
+
+	.timestamp{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	.actions{
+		position: absolute;
+		bottom: 0;
+		right: -$default-margin;
+		text-align: right;
 	}
 
 	.content--center{
