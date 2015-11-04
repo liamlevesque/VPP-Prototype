@@ -383,6 +383,10 @@ label{
 		margin: 0 auto;
 		//overflow: hidden;
 		position: relative;
+
+		@include breakpoint(medmax){
+			padding: 0 15px;
+		}
 	}
 
 

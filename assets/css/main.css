@@ -516,6 +516,9 @@ header {
   max-width: 990px;
   margin: 0 auto;
   position: relative; }
+  @media (max-width: 800px) {
+    .content--center, footer {
+      padding: 0 15px; } }
 
 /*******************
 	GENERAL LAYOUT
