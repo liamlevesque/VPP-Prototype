@@ -248,7 +248,7 @@ h2 {
   margin-bottom: 15px; }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 7.5px; }
 
 p {
@@ -556,7 +556,7 @@ header {
   width: 40%;
   text-align: right;
   margin-right: 2%; }
-  @media (max-width: 48em) {
+  @media (max-width: 800px) {
     .details-table label {
       display: block;
       width: 100%;
@@ -570,7 +570,7 @@ header {
     vertical-align: top;
     box-sizing: border-box;
     width: 55%; }
-    @media (max-width: 48em) {
+    @media (max-width: 800px) {
       .details-table .calculation > div {
         display: block;
         width: 100%; } }
