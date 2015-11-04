@@ -7,6 +7,7 @@ $(function(){
 		var currencies = ['CAD','CNY','GBP','EUR'],
 			currency = 0;
 
+		//SWITCH THE CURRENCY USED ON THE PAGE
 		$('.js--toggle-currency').click(function(){
 			$('body').removeClass(currencies[currency]);
 			
@@ -16,15 +17,16 @@ $(function(){
 			$('body').addClass(currencies[currency]);
 		}); 
 
+		//TURN OFF FINANCING ON THE PAGE
 		$('.js--financing-toggle').click(function(){
 			$('body').toggleClass('s-no-financing');
 			$('.js--shipping-button').toggleClass('button').toggleClass('button_secondary');
 			setTimeout(function(){$('.js--sticky-wrapper').css('height',$('.js--pin-section').css('height'))},100);
 		});
 
+		//REMOVE ALL PURCHASES FROM THE PAGE
 		$('.js--toggle-purchases').click(function(){
 			noItems = !noItems;
-			$('.js--lb-show').prop('disabled',noItems);
 			updateTotals();
 			$('body').toggleClass('s-no-purchases');
 		});

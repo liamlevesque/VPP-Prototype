@@ -9,51 +9,8 @@ body{
 	font-size: 18px;
 	margin: 0;
 	padding: 0;
-
-	&.s-no-scroll{
-		overflow-y: hidden;
-	}
-
-	&.s-no-financing{
-		.no-finance--hide{
-			display: none;
-		}
-
-		.no-finance--full{
-			width: 100%;
-			text-align: center;
-		}
-
-		.col-2{
-			width: 64%;
-		}
-
-		.col-4{
-			width: 0 !important;
-			display: none;
-		}
-	}
-
-	&.s-no-purchases{
-
-		.no-purchases--hide{
-			display: none;
-		}
-
-		.no-purcahses--full{
-			width: 100%;
-			text-align: center;
-		}
-
-		.purchases{
-			display: none;
-		}
-
-		.purchases_empty{
-			display: block;
-		}
-	}
 }
+
 
 ul{
 	list-style-type: none;
@@ -555,7 +512,7 @@ label{
 		z-index: 2;
 		position: relative;
 
-		.g-third{
+		.g-third, .g-half{
 			padding: $default-margin;
 		}
 
@@ -595,7 +552,7 @@ label{
 	}
 
 	&_empty{
-		padding: 130px $default-margin;
+		padding: 60px $default-margin 130px;
 		text-align: center;
 		display: none;
 	}
