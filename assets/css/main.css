@@ -569,7 +569,7 @@ header {
   display: inline-block; }
   .action .action-icon {
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 24px; }
   .action .action-label {
     display: block;
