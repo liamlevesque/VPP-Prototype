@@ -279,13 +279,13 @@ a {
 .smalltext {
   font-size: 0.7rem;
   font-weight: 700;
-  line-height: 0.8rem;
+  line-height: 0.9rem;
   text-transform: uppercase; }
 
-label {
+label, .label {
   font-size: 0.7rem;
   font-weight: 700;
-  line-height: 0.8rem;
+  line-height: 0.9rem;
   text-transform: uppercase;
   display: inline-block;
   color: #959595; }
@@ -509,7 +509,7 @@ header {
     display: block;
     font-size: 0.7rem;
     font-weight: 700;
-    line-height: 0.8rem;
+    line-height: 0.9rem;
     text-transform: uppercase; }
 
 .content--center, footer {
@@ -697,7 +697,7 @@ header {
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
-  line-height: 0.8rem;
+  line-height: 0.9rem;
   margin-right: 15px;
   font-size: 0.75rem; }
   .unit-pill div {
@@ -726,6 +726,8 @@ header {
   .purchases--totals [class^='col'] {
     display: table-cell;
     padding: 15px; }
+  .purchases--totals .col-3, .purchases--totals .col-4 {
+    text-align: center; }
   .purchases--totals .col-3 {
     padding-right: 30px; }
 
@@ -760,7 +762,7 @@ footer {
 .disclaimers {
   font-size: 0.7rem;
   font-weight: 700;
-  line-height: 0.8rem;
+  line-height: 0.9rem;
   color: #959595; }
 
 /**********************
@@ -1181,6 +1183,9 @@ body.s-no-purchases .purchases_empty {
 .h-ta-center {
   text-align: center; }
 
+.h-ta-right {
+  text-align: right; }
+
 .h-mt-80 {
   margin-top: 10px; }
 
@@ -1211,6 +1216,9 @@ body.s-no-purchases .purchases_empty {
 .h-d-table {
   display: table;
   width: 100%; }
+
+.h-d-block {
+  display: block; }
 
 .h-d-inline-block {
   display: inline-block; }

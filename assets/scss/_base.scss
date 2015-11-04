@@ -75,7 +75,7 @@ a{
 @mixin smalltext{
 	font-size: 0.7rem;
 	font-weight: 700;
-	line-height: 0.8rem;
+	line-height: 0.9rem;
 }
 
 	.smalltext{
@@ -88,7 +88,7 @@ a{
 	font-weight: 700;
 }
 
-label{
+label, .label{
 	@include smalltext;
 	text-transform: uppercase;
 	
@@ -690,6 +690,10 @@ label{
 	[class^='col']{
 		display: table-cell;
 		padding: $default-margin;
+	}
+
+	.col-3, .col-4{
+		text-align: center;
 	}
 
 	.col-3{
