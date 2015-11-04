@@ -1152,6 +1152,9 @@ body.s-no-purchases .purchases_empty {
 .h-overflow {
   overflow: hidden; }
 
+.h-t-xs {
+  font-size: 0.6rem; }
+
 .h-ta-center {
   text-align: center; }
 
