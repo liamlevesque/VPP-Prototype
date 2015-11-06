@@ -31,6 +31,7 @@ $(function(){
 			$('body').toggleClass('s-no-purchases');
 		});
 
+
 	/*********************************
 		INITIALIZE EVERYTHING
 	*********************************/
@@ -218,6 +219,12 @@ $(function(){
 
 }); 
 
+$(window).load(function(){
+	$('.js--total-price').each(function(){
+		checkPriceSize($(this));
+	});
+});
+
 /*********************************
 	GLOBAL VARIABLES
 *********************************/
@@ -326,9 +333,26 @@ function updateTotals(){
 	moneyUpdate($('.js--finance-total'),totalForFinance);//UPDATE TOTAL FOR FINANCING
 	
 	moneyUpdate($('.js--monthly-total'),totalFinance);//FINANCE MONTHLY PAYMENT TOTAL
-
 }
 
+
+function checkPriceSize(target){
+	//TEXT RESIZE IF TOO WIDE? 
+
+	var totalwidth = target.innerWidth();
+		dwidth = parseInt(target.find('.js--dollars').css('width'),10),
+		cwidth = parseInt(target.find('.js--cents').css('width'),10),
+		fontSize = parseInt(target.find('.js--dollars').css("font-size"));
+
+	while(dwidth + cwidth >= totalwidth){
+		fontSize -= 1;
+		if(fontSize < 18) return;
+		target.find('.js--dollars').css("font-size", fontSize + "px");
+		dwidth = parseInt(target.find('.js--dollars').css('width'),10);
+	}
+
+	//$('.js--total-price .js--dollars').css("font-size",fontSize + "px");
+}
 
 /*********************************
 	TIMESTAMP FUNCTIONS

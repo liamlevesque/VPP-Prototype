@@ -729,7 +729,7 @@ header {
   .purchases--totals .col-3, .purchases--totals .col-4 {
     text-align: center; }
   .purchases--totals .col-3 {
-    padding-right: 30px; }
+    padding-right: 25px; }
 
 .totals--or {
   position: absolute;
@@ -1247,6 +1247,9 @@ body.s-no-purchases .purchases_empty {
 
 .h-va-super {
   vertical-align: super; }
+
+.h-ws-nowrap {
+  white-space: nowrap; }
 
 /*******************
 	COLOUR OVERRIDES
