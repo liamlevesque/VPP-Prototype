@@ -66,6 +66,11 @@ $(function(){
 		//UPDATE RELATIVE TIME
 		var timestampTimer = setInterval(updateTimeStamp, 60000);
 
+		//REFRESH THE PAGE
+		$('.js--page-refresh').click(function(){
+			location.reload();
+		});
+
 	
 	/*********************************
 		FINANCE CALCULATOR CONTROLS
