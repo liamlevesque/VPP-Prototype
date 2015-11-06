@@ -66,6 +66,11 @@ a{
 	&.a--img{
 		line-height: 0;
 		display: inline-block;
+		max-width: 100%;
+
+		img{
+			max-width: 100%;
+		}
 	}
 }
 
@@ -539,6 +544,8 @@ label, .label{
 		z-index: 2;
 		position: relative;
 
+		@include tableLayout;
+
 		.g-third, .g-half{
 			padding: $default-margin;
 		}
@@ -565,13 +572,12 @@ label, .label{
 	padding: $default-margin 0 10px;
 	text-align: center;
 	font-size: 0.9rem;
-	display: table;
-	width: 100%;
+	@include tableLayout;
 }
 
 .purchases{
 	ul{
-		display: table;
+		@include tableLayout;
 	}
 	
 	&.s-hidden{
@@ -603,6 +609,10 @@ label, .label{
 		&.box-money_finance{
 			padding-right: $toggle-padding;
 		}
+	}
+
+	img{
+		max-width: 100%;
 	}
 
 	.col-1, .col-3, .col-4{

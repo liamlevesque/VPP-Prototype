@@ -54,8 +54,7 @@
 	}
 
 	.h-d-table{
-		display: table;
-    	width: 100%;
+		@include tableLayout;
 	}
 
 	.h-d-block{

@@ -349,9 +349,8 @@ function checkPriceSize(target){
 		if(fontSize < 18) return;
 		target.find('.js--dollars').css("font-size", fontSize + "px");
 		dwidth = parseInt(target.find('.js--dollars').css('width'),10);
+		console.log(dwidth + cwidth + ":" + totalwidth);
 	}
-
-	//$('.js--total-price .js--dollars').css("font-size",fontSize + "px");
 }
 
 /*********************************

@@ -61,6 +61,11 @@ $transition: $transition-time_1 $transition-function;
   transition-delay: $delay;
 }
 
+@mixin tableLayout(){
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
 
 //BREAKPOINTS
 

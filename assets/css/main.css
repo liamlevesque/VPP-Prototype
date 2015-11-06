@@ -271,7 +271,10 @@ a {
     outline: none; }
   a.a--img {
     line-height: 0;
-    display: inline-block; }
+    display: inline-block;
+    max-width: 100%; }
+    a.a--img img {
+      max-width: 100%; }
 
 /**********************
 	TEXT FORMATTING
@@ -626,7 +629,10 @@ header {
   border: 1px solid #24532B;
   overflow: hidden;
   z-index: 2;
-  position: relative; }
+  position: relative;
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
   .financing .g-third, .financing .g-half {
     padding: 15px; }
   .financing p {
@@ -648,10 +654,13 @@ header {
   text-align: center;
   font-size: 0.9rem;
   display: table;
-  width: 100%; }
+  width: 100%;
+  table-layout: fixed; }
 
 .purchases ul {
-  display: table; }
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
 .purchases.s-hidden {
   display: none; }
 .purchases_empty {
@@ -672,6 +681,8 @@ header {
       font-size: 1.2rem; }
     .purchase [class^="col"].box-money_finance {
       padding-right: 40px; }
+  .purchase img {
+    max-width: 100%; }
   .purchase .col-1, .purchase .col-3, .purchase .col-4 {
     vertical-align: middle; }
   .purchase .col-3, .purchase .col-4 {
@@ -1215,7 +1226,8 @@ body.s-no-purchases .purchases_empty {
 
 .h-d-table {
   display: table;
-  width: 100%; }
+  width: 100%;
+  table-layout: fixed; }
 
 .h-d-block {
   display: block; }
