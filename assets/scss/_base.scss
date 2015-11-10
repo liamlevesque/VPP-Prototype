@@ -569,7 +569,7 @@ label, .label{
 **********************/
 
 .table--header{
-	padding: $default-margin 0 10px;
+	padding: 8px 0 6px;
 	text-align: center;
 	font-size: 0.9rem;
 	@include tableLayout;
