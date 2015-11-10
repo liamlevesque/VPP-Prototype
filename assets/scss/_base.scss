@@ -652,6 +652,7 @@ label, .label{
 		color: $grey-700;
 		display: inline-block;
 		@include smalltext;
+		line-height: 0.8rem;
 		margin-right: $default-margin;
 		font-size: 0.75rem;
 		
