@@ -70,6 +70,20 @@ $transition: $transition-time_1 $transition-function;
   table-layout: fixed;
 }
 
+@mixin line-clamp(){
+  //IF THIS BROWSER SUPPORTS LINE CLAMPING, THEN USE IT. IF NOT, JUST LET IT OVERFLOW.
+  @supports (-webkit-line-clamp: 1)
+  {
+    display            : -webkit-box;
+    -webkit-box-orient : vertical;
+    overflow           : hidden;
+    text-overflow      : ellipsis;
+    -webkit-line-clamp : 2;
+  }
+}
+
+
+
 //BREAKPOINTS
 
 @mixin breakpoint($point) {

@@ -698,7 +698,15 @@ header {
 .description {
   display: block;
   font-size: 1.1rem;
-  min-height: 2em; }
+  height: 2.4em;
+  overflow: hidden; }
+  @supports (-webkit-line-clamp: 1) {
+    .description {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2; } }
 
 .description-footer {
   margin-top: 15px; }
