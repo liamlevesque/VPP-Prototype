@@ -125,7 +125,7 @@ label, .label{
 	display: inline-block;
 	
 	padding: 8px $default-margin;
-	color: black;
+	color: $black;
 	border-radius: $default-border-radius;
 	font-size: 1rem;
 	font-weight: 700;
@@ -152,7 +152,7 @@ label, .label{
 		&:hover{
 			background-color: darken($brand-color,10%);
 			background-image: $button-gradient_hover;
-			color: white;
+			color: $white;
 		}
 
 		&.icon{
@@ -199,12 +199,12 @@ label, .label{
 		background-color: $grey-300;
 		background-image: none;
 		border: 0;
-		color: black;
+		color: $black;
 
 		&:hover{
 			background-color: darken($grey-300,30%);
 			box-shadow: none;
-			color: white;
+			color: $white;
 			text-decoration: none;
 		}
 	}
@@ -249,7 +249,7 @@ label, .label{
 		}
 
 		&_black{
-			border: 1px solid black;
+			border: 1px solid $black;
 			padding: $default-margin;
 			position: relative;
 		}
@@ -260,7 +260,7 @@ label, .label{
 	.box--header, .box--divider{
 		padding: $default-margin/2 $default-margin;
 		margin: (-$default-margin) (-$default-margin) $default-margin;
-		background-color: black;
+		background-color: $black;
 
 		h3{
 			margin: 0;
@@ -537,7 +537,7 @@ label, .label{
 	}
 
 	.financing{
-		background-color: white;
+		background-color: $white;
 		border: 1px solid $finance-color;
 		overflow: hidden;
 
@@ -663,7 +663,7 @@ label, .label{
 		.unit--quantity{
 			border-radius: 10px 0 0 10px;
 			background-color: $money-color;
-			color: white;
+			color: $white;
 			padding: 5px 10px;
 
 			&:after{
@@ -726,7 +726,7 @@ $or-circle-size: 24px;
 	height: $or-circle-size;
 	text-align: center; 
 	display: inline-block;
-	color: white;
+	color: $white;
 	font-size: 0.6rem;
 }
 
@@ -857,7 +857,7 @@ $or-circle-size: 24px;
 	display: inline-block;
 	left: 50%;
 	transform: translateX(-50%);
-	color: black;
+	color: $black;
 
 	li{
 		position: relative;

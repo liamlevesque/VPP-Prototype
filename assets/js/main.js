@@ -29,6 +29,7 @@ $(function(){
 			noItems = !noItems;
 			updateTotals();
 			$('body').toggleClass('s-no-purchases');
+			setTimeout(function(){$('.js--sticky-wrapper').css('height',$('.js--pin-section').css('height'))},100);
 		});
 
 

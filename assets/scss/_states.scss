@@ -4,6 +4,34 @@ body{
 		overflow-y: hidden;
 	}
 
+	&.s-no-purchases{
+
+		.no-purchases--hide{
+			display: none;
+		}
+
+		.no-purcahses--full{
+			width: 100%;
+			text-align: center;
+		}
+
+		.no-purchases--show{
+			display: block;
+		}
+
+		.no-purchases--show_cell{
+			display: table-cell !important;
+		}
+		
+		.purchases{
+			display: none;
+		}
+
+		.purchases_empty{
+			display: block;
+		}
+	}
+
 	&.s-no-financing{
 		.no-finance--hide{
 			display: none;
@@ -24,35 +52,20 @@ body{
 		}
 	}
 
-	&.s-no-purchases{
-
-		.no-purchases--hide{
-			display: none;
-		}
-
-		.no-purcahses--full{
-			width: 100%;
-			text-align: center;
-		}
-
+	&.s-no-financing.s-no-purchases{
 		.no-purchases--show{
 			display: block;
 		}
-
-		.no-purchases--show_cell{
-			display: table-cell;
-		}
-		
-		.purchases{
+		.no-finance--hide{
 			display: none;
-		}
-
-		.purchases_empty{
-			display: block;
 		}
 	}
 }
 
 	.no-purchases--show, .no-purchases--show_cell{
+		display: none;
+	}
+
+	.g-display-table .no-purchases--show_cell{
 		display: none;
 	}

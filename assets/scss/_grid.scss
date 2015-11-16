@@ -32,7 +32,6 @@ GRID
 			float: none;
 		}
 	}
-
 	
 	.g-quarter{width:25%};
 	.g-third{width:33%};
@@ -105,12 +104,14 @@ GRID
 		width: 49%;
 		margin-right: 1%;
 
-		&.g-no-space{
-			width: 50%
-		}
-
 		&:nth-child(2n+2){ ///GO TO 3 COLUMN LAYOUT @ MEDIUM BREAKPOINT
 			float: right;
+			margin-right: 0;
+		}
+
+		&.g-no-space{
+			width: 50%;
+			float: none;
 			margin-right: 0;
 		}
 	}

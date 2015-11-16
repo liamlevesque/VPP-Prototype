@@ -35,10 +35,10 @@
 
 .ritchie-tooltips {
 	border-radius: 0; 
-	border: 1px solid black;
+	border: 1px solid $black;
 	box-shadow: $ritchie-shadow;
-	background: white;
-	color: black;
+	background: $white;
+	color: $black;
 	max-width: 300px;
 }
 
