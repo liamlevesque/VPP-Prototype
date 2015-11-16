@@ -587,7 +587,6 @@ label, .label{
 	&_empty{
 		padding: 60px $default-margin 130px;
 		text-align: center;
-		display: none;
 	}
 }
 
@@ -798,6 +797,7 @@ $or-circle-size: 24px;
 [class^="cents"]{
 	vertical-align: top;
 	display: inline-block;
+	//display: none; //UNCOMMENT TO HIDE CENTS EVERYWHERE ON THE PAGE
 	margin-left: -5px;
 	margin-top: 2px;
 

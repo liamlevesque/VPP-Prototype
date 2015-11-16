@@ -667,8 +667,7 @@ header {
   display: none; }
 .purchases_empty {
   padding: 60px 15px 130px;
-  text-align: center;
-  display: none; }
+  text-align: center; }
 
 .purchase {
   padding: 10px 0;
@@ -1175,10 +1174,6 @@ body.s-no-purchases .no-purchases--show {
   display: block; }
 body.s-no-purchases .no-purchases--show_cell {
   display: table-cell !important; }
-body.s-no-purchases .purchases {
-  display: none; }
-body.s-no-purchases .purchases_empty {
-  display: block; }
 body.s-no-financing .no-finance--hide {
   display: none; }
 body.s-no-financing .no-finance--full {
