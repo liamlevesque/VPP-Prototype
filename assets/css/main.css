@@ -556,6 +556,16 @@ header {
   vertical-align: top;
   width: 65%; }
 
+.slim-table {
+  margin-left: 25px;
+  font-size: 0.9rem;
+  list-style-type: disc;
+  margin-top: 7px; }
+  .slim-table li {
+    margin-bottom: 5px; }
+    .slim-table li:last-of-type {
+      margin-bottom: 0; }
+
 /**********************
 	METADATA
 **********************/
@@ -1174,6 +1184,12 @@ body.s-no-purchases .no-purchases--show {
   display: block; }
 body.s-no-purchases .no-purchases--show_cell {
   display: table-cell !important; }
+body.s-no-purchases .no-purchases--fill-height {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 body.s-no-financing .no-finance--hide {
   display: none; }
 body.s-no-financing .no-finance--full {

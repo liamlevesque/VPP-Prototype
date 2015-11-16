@@ -40,7 +40,7 @@
 			<div class="h-overflow h-d-table">
 				<div class="g-display-table">
 					<div class="g-half">
-						<div class="box-bordered h-mr-100">
+						<div class="box-bordered h-mr-100 no-purchases--fill-height">
 							<h3>Your Details</h3>
 							<ul class="details-table">
 								<li class="details--entry"><label>Bidder No:</label><span>123456</span></li>
@@ -50,20 +50,26 @@
 							</ul>
 						</div>
 
-						<div class="box-bordered_greybg h-mr-100">
+						<div class="no-purchases--hide box-bordered_greybg h-mr-100">
 							<h3>Need Shipping?</h3>
 							<p>Get free, competitive, no obligation quotes for shipping these items. One request, multiple quotes. It's that easy!</p>
 							<a href="http://uship.com" class="button_secondary js--shipping-button" target="_blank">Get a free shipping quote</a>
 						</div>
 					</div>
 					
-					<!-- <div class="g-half g-no-space no-purchases--show_cell box-bordered_greybg h-mr-100">
-						<h3>Need Shipping?</h3>
-						<p>Get free, competitive, no obligation quotes for shipping any items you buy. One request, multiple quotes. It's that easy!</p>
-						<a href="http://uship.com" class="button_secondary js--shipping-button" target="_blank">Get a free shipping quote</a>
-					</div> -->
+					<div class="g-half g-no-space no-purchases--show_cell">
+						<div class="box-bordered_black">
+							<div class="box--header"><h3 class="c-white">You have no Purchases yet!</h3></div>
+							<p>Head back to <a href="http://rbauction.com" class="c-link" target="_blank">rbauction.com</a> and get shopping!</p>
+						</div>
+						<div class="box-bordered_greybg">
+							<h3>Did you know you we offer shipping?</h3>
+							<p>Get free, competitive, no obligation quotes for shipping any items you buy. One request, multiple quotes. It's that easy!</p>
+							<a href="http://uship.com" class="button_secondary js--shipping-button" target="_blank">Learn about shipping services</a>
+						</div>
+					</div>
 
-					<div class="g-half box-bordered box-bordered_black">
+					<div class="g-half box-bordered no-purchases--hide box-bordered_black">
 						<div class="box--header"><h3 class="c-white">This is not an invoice</h3></div>
 						<p>You will receive an email with a link to your invoice within 24 hours of the end of the auction. If you do not receive this email, please contact the auction site directly. Invoices are stored on the secure DocuSign website.
 						</p>
@@ -140,9 +146,9 @@
 
 				</div>
 
-				<div class="financing financing_no-calc no-finance--hide no-purchases--show js--finance-container_no-purchases">
+				<div class="financing financing_no-calc no-purchases--show js--finance-container_no-purchases">
 					<div class="g-display-table">
-						<div class="g-half">
+						<!-- <div class="g-half">
 							<h3>Save your cash with financing</h3>
 							<p>Get more equipment and trucks working on the job while reducing your upfront costs with financing from Ritchie Bros. Financial Services</p>
 						</div>
@@ -151,6 +157,26 @@
 							<div class="h-pos-relative h-d-inline-block">
 								<button class="js--lb-show">Apply for finance pre-approval</button>
 								<div class="js--tooltip_finance-disclaimer tooltip_e"><img src="assets/img/qmark.png"/></div>
+							</div>
+						</div> -->
+						<!-- THE NEW ITEMS IN THE CALCULATOR WHEN THERE ARE NO PURCHASES -->
+						<div class="g-display-table">
+							<div class="g-half">
+								<h3>Get pre-approved for financing and be ready to buy at any Ritchie Bros. auction</h3>
+								
+								<ul class="slim-table">
+									<li>Pre-approval is fast and good for 90 days</li>
+									<li>Up to $100 financing, with $0 down</li>
+									<li>Affordable monthly payments</li>
+								</ul>
+							</div>
+							<div class="g-half box-money_finance h-ta-center">
+								<h3 class="c-finance">Get pre-approved before you buy!</h3>
+	  							<br>
+	  							<div class="h-pos-relative h-d-inline-block">
+									<button class="js--lb-show">Apply for finance pre-approval</button>
+									<div class="js--tooltip_finance-disclaimer tooltip_e tooltipstered"><img src="assets/img/qmark.png"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -174,7 +200,7 @@
 	</div>
 
 	<div class="content--center">
-		<div class="purchases js--all-purchases">
+		<div class="purchases no-purchases--hide js--all-purchases">
 			<ul>
 				<li class="purchase js--purchase">
 					<div class="col-0">
@@ -320,13 +346,13 @@
 			</div>
 		</div>
 
-		<div class="purchases_empty js--no-purchases">
+		<div class="purchases_empty no-purchases--show js--no-purchases">
 			<div class="content--center">
 				<img src="assets/img/empty.png"/>
 				<br/>
 				<h3 class="c-grey">You haven't purchased anything yet</h3>
 				<h4 class="c-grey">( head back to <a href="http://rbauction.com" class="c-link" target="_blank">rbauction.com</a> and get shopping )</h4>
-				<div class="finance-confirmation no-finance--hide no-purchases--show h-mw-400">
+				<div class="finance-confirmation h-mw-400">
 					<p><strong> Need financing to get you started?  </strong></p>
 					<div class="h-pos-relative h-d-inline-block">
 						<button class="js--lb-show">Apply for finance pre-approval</button>

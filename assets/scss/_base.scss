@@ -437,6 +437,21 @@ label, .label{
 		width: 65%;	
 	}
 
+	.slim-table{
+		margin-left: 25px;
+	    font-size: 0.9rem;
+	    list-style-type: disc;
+	    margin-top: 7px;
+
+	    li{
+	    	margin-bottom: 5px;
+
+	    	&:last-of-type{
+	    		margin-bottom: 0;
+	    	}
+	    }
+	}
+
 /**********************
 	METADATA
 **********************/
