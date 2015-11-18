@@ -306,6 +306,15 @@ label, .label {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 15px; }
+  .phone-link a {
+    color: #20579E; }
+
+.phone-cta {
+  padding: 3px 0;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-width: 1px 0;
+  color: #959595; }
 
 /**********************
 	BUTTONS
@@ -1226,6 +1235,9 @@ body.s-no-financing.s-no-purchases .no-finance--hide {
 .h-ta-right {
   text-align: right; }
 
+.h-tt-uppercase {
+  text-transform: uppercase; }
+
 .h-mt-80 {
   margin-top: 10px; }
 
@@ -1277,7 +1289,7 @@ body.s-no-financing.s-no-purchases .no-finance--hide {
   text-align: center; }
 
 .h-mw-400 {
-  max-width: 400px;
+  max-width: 430px;
   margin: 0 auto; }
 
 .h-f-right {
