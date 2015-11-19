@@ -608,7 +608,8 @@ header {
   padding: 10px 0;
   border-bottom: 1px dotted #959595; }
   .details--entry:last-of-type {
-    border-bottom-width: 0; }
+    border-bottom-width: 0;
+    padding-bottom: 0; }
 
 /**********************
 	FINANCING
