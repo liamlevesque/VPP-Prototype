@@ -47,7 +47,7 @@ $(function(){
 	*********************************/
 
 		$('.js--tooltip-logo').tooltipster({
-			content: $('<p>Back to rbauction.com</p>'),
+			content: $('<p>Back to rbauction</p>'),
 			theme: 'ritchie-tooltips',
 			delay: 1000,
 			hideOnClick: true,
