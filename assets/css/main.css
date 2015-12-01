@@ -582,12 +582,25 @@ header {
   display: inline-block;
   width: 40%;
   text-align: right;
-  margin-right: 2%; }
+  margin-right: 2%;
+  vertical-align: middle; }
+  .details-table label.label_narrow {
+    width: 120px; }
   @media (max-width: 800px) {
     .details-table label {
       display: block;
       width: 100%;
       text-align: left; } }
+.details-table .long-field {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  vertical-align: middle; }
+  @media (max-width: 800px) {
+    .details-table .long-field {
+      max-width: 100%; } }
 .details-table .calculation {
   display: block;
   position: relative;

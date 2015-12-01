@@ -476,12 +476,30 @@ label, .label{
 			width: 40%;
 			text-align: right;
 			margin-right: 2%;
+			vertical-align: middle;
+
+			&.label_narrow{
+				width: 120px;
+			}
 
 			@include breakpoint(medmax){
 				display: block;
 				width: 100%;
 				text-align: left;
 			}
+		}
+ 
+		.long-field{
+			display: inline-block;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		    max-width: 70%;
+		    vertical-align: middle;
+
+		    @include breakpoint(medmax){
+				max-width: 100%;
+		    } 
 		}
 
 		.calculation{
