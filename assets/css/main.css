@@ -63,15 +63,19 @@ input[type=number]::-webkit-outer-spin-button {
 
 .select-container {
   position: relative; }
+  .select-container:hover:after {
+    background-position: right -33px; }
   .select-container:after {
     content: " ";
     display: block;
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
     width: 30px;
-    background-color: white; }
+    background-color: white;
+    background: url("../img/select-arrow.png") no-repeat right 0;
+    pointer-events: none; }
 
 select::-ms-expand {
   display: none; }
