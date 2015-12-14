@@ -87,6 +87,9 @@ input[type=number]::-webkit-outer-spin-button {
   @extend %field--select;
 }
 
+select::-ms-expand {
+    display: none;
+}
 
 
 .field--toggle{
