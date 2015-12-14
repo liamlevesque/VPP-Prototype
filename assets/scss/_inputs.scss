@@ -88,30 +88,6 @@ input[type=number]::-webkit-outer-spin-button {
   @extend %field--select;
 }
 
-.select-container{
-  position: relative;
-
-  &:hover{
-    &:after{
-      background-position: right -33px;
-    }
-  }
-
-  &:before{
-    content: " ";
-    display: block;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 30px;
-    background: url("../img/select-arrow.png") no-repeat right 0;
-    pointer-events: none;
-    background-color: white;
-    cursor: pointer;
-  }
-}
-
 select::-ms-expand {
     display: none;
 }
