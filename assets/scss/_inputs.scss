@@ -92,6 +92,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
 
   &:after{
+    content: " ";
     display: block;
     position: absolute;
     right: 0;
