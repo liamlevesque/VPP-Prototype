@@ -73,7 +73,7 @@ input[type=number]::-webkit-outer-spin-button {
   @extend %field;
   background: url("../img/select-arrow.png") no-repeat right 0;
   cursor: pointer;
-  padding-right: 30px;
+  padding-right: 30px; 
   
   &.invalid{
     border-color: $error-colour;
