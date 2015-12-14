@@ -54,11 +54,23 @@ input[type=number]::-webkit-outer-spin-button {
 
 .field--select {
   background: url("../img/select-arrow.png") no-repeat right 0;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-right: 30px; }
   .invalid.field--select {
     border-color: #c4483a; }
   .field--select:hover {
     background-position: right -33px; }
+
+.select-container {
+  position: relative; }
+  .select-container:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: white; }
 
 select::-ms-expand {
   display: none; }
