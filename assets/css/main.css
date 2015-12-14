@@ -65,7 +65,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative; }
   .select-container:hover:after {
     background-position: right -33px; }
-  .select-container:after {
+  .select-container:before {
     content: " ";
     display: block;
     position: absolute;
@@ -75,7 +75,8 @@ input[type=number]::-webkit-outer-spin-button {
     width: 30px;
     background: url("../img/select-arrow.png") no-repeat right 0;
     pointer-events: none;
-    background-color: red; }
+    background-color: white;
+    cursor: pointer; }
 
 select::-ms-expand {
   display: none; }
