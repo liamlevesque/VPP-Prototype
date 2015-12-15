@@ -49,7 +49,7 @@ $(function(){
 		$('.js--tooltip-logo').tooltipster({
 			content: $('<p>Back to rbauction</p>'),
 			theme: 'ritchie-tooltips',
-			delay: 1000,
+			delay: tooltipDelay,
 			hideOnClick: true,
 			position: 'bottom'
 		});
@@ -61,6 +61,7 @@ $(function(){
 		$('.js--tooltip--timestamp').tooltipster({
 			content: $('<p>'+ getFormattedDate(startTimeStamp) +'</p>'),
 			theme: 'ritchie-tooltips',
+			delay: tooltipDelay,
 			hideOnClick: true,
 			position: 'bottom'
 		});
@@ -126,7 +127,7 @@ $(function(){
 			theme: 'ritchie-tooltips',
 			//timer: 10000,
 			interactive: true,
-			delay: 1000,
+			delay: tooltipDelay,
 			position: 'bottom-right'
 		});
 
@@ -163,7 +164,7 @@ $(function(){
 		$('.js--tooltip-monthly-toggle').tooltipster({
 			content: $($('.js--tooltip-monthly-toggle--content').html()),
 			theme: 'ritchie-tooltips',
-			delay: 1000,
+			delay: tooltipDelay,
 			timer: 2000,
 			hideOnClick: true,
 			position: 'bottom-right'
@@ -238,7 +239,8 @@ var interest = 6.00,
 	period = 24,
 	isFinancingHidden = false,
 	startTimeStamp = new Date(),
-	noItems = false;
+	noItems = false,
+	tooltipDelay = 500;
 
 /*********************************
 	GENERIC FUNCTIONS
