@@ -732,7 +732,10 @@ header {
     padding-right: 30px; }
   .purchase .col-1 {
     color: #E87722;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 0.85rem;
+    font-weight: bold; }
   .purchase .col-2 {
     position: relative; }
 

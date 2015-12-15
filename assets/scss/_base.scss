@@ -673,6 +673,10 @@ label, .label{
 	.col-1{
 		color: $brand-color;
 		text-align: center;
+		letter-spacing: -1px;
+		font-size: 0.85rem;
+		font-weight: bold;
+    
 	}
 
 	.col-2{
