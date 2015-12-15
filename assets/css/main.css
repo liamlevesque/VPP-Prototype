@@ -65,13 +65,7 @@ select::-ms-expand {
   display: none; }
 
 .field--toggle {
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  cursor: pointer; }
   .field--toggle .toggle-control {
     -webkit-transition: 0.2s cubic-bezier(0.63, 0.005, 0.365, 1);
     transition: 0.2s cubic-bezier(0.63, 0.005, 0.365, 1);
@@ -723,7 +717,7 @@ header {
       padding: 15px;
       font-size: 1.2rem; }
     .purchase [class^="col"].box-money_finance {
-      padding-right: 40px; }
+      padding-right: 10px; }
   .purchase img {
     max-width: 100%; }
   .purchase .col-1, .purchase .col-3, .purchase .col-4 {

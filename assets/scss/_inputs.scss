@@ -96,10 +96,10 @@ select::-ms-expand {
 .field--toggle{
 
     cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    // position: absolute;
+    // right: 10px;
+    // top: 50%;
+    // transform: translateY(-50%);
   
    .toggle-control{
       transition: $transition;
