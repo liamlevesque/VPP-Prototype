@@ -719,7 +719,8 @@ header {
     .purchase [class^="col"].box-money_finance {
       padding-right: 10px; }
   .purchase img {
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
   .purchase .col-1, .purchase .col-3, .purchase .col-4 {
     vertical-align: middle; }
   .purchase .col-3, .purchase .col-4 {
