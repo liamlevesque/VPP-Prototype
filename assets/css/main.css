@@ -850,6 +850,7 @@ footer {
 [class^="cents"] {
   vertical-align: top;
   display: inline-block;
+  display: none;
   margin-left: -5px;
   margin-top: 2px; }
   [class^="cents"]:before {

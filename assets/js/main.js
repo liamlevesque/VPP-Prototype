@@ -126,8 +126,12 @@ $(function(){
 			theme: 'ritchie-tooltips',
 			//timer: 10000,
 			interactive: true,
-			hideOnClick: true,
+			delay: 1000,
 			position: 'bottom-right'
+		});
+
+		$('.js--tooltip_finance-disclaimer').click(function(){
+			$(this).tooltipster('show');
 		});
 
 	/********************************* 
