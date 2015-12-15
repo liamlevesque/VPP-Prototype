@@ -50,6 +50,7 @@ $(function(){
 			content: $('<p>Back to rbauction</p>'),
 			theme: 'ritchie-tooltips',
 			delay: tooltipDelay,
+			touchDevices: false,
 			hideOnClick: true,
 			position: 'bottom'
 		});
@@ -62,8 +63,11 @@ $(function(){
 			content: $('<p>'+ getFormattedDate(startTimeStamp) +'</p>'),
 			theme: 'ritchie-tooltips',
 			delay: tooltipDelay,
-			hideOnClick: true,
 			position: 'bottom'
+		});
+
+		$('.js--tooltip--timestamp').click(function(){
+			$(this).tooltipster('show');
 		});
 
 		//UPDATE RELATIVE TIME
@@ -125,7 +129,6 @@ $(function(){
 		$('.js--tooltip_finance-disclaimer').tooltipster({
 			content: $($('.js--tooltip_finance-disclaimer--content').html()),
 			theme: 'ritchie-tooltips',
-			//timer: 10000,
 			interactive: true,
 			delay: tooltipDelay,
 			position: 'bottom-right'
@@ -144,6 +147,7 @@ $(function(){
 				target.toggleClass('s-finance-inactive');
 				$(this).find('.js--monthly-toggle').trigger('classChange'); 
 				updateTotals();
+
 				updateTotalItems();
 			});
 
@@ -165,8 +169,7 @@ $(function(){
 			content: $($('.js--tooltip-monthly-toggle--content').html()),
 			theme: 'ritchie-tooltips',
 			delay: tooltipDelay,
-			timer: 2000,
-			hideOnClick: true,
+			touchDevices: false,
 			position: 'bottom-right'
 		});
 
