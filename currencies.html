@@ -7,29 +7,39 @@
 </head>
 <body class="CAD" id="js--body">
 	
-	<div class="content--center">
-		
-		<div class="c-finance price-display js--target-price" data-amt="9876543.210">
-			<span class="dollars_700 no-before js--dollars"></span>
-			<span class="cents_700 force-show js--cents"></span>
+	<div class="ccy-container">
+
+		<div class="g-two-thirds">
+			<label>Price</label>
+			<div class="c-finance price-display js--target-price" data-amt="9876543.210">
+				<span class="dollars_700 no-before js--dollars"></span>
+				<span class="cents_700 force-show js--cents"></span>
+			</div>
+
 		</div>
+
+		<div class="g-third">
+			<label>Currency</label>
 		
-		<select class="js--ccy-select field--select"> 
-			<option value="CAD">CAD</option>
-			<option value="USD">USD</option>
-			<option value="SGD">SGD</option>
-			<option value="NZD">NZD</option>
-			<option value="AUD">AUD</option>
-			<option value="MXN">MXN</option>
-			<option value="ZAR">ZAR</option>
-			<option value="PLN">PLN</option>
-			<option value="GBP">GBP</option>
-			<option value="EUR">EUR</option>
-			<option value="JPY">JPY</option>
-			<option value="CNY">CNY</option>
-			<option value="INR">INR</option>
-			<option value="AED">AED</option>
-		</select>
+			<select class="js--ccy-select field--select"> 
+				<option value="CAD">CAD</option>
+				<option value="USD">USD</option>
+				<option value="SGD">SGD</option>
+				<option value="NZD">NZD</option>
+				<option value="AUD">AUD</option>
+				<option value="MXN">MXN</option>
+				<option value="ZAR">ZAR</option>
+				<option value="PLN">PLN</option>
+				<option value="GBP">GBP</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+				<option value="CNY">CNY</option>
+				<option value="INR">INR</option>
+				<option value="AED">AED</option>
+			</select>
+
+		</div>
+
 	</div>
 	
 	<script type="text/javascript" src="assets/js/currencies-min.js"></script>

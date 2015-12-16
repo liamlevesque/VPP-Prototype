@@ -11,8 +11,16 @@ $(function(){
 
 function divideNumber(x) {
     var price = x.split('.');
+    
+    //MAJOR COMPONENT (ie Dollars)
+    	//IF THIS IS INDIAN RUPEES, DIVIDE INTO LAKH, CRORE... (THIS IS THE ONLY EXCEPTION TO THE RULE OF WHERE TO PLACE COMMAS)
     if($('#js--body').hasClass('INR')) price[0] = price[0].toString().replace(/(\d)(?=(\d\d)+\d$)/g, '$1<span class="divider"></span>');
     else price[0] = price[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, '<span class="divider"></span>');
+    
+    //MINOR COMPONENT (ie Cents)
+    	//NOTE - DO WHAT YOU'D LIKE HERE TO ROUND/TRUNCATE CENTS IF NEEDED
+    price[1] = price[1].substr(0,2);
+
     return price;
 }
 
