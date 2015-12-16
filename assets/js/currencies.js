@@ -16,6 +16,7 @@ function divideNumber(x) {
     //MAJOR COMPONENT (ie Dollars) - split up into chunks with dividers where commas or spaces would go.
     	//IF THIS IS INDIAN RUPEES, DIVIDE INTO LAKH, CRORE... (THIS IS THE ONLY EXCEPTION TO THE RULE OF WHERE TO PLACE COMMAS)
     if($('#js--body').hasClass('INR')) price[0] = price[0].toString().replace(/(\d)(?=(\d\d)+\d$)/g, '$1<span class="divider"></span>');
+    	//ELSE DIVIDE INTO CHUNKS OF 3 CHARACTERS SEPARATED BY DIVIDERS
     else price[0] = price[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, '<span class="divider"></span>');
     
     //MINOR COMPONENT (ie Cents)
