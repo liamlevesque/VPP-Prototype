@@ -1,0 +1,46 @@
+.force-show{
+	display: inline-block !important;
+}
+
+.no-before:before{
+	content: '' !important;
+}
+
+.price-display:before{
+	font-size: 1.6rem;
+}
+
+$ccys: 	"CAD" "$" "" "," ".",
+		"USD" "$" "" "," ".",
+		"SGD" "$" "" "," ".",
+		"NZD" "$" "" "," ".",
+		"AUD" "$" "" "," ".",
+		"MXN" "$" "" "," ".",
+		"ZAR" "R" "" "," ".",
+		"PLN" "" "z\0142" " " ",",
+		"GBP" "\00A3" "" "," ".",
+		"EUR" "\20AC" "" " " ",",
+		"CNY" "\00A5" "" "," ".",
+		"JPY" "\00A5" "" "," ".",
+		"INR" "\20B9" "" "," ".",
+		"AED" "" "د.إ" "," ".";  
+			
+
+@each $ccy in $ccys{
+	.#{nth($ccy,1)}{
+		.divider:before{
+			content: "#{nth($ccy,4)}";
+		}
+		.price-display:before{
+			content: "#{nth($ccy,2)}";
+		}
+
+		.price-display:after{
+			content: "#{nth($ccy,3)}";	
+		}
+
+		*[class^="cents"]:before{
+			content: "#{nth($ccy,5)}";		
+		} 
+	}
+} 
