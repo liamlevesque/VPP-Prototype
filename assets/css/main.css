@@ -1514,7 +1514,7 @@ body.s-no-financing.s-no-purchases .no-finance--hide {
 .INR .divider:before {
   content: ","; }
 .INR .price-display:before {
-  content: "₹"; }
+  content: "R"; }
 .INR .price-display:after {
   content: ""; }
 .INR *[class^="cents"]:before {
