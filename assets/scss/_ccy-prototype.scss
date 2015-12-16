@@ -26,6 +26,10 @@
 	}
 }
 
+//THIS IS THE ARRAY OF VALUES THAT NEEDS TO BE "MAINTAINED" (note - currencies seldom change how they are displayed)
+//THE DATA READS AS FOLLOWS:
+//"CCY" "CCY SYMBOL IF BEFORE" "CCY SYMBOL IF AFTER" "MAJOR UNIT SEPARATOR" "MINOR UNIT SEPARATOR" "SHOW CENTS TRUE/FALSE?"
+
 $ccys: 	"CAD" "$" "" "," "." true,
 		"USD" "$" "" "," "." true,
 		"SGD" "$" "" "," "." true,

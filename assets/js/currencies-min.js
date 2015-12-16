@@ -16,9 +16,10 @@ $(function(){
 });
 
 function divideNumber(x) {
+	//ASSUMES THE PRICE COMES IN FORMAT 000000.00
     var price = x.split('.');
     
-    //MAJOR COMPONENT (ie Dollars)
+    //MAJOR COMPONENT (ie Dollars) - split up into chunks with dividers where commas or spaces would go.
     	//IF THIS IS INDIAN RUPEES, DIVIDE INTO LAKH, CRORE... (THIS IS THE ONLY EXCEPTION TO THE RULE OF WHERE TO PLACE COMMAS)
     if($('#js--body').hasClass('INR')) price[0] = price[0].toString().replace(/(\d)(?=(\d\d)+\d$)/g, '$1<span class="divider"></span>');
     else price[0] = price[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, '<span class="divider"></span>');
