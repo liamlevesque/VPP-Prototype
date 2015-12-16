@@ -1,7 +1,8 @@
 $(function(){
+	//INITIAL FORMAT/DISPLAY OF PRICE
+		updateMoney();
 
-	updateMoney();
-
+	//HANDLE CHANGING THE CCY SELECTOR
 	$('.js--ccy-select').change(function(){
 		$('#js--body').removeClass().addClass($(this).val());
 		updateMoney();
@@ -10,7 +11,7 @@ $(function(){
 });
 
 function divideNumber(x) {
-	//ASSUMES THE PRICE COMES IN FORMAT 000000.00
+	//ASSUMES THE PRICE COMES IN FORMAT 000000.0000
     var price = x.split('.');
     
   //MAJOR COMPONENT (ie Dollars) - split up into chunks with dividers where commas or spaces would go.

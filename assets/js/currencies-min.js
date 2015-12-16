@@ -5,9 +5,10 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 //# sourceMappingURL=jquery.min.map
 
 $(function(){
+	//INITIAL FORMAT/DISPLAY OF PRICE
+		updateMoney();
 
-	updateMoney();
-
+	//HANDLE CHANGING THE CCY SELECTOR
 	$('.js--ccy-select').change(function(){
 		$('#js--body').removeClass().addClass($(this).val());
 		updateMoney();
@@ -16,7 +17,7 @@ $(function(){
 });
 
 function divideNumber(x) {
-	//ASSUMES THE PRICE COMES IN FORMAT 000000.00
+	//ASSUMES THE PRICE COMES IN FORMAT 000000.0000
     var price = x.split('.');
     
   //MAJOR COMPONENT (ie Dollars) - split up into chunks with dividers where commas or spaces would go.
