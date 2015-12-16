@@ -1,33 +1,5 @@
-.force-show{
-	display: inline-block !important;
-}
-
-.no-before:before{
-	content: '' !important;
-}
-
-.price-display:before{
-	font-size: 1.6rem;
-}
-
-.ccy-container{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 430px;
-	transform: translate(-50%,-50%);
-
-	background-color: $finance-tint;
-	border-radius: 10px;
-	padding: 20px 30px 30px;
-
-	.field--select{
-		background-color: white;
-	}
-}
-
-//THIS IS THE ARRAY OF VALUES THAT NEEDS TO BE "MAINTAINED" (note - currencies seldom change how they are displayed)
-//THE DATA READS AS FOLLOWS:
+//THIS IS THE ARRAY OF VALUES THAT NEEDS TO BE MAINTAINED (note - currencies seldom change how they are displayed)
+//THE LIST READS AS FOLLOWS:
 //"CCY" "CCY SYMBOL IF BEFORE" "CCY SYMBOL IF AFTER" "MAJOR UNIT SEPARATOR" "MINOR UNIT SEPARATOR" "SHOW CENTS TRUE/FALSE?"
 
 $ccys: 	"CAD" "$" "" "," "." true,
@@ -70,3 +42,36 @@ $ccys: 	"CAD" "$" "" "," "." true,
 		}
 	}
 } 
+
+
+
+
+
+///////OTHER STUFF - NOT RELEVANT
+.force-show{
+	display: inline-block !important;
+}
+
+.no-before:before{
+	content: '' !important;
+}
+
+.price-display:before{
+	font-size: 1.6rem;
+}
+
+.ccy-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 430px;
+	transform: translate(-50%,-50%);
+
+	background-color: #D3E8CB;
+	border-radius: 10px;
+	padding: 20px 30px 30px;
+
+	.field--select{
+		background-color: white;
+	}
+}
