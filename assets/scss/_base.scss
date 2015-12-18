@@ -906,6 +906,7 @@ $mobile-purchase-large-font-size: 0.9rem;
     	@include breakpoint(medmax){
     		font-size: $mobile-purchase-large-font-size;
     		max-height: 3.4rem;
+    		min-height: 2.2rem;
     		height: auto;
     	}
 	}

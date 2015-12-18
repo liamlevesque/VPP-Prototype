@@ -71,6 +71,15 @@
 	.lb-content{
 		padding: 2 * $default-margin;
 		text-align: center;
+		
+		@include breakpoint(medmax){
+			padding: 20px;
+
+			h2{
+				font-size: 1.4rem;
+				margin-bottom: 0;
+			}
+		}
 
 		img{
 			//margin-bottom: $default-margin;
@@ -154,7 +163,8 @@
 			}
 
 			.step-2a{
-				max-height: 50px;
+				max-height: 60px;
+
 			}
 
 			.step-2b{
