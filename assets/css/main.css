@@ -693,7 +693,7 @@ header {
   display: block;
   text-align: left;
   padding: 10px 0;
-  border-bottom: 1px dotted #959595; }
+  border-bottom: 1px dotted #bdbdbd; }
   .details--entry:last-of-type {
     border-bottom-width: 0;
     padding-bottom: 0; }
@@ -703,7 +703,7 @@ header {
 **********************/
 .pinned-section {
   background-color: #e8e6e2;
-  border-bottom: 1px solid #959595;
+  border-bottom: 1px dotted #bdbdbd;
   z-index: 1000;
   position: relative; }
   .pinned-section:after {
@@ -782,7 +782,8 @@ header {
   .purchases {
     margin: 0 -15px;
     display: block;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #bdbdbd; } }
 .purchases ul {
   display: table;
   width: 100%;

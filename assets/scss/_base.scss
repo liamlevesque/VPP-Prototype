@@ -607,7 +607,7 @@ label, .label{
 			display: block;
 	    	text-align: left;
 	    	padding: 10px 0;
-	    	border-bottom: 1px dotted $grey-500;
+	    	border-bottom: $ritchie-border;
 
 	    	&:last-of-type{
 	    		border-bottom-width: 0;
@@ -625,7 +625,7 @@ label, .label{
 
 	.pinned-section{
 		background-color: $grey-50;
-		border-bottom: 1px solid $grey-500;
+		border-bottom: $ritchie-border;
 		z-index: 1000;
 		position: relative;
 
@@ -729,6 +729,7 @@ label, .label{
 		margin: 0 -15px;
 		display: block;
 		margin-bottom: $default-margin;
+		border-bottom: $ritchie-border; 
 	}
 	
 	ul{
@@ -763,14 +764,14 @@ $mobile-purchase-large-font-size: 0.9rem;
 	@include breakpoint(medmax){
 		display: block;
 		position: relative;
-		border-bottom: 1px dotted $border-color;
+		border-bottom: $ritchie-border;
 	}
 
 	[class^="col"]{
 		display: table-cell;
 		padding: $default-margin 0;
 		vertical-align: top;
-		border-bottom: 1px dotted $border-color;
+		border-bottom: $ritchie-border;
 
 		&[class*="box-money"]{
 			padding: $default-margin;
@@ -989,6 +990,7 @@ $mobile-purchase-large-font-size: 0.9rem;
 	}
 
 	@include breakpoint(medmax){
+		
 		[class^='col']{
 			display: none;
 		}
