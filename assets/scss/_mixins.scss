@@ -79,6 +79,10 @@ $transition: $transition-time_1 $transition-function;
     overflow           : hidden;
     text-overflow      : ellipsis;
     -webkit-line-clamp : 2;
+
+    @include breakpoint(medmax){
+      -webkit-line-clamp: 3;
+    }
   }
 }
 

@@ -9,6 +9,8 @@ body{
 	font-size: 18px;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 
@@ -345,6 +347,10 @@ label, .label{
 		overflow: hidden;
 		position: relative;
 
+		@include breakpoint(medmax){
+			overflow: initial;
+		}
+
 		.home-link{
 			font-size: 0.8rem;
 			
@@ -419,7 +425,7 @@ label, .label{
 		display: block;
 		position: absolute;
 		top: 0;
-		right: 0;
+		right:-$default-margin;
 		padding: 9px 0;
 		cursor: pointer;
 		
@@ -898,7 +904,8 @@ $mobile-purchase-large-font-size: 0.9rem;
 
     	@include breakpoint(medmax){
     		font-size: $mobile-purchase-large-font-size;
-    		height: 2rem;
+    		max-height: 3.4rem;
+    		height: auto;
     	}
 	}
 

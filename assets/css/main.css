@@ -243,7 +243,9 @@ body {
   font-family: 'Trebuchet MS', Verdana, sans-serif;
   font-size: 18px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; }
 
 ul {
   list-style-type: none;
@@ -498,6 +500,9 @@ header {
   padding: 15px 0;
   overflow: hidden;
   position: relative; }
+  @media (max-width: 48em) {
+    header {
+      overflow: initial; } }
   header .home-link {
     font-size: 0.8rem; }
     header .home-link img {
@@ -558,7 +563,7 @@ header {
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -15px;
   padding: 9px 0;
   cursor: pointer; }
   @media (min-width: 48em) {
@@ -906,11 +911,15 @@ header {
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 2; } }
+      -webkit-line-clamp: 2; }
+      @media (max-width: 48em) {
+        .description {
+          -webkit-line-clamp: 3; } } }
   @media (max-width: 48em) {
     .description {
       font-size: 0.9rem;
-      height: 2rem; } }
+      max-height: 3.4rem;
+      height: auto; } }
 
 .description-footer {
   margin-top: 15px; }
