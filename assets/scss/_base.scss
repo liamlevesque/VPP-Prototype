@@ -679,6 +679,10 @@ label, .label{
 
 		@include breakpoint(medmax){
 			margin-bottom: $default-margin;
+
+			.box-money_finance label{
+				display: block;
+			}
 		}
 
 		.g-third, .g-half{
@@ -820,7 +824,7 @@ $mobile-purchase-large-font-size: 0.9rem;
     		font-size: 0.8rem;
 
 			&:before{
-				content: "Lot: "
+				content: "Lot "
 			}
 		}
 

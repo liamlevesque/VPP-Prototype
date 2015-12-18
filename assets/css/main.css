@@ -743,7 +743,9 @@ header {
   table-layout: fixed; }
   @media (max-width: 48em) {
     .financing {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px; }
+      .financing .box-money_finance label {
+        display: block; } }
   .financing .g-third, .financing .g-half {
     padding: 15px; }
   .financing p {
@@ -846,7 +848,7 @@ header {
         letter-spacing: 0;
         font-size: 0.8rem; }
         .purchase .col-1:before {
-          content: "Lot: "; } }
+          content: "Lot "; } }
     @media (max-width: 30.0625em) {
       .purchase .col-1 {
         top: calc(19vw / 1.33);
@@ -1462,8 +1464,9 @@ body.s-no-financing.s-no-purchases .no-finance--hide {
 .h-mt-80 {
   margin-top: 10px; }
 
-.h-mt-100 {
-  margin-top: 15px; }
+@media (min-width: 48em) {
+  .h-mt-100 {
+    margin-top: 15px; } }
 
 .h-mb-100 {
   margin-bottom: 15px; }

@@ -30,7 +30,9 @@
 	}
 
 	.h-mt-100{
-		margin-top: $default-margin;
+		@include breakpoint(medium){
+			margin-top: $default-margin;
+		}
 	}
 
 	.h-mb-100{
