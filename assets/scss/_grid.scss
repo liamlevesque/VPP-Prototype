@@ -7,6 +7,11 @@ GRID
 	position: relative;
 	vertical-align: top;
 	
+	@include breakpoint(medmax){
+		display: block;
+		width: 100%;
+	}
+	
 	@include breakpoint(medium){
 		display: inline-block;
 		vertical-align: top;
@@ -37,6 +42,16 @@ GRID
 	.g-third{width:33%};
 	.g-half{width:50%};
 	.g-two-thirds{width:66%};
+
+	@include breakpoint(medmax){
+		display: block;
+		
+		.g-quarter, .g-third, .g-half, .g-two-thirds{
+			width: 100%;
+			display: block;
+		}
+
+	}
 
 }
 

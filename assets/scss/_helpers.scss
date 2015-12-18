@@ -46,7 +46,9 @@
 	}
 
 	.h-mr-100{
-		margin-right: $default-margin;
+		@include breakpoint(medium){
+			margin-right: $default-margin;
+		}
 	}
 
 	.h-pt-100{

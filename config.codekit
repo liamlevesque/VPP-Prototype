@@ -194,6 +194,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/share.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 497,
+		"inputAbbreviatedPath": "\/assets\/img\/share.png",
+		"outputAbbreviatedPath": "\/assets\/img\/share.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/share_ios.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 320,
+		"inputAbbreviatedPath": "\/assets\/img\/share_ios.png",
+		"outputAbbreviatedPath": "\/assets\/img\/share_ios.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/shipping.png": {
 		"fileType": 32768,
 		"ignore": 0,

@@ -264,6 +264,10 @@ label, .label{
 			border: 1px solid $black;
 			padding: $default-margin;
 			position: relative;
+			
+			@include breakpoint(smallmax){
+				margin-top: $default-margin;
+			}
 		}
 	}
 
@@ -355,10 +359,27 @@ label, .label{
 		width: 200px;
     	height: 46px;
     	margin: 10px 0 20px;
+
+    	@include breakpoint(medmax){
+    		.logo-hide-small{
+    			display: none;
+    		}
+    	}
 	}
 
 	.top-section{
 		background-color: $grey-50;
+
+		@include breakpoint(medmax){
+			h1{
+				font-size: 1.4rem;
+	    		white-space: nowrap;
+			}
+
+			label, .smalltext{
+				white-space: nowrap;
+			}
+		}
 	}
 
 	.timestamp{
@@ -373,7 +394,54 @@ label, .label{
 		top: $default-margin;
 		right: -$default-margin;
 		text-align: right;
+
+		@include breakpoint(medmax){
+		    top: 0;
+		    right: 60px;
+		    text-align: right;
+		    background-color: white;
+		    box-shadow: $ritchie-shadow;
+		    padding: 10px 20px 10px 10px;
+
+		    transform: translateX(200%);
+		    opacity: 0;
+
+		    transition: $transition;
+
+		    &.s-visible{
+		    	opacity: 1;
+		    	transform: translateX(0);
+		    }
+		}
 	}
+
+	.actions-toggle{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 9px 0;
+		cursor: pointer;
+		
+		@include breakpoint(medium){
+			display: none;
+		}
+
+		.action .icon--ios{
+			display: none;
+		}
+	}
+		
+		//SHOWING/HIDING IOS SHARE ICON DEPENDING ON DEVICE TYPE
+		.s-device-ios .action{
+			.icon--ios{
+				display: block;
+			}
+
+			.icon--non-ios{
+				display: none;
+			}
+		}
 
 	.action{
 		vertical-align: bottom;
@@ -447,6 +515,15 @@ label, .label{
 		display: table-cell;
 		vertical-align: top;
 		width: 65%;	
+	}
+
+	.g-custom-65, .g-custom-35{
+		@include breakpoint(medmax){
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			text-align: center;
+		}
 	}
 	
 
@@ -559,29 +636,35 @@ label, .label{
 			transition: opacity 0.5s linear; 
 		}
 
-		&.s-stuck{
-			position: fixed;
-			top: 0;
-			width: 100%;
-			
-			&:after{
+		@include breakpoint(medium){
+			&.s-stuck{
+				position: fixed;
+				top: 0;
+				width: 100%;
 				
-				opacity: 1;
+				&:after{
+					
+					opacity: 1;
 
-			}
+				}
 
-			.financing.s-hidden{
-				display: none;
-			}
+				.financing.s-hidden{
+					display: none;
+				}
 
-			.finance--collapse{
-				right: -25px;
+				.finance--collapse{
+					right: -25px;
+				}
 			}
 		}
 	}
 
 	.js--sticky-wrapper{
 		transition: height $transition-time_1 $transition-function;
+
+		@include breakpoint(medmax){
+			height: auto !important;
+		}
 	}
 
 	.financing{
@@ -593,6 +676,10 @@ label, .label{
 		position: relative;
 
 		@include tableLayout;
+
+		@include breakpoint(medmax){
+			margin-bottom: $default-margin;
+		}
 
 		.g-third, .g-half{
 			padding: $default-margin;
@@ -621,11 +708,26 @@ label, .label{
 	text-align: center;
 	font-size: 0.9rem;
 	@include tableLayout;
+
+	@include breakpoint(medmax){
+		display: none;
+	}
 }
 
 .purchases{
+	@include breakpoint(medmax){
+		margin: 0 -15px;
+		display: block;
+		margin-bottom: $default-margin;
+	}
+	
 	ul{
 		@include tableLayout;
+
+		@include breakpoint(medmax){
+			display: block;
+
+		}
 	}
 	
 	&.s-hidden{
@@ -633,14 +735,26 @@ label, .label{
 	}
 
 	&_empty{
-		padding: 60px $default-margin 130px;
+		padding: 60px 0 130px;
 		text-align: center;
 	}
 }
 
+$purchase-row-padding: 10px;
+
+$mobile-outer-column-width: 17%;
+$mobile-inner-column-width: 60%;
+$mobile-purchase-large-font-size: 0.9rem;
+
 .purchase{
-	padding: 10px 0;
+	padding: $purchase-row-padding 0;
 	display: table-row;
+	
+	@include breakpoint(medmax){
+		display: block;
+		position: relative;
+		border-bottom: 1px dotted $border-color;
+	}
 
 	[class^="col"]{
 		display: table-cell;
@@ -656,6 +770,13 @@ label, .label{
 		&.box-money_finance{
 			padding-right: $toggle-padding;
 		}
+
+		@include breakpoint(medmax){
+			display: block;
+			position: absolute;
+			border-bottom: none;
+			height: auto;
+		}
 	}
 
 	img{
@@ -663,25 +784,103 @@ label, .label{
 		width: 100%;
 	}
 
-	.col-1, .col-3, .col-4{
-		vertical-align: middle;
-	}
+	.col-0{
+		@include breakpoint(medmax){
+			position: absolute;
+			left: 5px;
+			top: $purchase-row-padding;
+			width: 10%;
+			height: auto;
+			padding: 0; 
+		}
 
-	.col-3, .col-4{
-		padding-right: 30px;
+		@include breakpoint(smallmax){
+			width: $mobile-outer-column-width;
+		}
 	}
 
 	.col-1{
+		vertical-align: middle;
+
 		color: $brand-color;
 		text-align: center;
 		letter-spacing: -1px;
 		font-size: 0.85rem;
 		font-weight: bold;
 
+		@include breakpoint(medmax){
+			position: absolute;
+			left: 5px;
+			top: calc(11.5vw / 1.33);
+			width: 10%;
+			background-color: $brand-color;
+			color: white;
+			padding: 1px 0;
+			letter-spacing: 0;
+    		font-size: 0.8rem;
+
+			&:before{
+				content: "Lot: "
+			}
+		}
+
+		@include breakpoint(smallmax){
+			top: calc(19vw / 1.33);
+			width: $mobile-outer-column-width;
+		}
 	}
 
 	.col-2{
 		position: relative;
+
+		@include breakpoint(medmax){
+			left: 10%;
+			width: 70%;
+			padding: 0;
+			padding-left: $default-margin;
+		}
+
+		@include breakpoint(smallmax){
+			left: $mobile-outer-column-width;
+			width: $mobile-inner-column-width;
+		}
+	}
+
+	.col-3{
+		vertical-align: middle;
+
+		@include breakpoint(medmax){
+			right: $purchase-row-padding;
+			top: $purchase-row-padding;
+			background-color: transparent;
+			padding: 0 !important;
+		}
+	}
+
+	.col-4{
+		vertical-align: middle;
+
+		@include breakpoint(medmax){
+			right: $purchase-row-padding;
+			top: 35px;
+			background-color: transparent;
+			padding: 0 !important;
+			line-height: 0.8rem;
+
+			.field--toggle{
+				display: none;
+			}
+
+			&:before{
+				content: "(OR";
+				@include smalltext;
+			}
+
+			&:after {
+				content: "/MONTH)";
+				@include smalltext;
+			}
+		}
 	}
 
 }
@@ -692,12 +891,21 @@ label, .label{
     	overflow: hidden;
 
     	@include line-clamp();
+
+    	@include breakpoint(medmax){
+    		font-size: $mobile-purchase-large-font-size;
+    		height: 2rem;
+    	}
 	}
 
 	.description-footer{
 		//position: absolute;
 		//bottom: 0;
 		margin-top: $default-margin;
+
+		@include breakpoint(medmax){
+			margin-top: 10px;
+		}
 	}
 
 	.unit-pill{
@@ -709,6 +917,10 @@ label, .label{
 		line-height: 0.8rem;
 		margin-right: $default-margin;
 		font-size: 0.75rem;
+
+		@include breakpoint(medmax){
+			margin-bottom: 5px;
+		}
 		
 		div{
 			display: inline-block;
@@ -764,6 +976,21 @@ label, .label{
 	.col-3{
 		padding-right: 25px;
 	}
+
+	@include breakpoint(medmax){
+		[class^='col']{
+			display: none;
+		}
+
+		.col-3, .col-4{
+			display: table-cell;
+			width: 50%;
+
+			.h-ta-right{
+				text-align: center;
+			}
+		}
+	}
 }
 
 $or-circle-size: 24px;
@@ -786,7 +1013,7 @@ $or-circle-size: 24px;
 
 .finance-confirmation{
 	border: 1px solid $finance-color;
-	padding: $default-margin;
+	padding: $default-margin 2*$default-margin;
 	text-align: center;
 }
 
@@ -840,6 +1067,10 @@ $or-circle-size: 24px;
 
 	&_400{
 		font-size: 1.4rem;
+
+		@include breakpoint(medmax){
+			font-size: $mobile-purchase-large-font-size;
+		}
 	}
 
 	&_700{

@@ -51,6 +51,10 @@
 	transition: opacity $transition-time_2 $transition-function, transform $transition-time_2 $transition-function;
 	
 	margin: 90px 0;
+
+	@include breakpoint(medmax){
+		width: 95%;
+	}
 	
 }
 	

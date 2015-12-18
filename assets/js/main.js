@@ -41,6 +41,9 @@ $(function(){
 		updateTotalItems();
 		updateTimeStamp();
 
+		var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+		if(iOS) $('.js--body').addClass('s-device-ios');
+
 
 	/*********************************
 		LOGO
@@ -53,6 +56,11 @@ $(function(){
 			touchDevices: false,
 			hideOnClick: true,
 			position: 'bottom'
+		});
+
+		$('.js--actions-toggle').click(function(){
+			$(this).toggleClass('s-active');
+			$('.js--actions').toggleClass('s-visible');
 		});
 
 	/*********************************
@@ -185,6 +193,7 @@ $(function(){
 		var waypoints = new Waypoint({
 			element: $('.js--sticky-wrapper'),
 			handler: function(direction) {
+				
 				$('.js--sticky-wrapper').css('height',$('.js--sticky-wrapper').css('height'));
 				
 				if(direction === 'down') $('.js--pin-section').addClass('s-stuck');
