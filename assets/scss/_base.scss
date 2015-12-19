@@ -120,6 +120,10 @@ label, .label{
 
 	a{
 		color: $money-color;
+
+		@include breakpoint(medmax){
+			display: block;
+		}
 	}
 }
 

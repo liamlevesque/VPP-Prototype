@@ -323,6 +323,9 @@ label, .label {
   margin-bottom: 15px; }
   .phone-link a {
     color: #20579E; }
+    @media (max-width: 48em) {
+      .phone-link a {
+        display: block; } }
 
 .phone-cta {
   padding: 3px 0;
