@@ -1199,7 +1199,7 @@ footer {
   .lb-wizard--top-img img {
     max-width: 100%;
     width: 100%; }
-  .lb-wizard--top-img .img-2 {
+  .lb-wizard--top-img .img-2, .lb-wizard--top-img .img-3 {
     position: absolute;
     top: 0;
     left: 0; }
@@ -1260,9 +1260,9 @@ footer {
       opacity: 0; }
     .lb-wizard.s-step-1 .step-2b .img-2 {
       display: none; }
-  .lb-wizard.s-step-1 .step-3 {
+  .lb-wizard.s-step-1 .step-3, .lb-wizard.s-step-1 .step-3b {
     max-height: 0; }
-    .lb-wizard.s-step-1 .step-3 .step-content {
+    .lb-wizard.s-step-1 .step-3 .step-content, .lb-wizard.s-step-1 .step-3b .step-content {
       -webkit-transform: translateY(50%);
           -ms-transform: translateY(50%);
               transform: translateY(50%);
@@ -1301,44 +1301,62 @@ footer {
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0); }
-    .lb-wizard.s-step-2 .step-2b .img-2 {
+    .lb-wizard.s-step-2 .step-2b .img-2, .lb-wizard.s-step-2 .step-2b .img-3 {
       display: none; }
-  .lb-wizard.s-step-2 .step-3 {
+  .lb-wizard.s-step-2 .step-3, .lb-wizard.s-step-2 .step-3b {
     max-height: 0; }
-    .lb-wizard.s-step-2 .step-3 .step-content {
+    .lb-wizard.s-step-2 .step-3 .step-content, .lb-wizard.s-step-2 .step-3b .step-content {
       -webkit-transform: translateY(50%);
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       opacity: 0; }
-  .lb-wizard.s-step-3 .step-1 {
+  .lb-wizard.s-step-3 .step-1, .lb-wizard.s-step-3b .step-1 {
     max-height: 0; }
-  .lb-wizard.s-step-3 .step-2 {
+  .lb-wizard.s-step-3 .step-2, .lb-wizard.s-step-3b .step-2 {
     background-color: #ffffff;
     border-radius: 5px; }
-    .lb-wizard.s-step-3 .step-2 .lb-content {
+    .lb-wizard.s-step-3 .step-2 .lb-content, .lb-wizard.s-step-3b .step-2 .lb-content {
       padding-bottom: 0; }
-  .lb-wizard.s-step-3 .step-2a {
+  .lb-wizard.s-step-3 .step-2a, .lb-wizard.s-step-3b .step-2a {
     max-height: 0; }
-  .lb-wizard.s-step-3 .step-2b {
+  .lb-wizard.s-step-3 .step-2b, .lb-wizard.s-step-3b .step-2b {
     max-height: 300px;
     margin-top: -65px; }
-    .lb-wizard.s-step-3 .step-2b .lb-airplane--hiding-message {
+    .lb-wizard.s-step-3 .step-2b .lb-airplane--hiding-message, .lb-wizard.s-step-3b .step-2b .lb-airplane--hiding-message {
       max-height: 0;
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
-    .lb-wizard.s-step-3 .step-2b .step-content {
+    .lb-wizard.s-step-3 .step-2b .step-content, .lb-wizard.s-step-3b .step-2b .step-content {
       opacity: 1;
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0); }
-    .lb-wizard.s-step-3 .step-2b .lb-wizard--top-img {
+    .lb-wizard.s-step-3 .step-2b .lb-wizard--top-img, .lb-wizard.s-step-3b .step-2b .lb-wizard--top-img {
       background-color: #ffffff; }
-    .lb-wizard.s-step-3 .step-2b .img-2 {
-      display: block; }
+    .lb-wizard.s-step-3 .step-2b .img-2, .lb-wizard.s-step-3 .step-2b .img-3, .lb-wizard.s-step-3b .step-2b .img-2, .lb-wizard.s-step-3b .step-2b .img-3 {
+      display: none; }
+  .lb-wizard.s-step-3 .step-3, .lb-wizard.s-step-3 .step-3b, .lb-wizard.s-step-3b .step-3, .lb-wizard.s-step-3b .step-3b {
+    max-height: 0; }
+    .lb-wizard.s-step-3 .step-3 .step-content, .lb-wizard.s-step-3 .step-3b .step-content, .lb-wizard.s-step-3b .step-3 .step-content, .lb-wizard.s-step-3b .step-3b .step-content {
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      opacity: 0; }
+  .lb-wizard.s-step-3 .step-2b .img-2 {
+    display: block; }
   .lb-wizard.s-step-3 .step-3 {
     max-height: 1000px; }
     .lb-wizard.s-step-3 .step-3 .step-content {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1; }
+  .lb-wizard.s-step-3b .step-2b .img-3 {
+    display: block; }
+  .lb-wizard.s-step-3b .step-3b {
+    max-height: 1000px; }
+    .lb-wizard.s-step-3b .step-3b .step-content {
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0);
@@ -1560,6 +1578,9 @@ body.s-no-financing.s-no-purchases .no-finance--hide {
 
 .c-brand {
   color: #E87722; }
+
+.c-error {
+  color: #c4483a; }
 
 .c-link {
   color: #1478BC; }

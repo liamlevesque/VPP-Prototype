@@ -32,6 +32,10 @@ $(function(){
 			setTimeout(function(){$('.js--sticky-wrapper').css('height',$('.js--pin-section').css('height'))},100);
 		});
 
+		$('.js--toggle-send-error').click(function(){
+			sendError = !sendError;
+		});
+
 
 	/*********************************
 		INITIALIZE EVERYTHING
@@ -229,10 +233,17 @@ $(function(){
 			$('.js--wizard').removeClass('s-step-1').addClass('s-step-2');
 			
 			setTimeout(function(){
-				$('.js--wizard').removeClass('s-step-2').addClass('s-step-3');
-				//CHANGE THE TEXT IN THE "APPLY FOR FINANCING BUTTONS"
-				$('.js--lb-show').html('Application Sent!').addClass('s-success');
-			},3000);
+				$('.js--wizard').removeClass('s-step-2');
+				//IF THERE'S AN ERROR SENDING
+				if(sendError){
+					$('.js--wizard').addClass('s-step-3b');
+				}
+				else{
+					$('.js--wizard').addClass('s-step-3');
+					//CHANGE THE TEXT IN THE "APPLY FOR FINANCING BUTTONS"
+					$('.js--lb-show').html('Application Sent!').addClass('s-success');
+				}
+			},3000); 
 		});
 
 }); 
@@ -252,7 +263,8 @@ var interest = 6.00,
 	isFinancingHidden = false,
 	startTimeStamp = new Date(),
 	noItems = false,
-	tooltipDelay = 500;
+	tooltipDelay = 500,
+	sendError = false;
 
 /*********************************
 	GENERIC FUNCTIONS

@@ -442,6 +442,13 @@
 				<li class="js--toggle-currency toggle-currency">
 					<lable> Click here to cycle through demo currencies</lable>
 				</li>
+				<li>
+					<label class="field--toggle">
+						<input type="checkbox" class="toggle_input js--toggle-send-error" />
+						<div class="toggle-control"></div>
+					</label>
+					Show error when sending application
+				</li>
 			</ul>
 		</div>
 	</footer>
@@ -492,6 +499,7 @@
 									<div class="lb-wizard--top-img">
 										<img class="img-1" src="assets/img/airplane_gif.gif"/>
 										<img class="img-2" src="assets/img/check.gif"/>
+										<img class="img-3" src="assets/img/error_gif.gif"/>
 									</div>
 									<div class="lb-airplane--hiding-message"><h1 class="c-grey">Sending Application</h1><br/><br/></div>
 								</div>
@@ -503,9 +511,43 @@
 								<div class="lb-content">
 									<h2 class="">Your finance application has been sent.<br/>High Five!</h2>
 									<div class="h-mw-400">
-										<p class="p-100"> One of our finance representatives will contact you within 48 hours. We've also sent you confirmation of your application via e-mail.</p>
+										<p class="p-100"> One of our finance representatives will contact you within 48 hours.</p>
 										<div class="box-bordered">
 											<p class="p-100">If you have any questions in the meantime, please contact Ritchie Bros. Financial Services at:</p>
+											<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
+											<div class="collapsible js--collapsible">
+												<div class="default-shown js--default-shown">
+													<div class="grey-link js--collapsible-toggle">show contact information for the rest of the world</div>
+												</div>
+												<div class="default-hidden js--default-hidden">
+													<p class="phone-link">Europe - <a href="tel:18553315750">+31.765.242.602</a></p>
+													<p class="phone-link">Mexico - <a href="tel:18553315750">+52.427.266.0909</a></p>
+													<p class="phone-link">Australia - <a href="tel:18553315750">+61(0)73382.4491</a></p>
+													<div class="grey-link js--collapsible-toggle">hide contact information for the rest of the world</div>
+												</div>
+											</div>
+											<br/>
+											<br/>
+											<p class="c-brand">Please reference your bidder number: 123456</p>
+										</div>
+										<br/><br/>
+									</div>
+								</div>
+								<div class="lb-action-area">
+									<button class="js--lb-close">OK, got it!</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="lb-wizard--step step-3b">
+							<div class="step-content">
+								<div class="lb-content">
+									<h2 class="c-error">Oh No! Something went wrong</h2>
+									<div class="h-mw-400">
+										<p class="p-100">It looks like we couldn't send your application, maybe we should do this the old fashioned way.</p>
+										<div class="box-bordered">
+											<p class="p-100">To get your application started, please contact Ritchie Bros. Financial Services at:</p>
 											<p class="phone-link">USA/Canada - <a href="tel:18553315750">1 855 331 5750 </a></p>
 											<div class="collapsible js--collapsible">
 												<div class="default-shown js--default-shown">
