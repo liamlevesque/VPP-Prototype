@@ -541,7 +541,8 @@ header {
   position: absolute;
   top: 15px;
   right: -15px;
-  text-align: right; }
+  text-align: right;
+  display: none; }
   @media (max-width: 48em) {
     .actions {
       top: 0;

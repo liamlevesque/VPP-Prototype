@@ -404,6 +404,7 @@ label, .label{
 		top: $default-margin;
 		right: -$default-margin;
 		text-align: right;
+		display: none;
 
 		@include breakpoint(medmax){
 		    top: 0;
