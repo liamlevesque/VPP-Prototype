@@ -73,6 +73,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/asset3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15137,
+		"inputAbbreviatedPath": "\/assets\/img\/asset3.png",
+		"outputAbbreviatedPath": "\/assets\/img\/asset3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/asset4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13223,
+		"inputAbbreviatedPath": "\/assets\/img\/asset4.png",
+		"outputAbbreviatedPath": "\/assets\/img\/asset4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/asset5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14690,
+		"inputAbbreviatedPath": "\/assets\/img\/asset5.png",
+		"outputAbbreviatedPath": "\/assets\/img\/asset5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/attention.png": {
 		"fileType": 32768,
 		"ignore": 0,

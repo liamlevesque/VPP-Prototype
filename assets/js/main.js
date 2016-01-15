@@ -96,21 +96,55 @@ $(function(){
 	*********************************/
 		//HANDLE WHEN THE INTEREST RATE CHANGES
 		$('.js--finance-interest').on('input', function(){
-			if($(this).val().length == 0) return; //don't recalculate if this is empty
-			updateInterest(parseFloat($(this).val()).round(2));
+			//if($(this).val().length == 0) return; //don't recalculate if this is empty
+			//updateInterest(parseFloat($(this).val()).round(2));
 		}); 
 
 		//HANDLE TEXT INPUT ON THE INTEREST RATE - ONLY ALLOW NUMBERS AND PERIODS
-		$('.js--finance-interest').on('keypress', function(e){
-			if (e.keyCode != 46 && e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57))
-	            return false;
-	         return true;
+		$('.js--finance-interest').on('keydown', function(e){
+		    switch(e.which) {
+		    	case 9:
+		    	case 13: // enter
+			        cleanupInterestInput();
+			        $('.js--finance-period').focus();
+			        e.preventDefault();
+			        return true;
+			        break;
+
+		        case 38: // up
+		        	incrementInterest(0.5);
+			       	e.preventDefault();
+			       	return true;
+			        break;
+
+		        case 40: // down
+		        	incrementInterest(-0.5);
+		        	e.preventDefault();
+			       	return true;
+			       	break;
+
+		        default: 
+
+		        	if(e.which != 46 && e.which != 190 && e.which > 31 && (e.which < 48 || e.which > 57)) return false;
+		        	else return true; // exit this handler for other keys
+		    }
+		    e.preventDefault();
 		});
 
-		//HANDLE SCROLLING ON THE INTEREST RATE INPUT
+		//CLEAN UP DISPLAY OF INTEREST RATE ON FOCUS LOST
 		$('.js--finance-interest').on('blur', function(e){
-			$('.js--finance-interest').val(interest.toFixed(2) + "%");
+			cleanupInterestInput();
 		});
+
+		function cleanupInterestInput(){
+			var tempInt = parseFloat($('.js--finance-interest').val()).round(2);
+			
+			if( tempInt > 15) updateInterest(15);
+			else updateInterest(tempInt);
+			
+			$('.js--finance-interest').val(interest.toFixed(2) + "%");
+		}
+
 
 		//HANDLE SCROLLING ON THE INTEREST RATE INPUT
 		$('.js--finance-interest')[0].addEventListener('mousewheel', function(e){
@@ -120,15 +154,20 @@ $(function(){
 		//EVENTS FOR CLICKING +/- ON THE INTEREST RATE INPUT
 		$('.js--interest-plus, .js--interest-minus').click(function(){
 			
+			incrementInterest($(this).data('increment'));
+			
+		});
+
+		function incrementInterest(val){
 			var tempValue = interest,
-				increment = parseFloat($(this).data('increment')).round(2);
+				increment = parseFloat(val).round(2);
 			
 			if(tempValue + increment <= 0) updateInterest(0);
+			else if(tempValue + increment >= 15) updateInterest(15);
 			else updateInterest(tempValue + increment);
 			
 			$('.js--finance-interest').val(interest.toFixed(2) + "%");
-			
-		});
+		}
 
 		//HANDLE CHANGING THE FINANCE PERIOD SELECTOR
 		$('.js--finance-period').change(function(){
@@ -258,7 +297,8 @@ $(window).load(function(){
 	GLOBAL VARIABLES
 *********************************/
 
-var interest = 6.00,
+var interest = 0.00,
+	interestMax = 15.00,
 	period = 24,
 	isFinancingHidden = false,
 	startTimeStamp = new Date(),
