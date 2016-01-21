@@ -71,3 +71,7 @@ body{
 	.g-display-table .no-purchases--show_cell{
 		display: none;
 	}
+
+	html.ie body.s-no-purchases .no-purchases--fill-height{
+		bottom: auto;
+	}
