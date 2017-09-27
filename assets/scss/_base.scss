@@ -340,6 +340,17 @@ label, .label{
 			color: $finance-color;
 			position: relative;
 		}
+
+		.quantity-price{
+			margin: 5px 0 0;
+			opacity: 0.8;
+		}
+	}
+
+	.show-cents{
+		.js--cents{
+			display: inline-block !important;
+		}
 	}
 
 /*******************

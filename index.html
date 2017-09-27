@@ -126,9 +126,9 @@
 							<ul class="details-table"> 
 								<li class="calculation js--finance-total">
 									<label>Total Selected for Financing</label>
-									<div>
+									<div class="show-cents">
 										<span class="dollars_200 js--dollars c-price"></span>
-										<span class="cents_200 js--cents c-price"></span>
+										<span class="cents_400 js--cents c-price"></span>
 										<div class="label h-d-block h-t-xs">(EXCLUDING FEES AND TAXES)</div>
 									</div>
 								</li>
@@ -158,9 +158,9 @@
 							</ul>
 						</div>
 						<div class="g-third box-money_finance h-ta-center">
-							<div class="js--monthly-total">
+							<div class="js--monthly-total show-cents">
 								<span class="dollars_700 js--dollars"></span>
-								<span class="cents_700 js--cents"></span>
+								<span class="cents_400 js--cents"></span>
 								<span class="">PER MONTH*</span>
 							</div>
 							<label>Estimated Financing Payment</label>
@@ -256,18 +256,22 @@
 				</li>
 				<li class="purchase js--purchase">
 					<div class="col-0">
-						<img src="assets/img/asset4.png"/>
+						<img src="assets/img/FencePanel.jpg"/>
 					</div>
 					<div class="col-1">29</div>
 					<div class="col-2">
-						<span class="description">2005 CATERPILLAR 420D 4x4 Loader Backhoe</span> 
+						<span class="description">Quantity of 45 Ft of Aluminum Fence Panel
+						</span> 
 						<div class="description-footer"><label class="purchase-meta">Purchased: 2015/10/14 @ 12:47:22 PDT</label></div>
 					</div>
-					<div class="col-3 js--price box-money" data-price="34000">
+					<div class="col-3 js--price box-money" data-price="56.25" data-fractional="true">
 						<span class="dollars_400 js--dollars"></span>
 						<span class="cents_400 js--cents"></span>
+						<h6 class="quantity-price">
+							( $1.25/Ft )
+						</h6>
 					</div>
-					<div class="col-4 js--monthly box-money_finance" data-price="0">
+					<div class="col-4 js--monthly box-money_finance" data-price="0" data-fractional="true">
 						<span class="dollars_400 js--dollars"></span>
 						<span class="cents_400 js--cents"></span>
 						<label class="field--toggle js--tooltip-monthly-toggle js--tooltip-monthly-toggle">
@@ -358,18 +362,18 @@
 					<div class="col-2"></div>
 					<div class="col-3 js--auction-total box-money">
 						<label class="h-ta-center">Auction Total<br/>(<span class="js--total-items"></span>)</label>
-						<div class="c-price js--total-price h-ta-right">
+						<div class="c-price js--total-price h-ta-right show-cents">
 							<span class="dollars_700 js--dollars"></span>
-							<span class="cents_700 js--cents"></span>
+							<span class="cents_400 js--cents"></span>
 						</div>
 						<label class="h-ta-center h-t-xs">(EXCLUDING FEES AND TAXES)</label>
 					</div>
 					<div class="col-4 js--monthly-total box-money_finance-total">
 						<div class="totals--or">or</div>
 						<label class="h-ta-center">Estimated Monthly Financing Payment</label>
-						<div class="c-finance js--total-price h-ta-right">
+						<div class="c-finance js--total-price h-ta-right show-cents">
 							<span class="dollars_700 js--dollars"></span>
-							<span class="cents_700 js--cents"></span>
+							<span class="cents_400 js--cents"></span>
 						</div>
 					</div>
 				</div>

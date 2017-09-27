@@ -340,6 +340,8 @@ function moneyUpdate(target, val){
 	target.data('price', val);
 	var valString = val.toString().split('.');
 
+	if(target.data('fractional')) target.addClass('show-cents');
+
 	if(valString[1] && valString[1].length < 2) valString[1] += "0";
 	target.find('.js--dollars').html(numberWithCommas(valString[0]));
 	
