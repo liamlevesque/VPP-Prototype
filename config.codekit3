@@ -222,6 +222,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/Ironclad-cog.png": {
+		"ft": 32768,
+		"iS": 1004,
+		"oA": 0,
+		"oAP": "\/assets\/img\/Ironclad-cog.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/printer.png": {
 		"ft": 32768,
 		"iS": 371,

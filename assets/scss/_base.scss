@@ -812,6 +812,8 @@ $mobile-purchase-large-font-size: 0.9rem;
 	}
 
 	.col-0{
+		position: relative;
+
 		@include breakpoint(medmax){
 			position: absolute;
 			left: 5px;
@@ -911,6 +913,9 @@ $mobile-purchase-large-font-size: 0.9rem;
 	}
 
 }
+
+	
+
 	.description{
 		display: block;
 		font-size: 1.1rem;
@@ -936,6 +941,30 @@ $mobile-purchase-large-font-size: 0.9rem;
 			margin-top: 10px;
 		}
 	}
+
+		.ironclad{
+			width: 15px !important;
+			margin-right: 10px;
+		}
+
+		.ironclad__img{
+			width: 20px !important;
+			position: absolute;
+			top: 12px;
+			right: -2px;
+		}
+
+		.qualifier{
+			font-size: 0.9rem;
+
+			a{
+				color: $money-color;
+				
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
 
 	.unit-pill{
 		background-color: $grey-100;
